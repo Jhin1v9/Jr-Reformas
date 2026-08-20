@@ -1,0 +1,309 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "localities": "Dónde trabajamos",
+    "gallery": "Transformaciones",
+    "beforeAfter": "Antes y después",
+    "process": "Cómo trabajamos",
+    "about": "Sobre Junior",
+    "blog": "Guías",
+    "contact": "Contacto",
+    "budget": "Pedir presupuesto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "changeLanguage": "Cambiar idioma"
+  },
+  "hero": {
+    "badge1": "15+ años de experiencia",
+    "badge2": "Respuesta el mismo día",
+    "badge3": "WhatsApp directo",
+    "h1": "Reformas integrales en Sabadell y alrededores",
+    "sub": "Más de 15 años transformando espacios. Desde un plato de ducha hasta una reforma completa. Presupuesto desglosado y visita técnica gratuita.",
+    "ctaPrimary": "Pedir presupuesto gratis",
+    "ctaSecondary": "Ver transformaciones"
+  },
+  "beforeAfter": {
+    "badge": "Antes y después",
+    "title": "La transformación habla por sí sola",
+    "description": "Arrastra el control y compara el estado en obra con el acabado final. Reformas reales, sin filtros.",
+    "before": "En obra",
+    "after": "Después",
+    "cta": "Ver todas las transformaciones"
+  },
+  "calculator": {
+    "badge": "Calculadora",
+    "title": "¿Cuánto puede costar tu reforma?",
+    "description": "Tres preguntas y tienes una estimación orientativa al momento.",
+    "step1": "¿Qué quieres reformar?",
+    "step2": "Metros cuadrados aproximados",
+    "step3": "Nivel de acabado",
+    "types": {
+      "bano": "Baño",
+      "cocina": "Cocina",
+      "piso": "Piso completo",
+      "suelo": "Suelo",
+      "local": "Local comercial",
+      "otro": "Otro"
+    },
+    "finishes": {
+      "estandar": "Estándar",
+      "estandarDesc": "Reforma funcional, materiales de calidad media-alta",
+      "premium": "Premium",
+      "premiumDesc": "Materiales de marca, acabados cuidados, diseño personalizado",
+      "alto": "Alto standing",
+      "altoDesc": "Materiales de lujo, diseño a medida, máxima calidad"
+    },
+    "result": "Estimación orientativa",
+    "disclaimer": "*Estimación orientativa. El presupuesto definitivo se realiza tras visita técnica gratuita.",
+    "cta": "Recibir presupuesto personalizado",
+    "sqm": "m²"
+  },
+  "servicesGrid": {
+    "badge": "Servicios",
+    "title": "¿Qué podemos transformar?",
+    "description": "Desde cambiar un plato de ducha hasta reformar tu piso completo. Todo con el mismo cuidado.",
+    "viewMore": "Ver más",
+    "viewAll": "Ver todos los servicios"
+  },
+  "process": {
+    "badge": "Proceso",
+    "title": "Cómo trabajamos",
+    "description": "Un proceso claro de 5 pasos para que siempre sepas en qué punto está tu reforma.",
+    "steps": [
+      { "title": "Visita", "description": "Conocemos el espacio y entendemos lo que necesitas. Visita técnica gratuita y sin compromiso." },
+      { "title": "Planeamiento", "description": "Definimos materiales, funciones y prioridades contigo." },
+      { "title": "Presupuesto", "description": "Recibes una propuesta clara y desglosada. Sin sorpresas." },
+      { "title": "Ejecución", "description": "Nuestro equipo coordina y ejecuta los trabajos con orden y limpieza." },
+      { "title": "Entrega", "description": "Acabados, limpieza y revisión final contigo." }
+    ]
+  },
+  "gallery": {
+    "badge": "Transformaciones",
+    "title": "Proyectos que hablan por nosotros",
+    "description": "Una muestra de nuestras reformas recientes. Espacios reales, acabados reales.",
+    "cta": "Ver todas las transformaciones",
+    "filters": {
+      "all": "Todos",
+      "COCINA": "Cocinas",
+      "BANO": "Baños",
+      "PISO": "Pisos",
+      "SUELO": "Suelos",
+      "LOCAL": "Locales",
+      "phaseAll": "Todas las fases",
+      "ANTES": "En obra",
+      "DURANTE": "Durante",
+      "DESPUES": "Después",
+      "DETALLE": "Detalles"
+    },
+    "openImage": "Ampliar imagen",
+    "closeImage": "Cerrar",
+    "pageTitle": "Transformaciones reales",
+    "pageSub": "Más de 15 años dejando espacios como nuevos. Estas son algunas de nuestras reformas."
+  },
+  "whyJunior": {
+    "badge": "Por qué Junior",
+    "title": "¿Por qué confiar en Junior Reformas?",
+    "items": [
+      { "title": "15+ años de experiencia", "description": "Más de quince años reformando pisos, baños, cocinas y locales en Sabadell, Barcelona y alrededores." },
+      { "title": "Calidad en cada detalle", "description": "Juntas perfectas, acabados cuidados y materiales de primera calidad con garantía del fabricante." },
+      { "title": "Tranquilidad garantizada", "description": "Presupuesto desglosado, visita técnica gratuita y respuesta el mismo día. Acompañamiento en cada paso." }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonios",
+    "title": "Lo que dicen nuestros clientes",
+    "description": "Reseñas reales de clientes verificados.",
+    "verified": "Reseña verificada",
+    "source": "Google / ProntoPro"
+  },
+  "area": {
+    "badge": "Área de actuación",
+    "title": "Dónde trabajamos",
+    "description": "Base en Sabadell y cobertura en un radio de 40-50 km: Barcelona, Terrassa, Mataró y alrededores.",
+    "cta": "¿Tu zona está aquí? Contáctanos",
+    "main": "Zona principal"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Cuánto cuesta una reforma integral en Sabadell?",
+        "a": "Depende de los metros y el nivel de acabado. Como orientación, una reforma integral estándar suele partir de 400-600 €/m². Preparamos presupuesto desglosado gratuito tras la visita técnica."
+      },
+      {
+        "q": "¿Cuánto tarda reformar un baño?",
+        "a": "Una reforma de baño completa suele tardar entre 1 y 3 semanas según el alcance: demolición, instalaciones, alicatado, sanitarios y acabados."
+      },
+      {
+        "q": "¿Puedo vivir en casa durante la obra?",
+        "a": "En la mayoría de reformas parciales sí, con algo de planificación. En reformas integrales suele ser más cómodo buscar una alternativa temporal. Te lo explicamos en la visita."
+      },
+      {
+        "q": "¿Qué incluye una reforma integral?",
+        "a": "Demolición, albañilería, electricidad, fontanería, carpintería, suelos, pintura, cocina, baños y limpieza final. Todo coordinado por un solo equipo."
+      },
+      {
+        "q": "¿Necesito permisos para reformar?",
+        "a": "Para reformas interiores sin afectar estructura suele bastar una comunicación al ayuntamiento. Te asesoramos sobre los permisos necesarios en Sabadell, Barcelona, Terrassa y Mataró."
+      },
+      {
+        "q": "¿Qué garantía tienen los materiales?",
+        "a": "Trabajamos con materiales de primera calidad con garantía del fabricante. Además, revisamos contigo cada acabado antes de la entrega final."
+      }
+    ]
+  },
+  "blogPreview": {
+    "badge": "Guías",
+    "title": "Guías útiles sobre reformas",
+    "description": "Respuestas claras a las preguntas que todo el mundo se hace antes de reformar.",
+    "cta": "Ver todas las guías",
+    "readMore": "Leer guía",
+    "minRead": "min de lectura"
+  },
+  "ctaFinal": {
+    "title": "Imagina tu casa completamente diferente",
+    "sub": "Ahora imagina poder entrar en ella. Cuéntanos qué quieres reformar y te respondemos el mismo día.",
+    "ctaPrimary": "Pedir presupuesto gratuito",
+    "ctaWhatsapp": "Hablar directamente con Junior"
+  },
+  "footer": {
+    "slogan": "Calidad y confianza en cada reforma",
+    "quickLinks": "Enlaces rápidos",
+    "servicesTitle": "Servicios",
+    "localitiesTitle": "Localidades",
+    "contactTitle": "Contacto",
+    "legal": "Legal",
+    "legalNotice": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "cookies": "Política de cookies",
+    "hours": "Lun-Vie 9:00-18:00 · Sáb 9:00-13:00",
+    "rights": "Todos los derechos reservados."
+  },
+  "forms": {
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "phone": "Teléfono",
+    "phonePlaceholder": "600 000 000",
+    "email": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntanos qué quieres reformar...",
+    "gdpr": "Acepto la política de privacidad y el tratamiento de mis datos",
+    "gdprLink": "política de privacidad",
+    "marketing": "Quiero recibir información y ofertas por WhatsApp",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "Solicitud enviada. Te contactaremos en menos de 24h.",
+    "errorRequired": "Este campo es obligatorio",
+    "errorPhone": "Introduce un teléfono válido",
+    "errorEmail": "Introduce un email válido",
+    "errorPostal": "Introduce un código postal válido (5 dígitos)",
+    "errorGdpr": "Debes aceptar la política de privacidad",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "edit": "Editar",
+    "stepOf": "Paso {current} de {total}"
+  },
+  "budgetForm": {
+    "h1": "Solicita tu presupuesto gratis",
+    "sub": "Cuéntanos qué quieres reformar y te respondemos el mismo día. Sin compromiso.",
+    "steps": ["Tipo de reforma", "Ubicación", "Metros", "Acabado", "Tu proyecto", "Plazos", "Contacto"],
+    "s1title": "¿Qué quieres reformar?",
+    "s2title": "¿Dónde está?",
+    "postalCode": "Código postal",
+    "city": "Ciudad",
+    "cityOther": "Otra",
+    "s3title": "¿Metros cuadrados aproximados?",
+    "s3hint": "Un piso medio en Sabadell tiene unos 80-100 m²",
+    "s3unknown": "No lo sé",
+    "s4title": "¿Nivel de acabado?",
+    "s4disclaimer": "Precios orientativos por m². El presupuesto definitivo requiere visita técnica gratuita.",
+    "s5title": "¿Qué quieres conseguir?",
+    "s5placeholder": "Ej: Quiero reformar el baño completo, cambiar la bañera por plato de ducha, azulejos claros, iluminación LED...",
+    "s6title": "¿Cuándo quieres empezar?",
+    "s6options": ["Lo antes posible", "En 1-2 meses", "En 3-6 meses", "Aún no lo tengo claro, solo información"],
+    "s7title": "¿Cómo te contactamos?",
+    "contactPref": "¿Cómo prefieres que te contactemos?",
+    "prefWhatsapp": "WhatsApp",
+    "prefCall": "Llamada",
+    "prefEmail": "Email",
+    "summary": "Resumen de tu solicitud",
+    "submit": "Enviar solicitud",
+    "priceHint": "Precio orientativo"
+  },
+  "contact": {
+    "h1": "Contacto",
+    "sub": "Cuéntanos tu proyecto. Respondemos el mismo día.",
+    "direct": "Contacto directo",
+    "response": "Respuesta el mismo día",
+    "area": "Sabadell, Barcelona, Terrassa, Mataró y alrededores"
+  },
+  "thanks": {
+    "h1": "¡Gracias por contactarnos!",
+    "sub": "Hemos recibido tu solicitud. Junior te contactará en menos de 24h.",
+    "nextSteps": "Próximos pasos",
+    "steps": [
+      "Revisamos tu solicitud",
+      "Te llamamos para confirmar la visita",
+      "Visita técnica gratuita",
+      "Presupuesto desglosado en 3-5 días"
+    ],
+    "ctaProjects": "Mientras tanto, mira nuestras transformaciones",
+    "ctaBlog": "Lee nuestras guías sobre reformas",
+    "ctaWhatsapp": "Escribir por WhatsApp"
+  },
+  "about": {
+    "h1": "Quién está detrás de Junior Reformas",
+    "storyTitle": "La historia",
+    "story": [
+      "Junior Reformas nace de la experiencia de João Paulo de Oliveira Domingues, con más de 15 años dedicados a las reformas en Sabadell, Barcelona y alrededores.",
+      "Empezó como paleta y hoy coordina un equipo pequeño y estable de 2 a 5 personas que se ocupa de toda la obra: albañilería, fontanería, electricidad, carpintería, suelos y pintura.",
+      "La mayoría de nuestros clientes llegan por recomendación. Eso solo se consigue cuidando cada detalle y cumpliendo lo prometido."
+    ],
+    "philosophyTitle": "Nuestra filosofía",
+    "philosophy": [
+      { "title": "Calidad", "description": "Acabados cuidados y materiales de primera calidad con garantía del fabricante." },
+      { "title": "Transparencia", "description": "Presupuesto desglosado, sin sorpresas ni costes ocultos." },
+      { "title": "Tranquilidad", "description": "Un único equipo coordinando toda la obra. Tú solo disfrutas del resultado." },
+      { "title": "Acompañamiento", "description": "Desde la primera visita hasta la entrega final, siempre disponibles en el mismo teléfono." }
+    ],
+    "teamTitle": "El equipo",
+    "team": "Un equipo fijo de 2 a 5 personas: paleta, instaladores y carpintero. Cada uno con su especialidad, todos con el mismo cuidado por el detalle.",
+    "stats": [
+      { "value": "15+", "label": "años de experiencia" },
+      { "value": "Mismo día", "label": "tiempo de respuesta" },
+      { "value": "Gratis", "label": "visita técnica" },
+      { "value": "5★", "label": "valoración de clientes" }
+    ]
+  },
+  "processPage": {
+    "h1": "Cómo trabajamos",
+    "sub": "Un proceso probado en cientos de obras: claro, ordenado y sin sorpresas.",
+    "tips": [
+      "Aprovecha la visita para contarnos todo: ahora cambiar una pared cuesta poco; después, mucho más.",
+      "Te ayudamos a elegir materiales según tu presupuesto y el uso real de cada estancia.",
+      "Revisa el desglose partida por partida. Pregunta todo lo que no entiendas: para eso está.",
+      "Mantenemos la obra ordenada y te informamos del avance con fotos por WhatsApp.",
+      "Recorremos juntos cada estancia antes de cerrar. Si algo no está bien, lo corregimos."
+    ],
+    "faq": [
+      { "q": "¿La visita técnica tiene algún coste?", "a": "No. La visita es gratuita y sin compromiso en Sabadell, Barcelona, Terrassa, Mataró y alrededores." },
+      { "q": "¿Cuánto tarda el presupuesto?", "a": "Tras la visita, recibes el presupuesto desglosado en 3-5 días laborables." },
+      { "q": "¿Quién coordina a los distintos gremios?", "a": "Junior coordina personalmente todo el equipo: albañilería, fontanería, electricidad y carpintería. Un solo interlocutor." },
+      { "q": "¿Cómo se paga la reforma?", "a": "Aceptamos transferencia, efectivo y tarjeta o Bizum. Los pagos se escalonan según el avance de la obra, nunca todo por adelantado." }
+    ],
+    "cta": "Empezar ahora"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "cta": "Volver al inicio",
+    "popular": "Páginas populares"
+  },
+  "whatsapp": { "ariaLabel": "Contactar por WhatsApp", "message": "Hola Junior, quiero pedir presupuesto para una reforma." },
+  "breadcrumb": { "home": "Inicio" },
+  "related": { "title": "También te interesa" },
+  "common": { "callUs": "Llámanos", "writeUs": "Escríbenos", "freeVisit": "Visita técnica gratuita", "sameDay": "Respuesta el mismo día" }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "jr-reformas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "verify": "node scripts/verify-build.js"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "framer-motion": "^11.11.0",
+    "lucide-react": "^0.453.0",
+    "next": "^16.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^10.8.1",
+    "eslint-config-next": "^16.3.1",
+    "playwright-core": "^1.62.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.0"
+  }
+}

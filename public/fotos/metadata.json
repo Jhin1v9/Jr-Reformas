@@ -1,0 +1,702 @@
+{
+  "project": "Junior Reformas",
+  "total_photos": 32,
+  "date_classified": "2026-08-20",
+  "photos": [
+    {
+      "id": "jr-001",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.09.jpeg",
+      "new_filename": "despues/bano-marmol-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Baño reformado con azulejos efecto mármol, plato de ducha a ras de suelo y mampara de cristal",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": true,
+      "par_id": "par-bano-hexagonal-01",
+      "alt_text": "Baño reformado con azulejos efecto mármol, plato de ducha a ras de suelo y mampara de cristal — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-marmol-despues-01-thumb.webp",
+        "gallery": "despues/bano-marmol-despues-01-gallery.webp",
+        "hero": "despues/bano-marmol-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-002",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.10 (1).jpeg",
+      "new_filename": "despues/bano-doble-lavabo-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Baño con mueble de doble lavabo y espejos con luz LED integrada",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño con mueble de doble lavabo y espejos con luz LED integrada — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-doble-lavabo-despues-01-thumb.webp",
+        "gallery": "despues/bano-doble-lavabo-despues-01-gallery.webp",
+        "hero": "despues/bano-doble-lavabo-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-003",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.10.jpeg",
+      "new_filename": "despues/bano-marmol-despues-02.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Baño completo con revestimiento efecto mármol, lavabo con mueble de madera y ducha acristalada",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño completo con revestimiento efecto mármol, lavabo con mueble de madera y ducha acristalada — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-marmol-despues-02-thumb.webp",
+        "gallery": "despues/bano-marmol-despues-02-gallery.webp",
+        "hero": "despues/bano-marmol-despues-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-004",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.11 (1).jpeg",
+      "new_filename": "despues/bano-led-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Baño moderno con doble espejo retroiluminado LED y ducha a ras",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": true,
+      "par_id": "par-bano-instal-01",
+      "alt_text": "Baño moderno con doble espejo retroiluminado LED y ducha a ras — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-led-despues-01-thumb.webp",
+        "gallery": "despues/bano-led-despues-01-gallery.webp",
+        "hero": "despues/bano-led-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-005",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.11 (2).jpeg",
+      "new_filename": "despues/bano-led-despues-02.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Zona de lavabo con espejo LED y grifería moderna en baño reformado",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Zona de lavabo con espejo LED y grifería moderna en baño reformado — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-led-despues-02-thumb.webp",
+        "gallery": "despues/bano-led-despues-02-gallery.webp",
+        "hero": "despues/bano-led-despues-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-006",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.11.jpeg",
+      "new_filename": "detalles/bano-detalle-espejo-led-01.jpg",
+      "fase": "DETALLE",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Detalle de espejo retroiluminado LED y lavabo de porcelana en baño reformado",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Detalle de espejo retroiluminado LED y lavabo de porcelana en baño reformado — Junior Reformas",
+      "sizes": {
+        "thumb": "detalles/bano-detalle-espejo-led-01-thumb.webp",
+        "gallery": "detalles/bano-detalle-espejo-led-01-gallery.webp",
+        "hero": "detalles/bano-detalle-espejo-led-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-007",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.12 (1).jpeg",
+      "new_filename": "despues/piso-pasillo-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "PISO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Pasillo de piso reformado con cocina integrada e iluminación LED en techo",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Pasillo de piso reformado con cocina integrada e iluminación LED en techo — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/piso-pasillo-despues-01-thumb.webp",
+        "gallery": "despues/piso-pasillo-despues-01-gallery.webp",
+        "hero": "despues/piso-pasillo-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-008",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.12 (2).jpeg",
+      "new_filename": "despues/bano-completo-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño completo reformado con revestimiento gris y radiador toallero",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño completo reformado con revestimiento gris y radiador toallero — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-completo-despues-01-thumb.webp",
+        "gallery": "despues/bano-completo-despues-01-gallery.webp",
+        "hero": "despues/bano-completo-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-009",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.12.jpeg",
+      "new_filename": "despues/bano-completo-despues-02.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño reformado con lavabo suspendido, espejo LED y ducha con mampara",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño reformado con lavabo suspendido, espejo LED y ducha con mampara — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-completo-despues-02-thumb.webp",
+        "gallery": "despues/bano-completo-despues-02-gallery.webp",
+        "hero": "despues/bano-completo-despues-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-010",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.13 (1).jpeg",
+      "new_filename": "despues/cocina-negra-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "COCINA",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Cocina moderna en tonos grafito con iluminación LED bajo muebles altos",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Cocina moderna en tonos grafito con iluminación LED bajo muebles altos — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/cocina-negra-despues-01-thumb.webp",
+        "gallery": "despues/cocina-negra-despues-01-gallery.webp",
+        "hero": "despues/cocina-negra-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-011",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.13 (2).jpeg",
+      "new_filename": "durante/bano-hexagonal-durante-01.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Aseo en obra con suelo de gres hexagonal negro y plato de ducha instalado",
+      "width": 1512,
+      "height": 2016,
+      "tiene_par": true,
+      "par_id": "par-bano-hexagonal-01",
+      "alt_text": "Aseo en obra con suelo de gres hexagonal negro y plato de ducha instalado — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-hexagonal-durante-01-thumb.webp",
+        "gallery": "durante/bano-hexagonal-durante-01-gallery.webp",
+        "hero": "durante/bano-hexagonal-durante-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-012",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.13 (3).jpeg",
+      "new_filename": "detalles/bano-detalle-alicatado-01.jpg",
+      "fase": "DETALLE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Detalle de alicatado gris y plato de ducha extraplano recién instalado",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Detalle de alicatado gris y plato de ducha extraplano recién instalado — Junior Reformas",
+      "sizes": {
+        "thumb": "detalles/bano-detalle-alicatado-01-thumb.webp",
+        "gallery": "detalles/bano-detalle-alicatado-01-gallery.webp",
+        "hero": "detalles/bano-detalle-alicatado-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-013",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.13.jpeg",
+      "new_filename": "despues/bano-gris-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño con revestimiento porcelánico gris en paredes y suelo",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño con revestimiento porcelánico gris en paredes y suelo — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-gris-despues-01-thumb.webp",
+        "gallery": "despues/bano-gris-despues-01-gallery.webp",
+        "hero": "despues/bano-gris-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-014",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.14 (1).jpeg",
+      "new_filename": "detalles/bano-detalle-alicatado-02.jpg",
+      "fase": "DETALLE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Detalle de juntas perfectas en alicatado porcelánico gris de ducha",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Detalle de juntas perfectas en alicatado porcelánico gris de ducha — Junior Reformas",
+      "sizes": {
+        "thumb": "detalles/bano-detalle-alicatado-02-thumb.webp",
+        "gallery": "detalles/bano-detalle-alicatado-02-gallery.webp",
+        "hero": "detalles/bano-detalle-alicatado-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-015",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.14 (2).jpeg",
+      "new_filename": "durante/bano-gris-durante-01.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Ducha alicatada en gris con tomas de fontanería preparadas para grifería",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Ducha alicatada en gris con tomas de fontanería preparadas para grifería — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-gris-durante-01-thumb.webp",
+        "gallery": "durante/bano-gris-durante-01-gallery.webp",
+        "hero": "durante/bano-gris-durante-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-016",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.14.jpeg",
+      "new_filename": "despues/cocina-azul-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "COCINA",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Cocina reformada con muebles azules y encimera de madera",
+      "width": 1080,
+      "height": 1920,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Cocina reformada con muebles azules y encimera de madera — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/cocina-azul-despues-01-thumb.webp",
+        "gallery": "despues/cocina-azul-despues-01-gallery.webp",
+        "hero": "despues/cocina-azul-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-017",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.15 (1).jpeg",
+      "new_filename": "despues/bano-ducha-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Ducha alicatada en porcelánico gris con esquinas perfectamente rematadas",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": true,
+      "par_id": "par-bano-gris-01",
+      "alt_text": "Ducha alicatada en porcelánico gris con esquinas perfectamente rematadas — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-ducha-despues-01-thumb.webp",
+        "gallery": "despues/bano-ducha-despues-01-gallery.webp",
+        "hero": "despues/bano-ducha-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-018",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.15.jpeg",
+      "new_filename": "despues/bano-ducha-despues-02.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Zona de ducha con alicatado gris y plato de ducha blanco",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Zona de ducha con alicatado gris y plato de ducha blanco — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-ducha-despues-02-thumb.webp",
+        "gallery": "despues/bano-ducha-despues-02-gallery.webp",
+        "hero": "despues/bano-ducha-despues-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-019",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.16 (1).jpeg",
+      "new_filename": "durante/bano-blanco-durante-01.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño en fase de alicatado con azulejo blanco e instalaciones vistas",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": true,
+      "par_id": "par-bano-instal-01",
+      "alt_text": "Baño en fase de alicatado con azulejo blanco e instalaciones vistas — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-01-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-01-gallery.webp",
+        "hero": "durante/bano-blanco-durante-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-020",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.16 (2).jpeg",
+      "new_filename": "durante/bano-blanco-durante-02.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño en obra con alicatado blanco y suelo porcelánico colocado",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": true,
+      "par_id": "par-bano-blanco-01",
+      "alt_text": "Baño en obra con alicatado blanco y suelo porcelánico colocado — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-02-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-02-gallery.webp",
+        "hero": "durante/bano-blanco-durante-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-021",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.16.jpeg",
+      "new_filename": "durante/bano-blanco-durante-03.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Alicatado de baño en curso con salidas de fontanería preparadas",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Alicatado de baño en curso con salidas de fontanería preparadas — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-03-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-03-gallery.webp",
+        "hero": "durante/bano-blanco-durante-03-hero.webp"
+      }
+    },
+    {
+      "id": "jr-022",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.17 (1).jpeg",
+      "new_filename": "durante/bano-blanco-durante-04.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño en obra con azulejo blanco y mecanismo de cisterna empotrada",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño en obra con azulejo blanco y mecanismo de cisterna empotrada — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-04-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-04-gallery.webp",
+        "hero": "durante/bano-blanco-durante-04-hero.webp"
+      }
+    },
+    {
+      "id": "jr-023",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.17 (2).jpeg",
+      "new_filename": "durante/bano-blanco-durante-05.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Tabiques alicatados en baño durante la reforma",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Tabiques alicatados en baño durante la reforma — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-05-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-05-gallery.webp",
+        "hero": "durante/bano-blanco-durante-05-hero.webp"
+      }
+    },
+    {
+      "id": "jr-024",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.17 (3).jpeg",
+      "new_filename": "durante/bano-blanco-durante-06.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Alicatado blanco de baño con instalación eléctrica preparada",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Alicatado blanco de baño con instalación eléctrica preparada — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-06-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-06-gallery.webp",
+        "hero": "durante/bano-blanco-durante-06-hero.webp"
+      }
+    },
+    {
+      "id": "jr-025",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.17 (4).jpeg",
+      "new_filename": "durante/bano-blanco-durante-07.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño en fase de alicatado con desagüe lineal en suelo",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño en fase de alicatado con desagüe lineal en suelo — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-07-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-07-gallery.webp",
+        "hero": "durante/bano-blanco-durante-07-hero.webp"
+      }
+    },
+    {
+      "id": "jr-026",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.17.jpeg",
+      "new_filename": "durante/bano-blanco-durante-08.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Esquina de baño alicatada en blanco durante la obra",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Esquina de baño alicatada en blanco durante la obra — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-blanco-durante-08-thumb.webp",
+        "gallery": "durante/bano-blanco-durante-08-gallery.webp",
+        "hero": "durante/bano-blanco-durante-08-hero.webp"
+      }
+    },
+    {
+      "id": "jr-027",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.18 (1).jpeg",
+      "new_filename": "despues/bano-termo-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Baño terminado con mampara de ducha, termo eléctrico e inodoro instalados",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Baño terminado con mampara de ducha, termo eléctrico e inodoro instalados — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-termo-despues-01-thumb.webp",
+        "gallery": "despues/bano-termo-despues-01-gallery.webp",
+        "hero": "despues/bano-termo-despues-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-028",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.18 (2).jpeg",
+      "new_filename": "durante/bano-radiador-durante-01.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Radiador toallero instalado y cisterna empotrada durante reforma de baño",
+      "width": 1530,
+      "height": 2040,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Radiador toallero instalado y cisterna empotrada durante reforma de baño — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-radiador-durante-01-thumb.webp",
+        "gallery": "durante/bano-radiador-durante-01-gallery.webp",
+        "hero": "durante/bano-radiador-durante-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-029",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.18.jpeg",
+      "new_filename": "durante/bano-ducha-durante-01.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Ducha alicatada con desagüe lineal en fase de obra",
+      "width": 2048,
+      "height": 1536,
+      "tiene_par": true,
+      "par_id": "par-bano-gris-01",
+      "alt_text": "Ducha alicatada con desagüe lineal en fase de obra — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-ducha-durante-01-thumb.webp",
+        "gallery": "durante/bano-ducha-durante-01-gallery.webp",
+        "hero": "durante/bano-ducha-durante-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-030",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.19.jpeg",
+      "new_filename": "durante/bano-hexagonal-durante-02.jpg",
+      "fase": "DURANTE",
+      "categoria": "BANO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Aseo con suelo hexagonal negro e inodoro instalado durante la reforma",
+      "width": 1512,
+      "height": 2016,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Aseo con suelo hexagonal negro e inodoro instalado durante la reforma — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/bano-hexagonal-durante-02-thumb.webp",
+        "gallery": "durante/bano-hexagonal-durante-02-gallery.webp",
+        "hero": "durante/bano-hexagonal-durante-02-hero.webp"
+      }
+    },
+    {
+      "id": "jr-031",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.20.jpeg",
+      "new_filename": "durante/suelo-nivelacion-durante-01.jpg",
+      "fase": "DURANTE",
+      "categoria": "SUELO",
+      "calidad": "MQ",
+      "localidad": "GEN",
+      "descripcion": "Colocación de suelo porcelánico con sistema de nivelación durante la reforma",
+      "width": 947,
+      "height": 2048,
+      "tiene_par": false,
+      "par_id": null,
+      "alt_text": "Colocación de suelo porcelánico con sistema de nivelación durante la reforma — Junior Reformas",
+      "sizes": {
+        "thumb": "durante/suelo-nivelacion-durante-01-thumb.webp",
+        "gallery": "durante/suelo-nivelacion-durante-01-gallery.webp",
+        "hero": "durante/suelo-nivelacion-durante-01-hero.webp"
+      }
+    },
+    {
+      "id": "jr-032",
+      "original_filename": "WhatsApp Image 2026-08-11 at 18.15.30.jpeg",
+      "new_filename": "despues/bano-mampara-despues-01.jpg",
+      "fase": "DESPUES",
+      "categoria": "BANO",
+      "calidad": "HQ",
+      "localidad": "GEN",
+      "descripcion": "Baño completo terminado con mampara de ducha corredera, mueble lavabo e inodoro",
+      "width": 1536,
+      "height": 2048,
+      "tiene_par": true,
+      "par_id": "par-bano-blanco-01",
+      "alt_text": "Baño completo terminado con mampara de ducha corredera, mueble lavabo e inodoro — Junior Reformas",
+      "sizes": {
+        "thumb": "despues/bano-mampara-despues-01-thumb.webp",
+        "gallery": "despues/bano-mampara-despues-01-gallery.webp",
+        "hero": "despues/bano-mampara-despues-01-hero.webp"
+      }
+    }
+  ],
+  "pares": [
+    {
+      "par_id": "par-bano-blanco-01",
+      "antes_id": "jr-020",
+      "despues_id": "jr-032",
+      "antes_file": "durante/bano-blanco-durante-02-gallery.webp",
+      "despues_file": "despues/bano-mampara-despues-01-gallery.webp",
+      "categoria": "BANO",
+      "localidad": "GEN",
+      "descripcion": "Transformación de baño completo: del alicatado en obra al baño terminado con mampara"
+    },
+    {
+      "par_id": "par-bano-gris-01",
+      "antes_id": "jr-029",
+      "despues_id": "jr-017",
+      "antes_file": "durante/bano-ducha-durante-01-gallery.webp",
+      "despues_file": "despues/bano-ducha-despues-01-gallery.webp",
+      "categoria": "BANO",
+      "localidad": "GEN",
+      "descripcion": "Transformación de ducha: alicatado en obra y acabado final en porcelánico gris"
+    },
+    {
+      "par_id": "par-bano-hexagonal-01",
+      "antes_id": "jr-011",
+      "despues_id": "jr-001",
+      "antes_file": "durante/bano-hexagonal-durante-01-gallery.webp",
+      "despues_file": "despues/bano-marmol-despues-01-gallery.webp",
+      "categoria": "BANO",
+      "localidad": "GEN",
+      "descripcion": "De obra en curso a baño terminado con ducha a ras de suelo"
+    },
+    {
+      "par_id": "par-bano-instal-01",
+      "antes_id": "jr-019",
+      "despues_id": "jr-004",
+      "antes_file": "durante/bano-blanco-durante-01-gallery.webp",
+      "despues_file": "despues/bano-led-despues-01-gallery.webp",
+      "categoria": "BANO",
+      "localidad": "GEN",
+      "descripcion": "De instalaciones vistas a baño moderno con espejos LED"
+    }
+  ],
+  "stats": {
+    "total": 32,
+    "hq": 9,
+    "mq": 23,
+    "lq": 0,
+    "pares_completos": 4,
+    "por_categoria": {
+      "BANO": 28,
+      "PISO": 1,
+      "COCINA": 2,
+      "SUELO": 1
+    }
+  }
+}

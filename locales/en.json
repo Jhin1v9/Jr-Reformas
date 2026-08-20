@@ -1,0 +1,309 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "localities": "Where we work",
+    "gallery": "Transformations",
+    "beforeAfter": "Before & after",
+    "process": "How we work",
+    "about": "About Junior",
+    "blog": "Guides",
+    "contact": "Contact",
+    "budget": "Get a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "changeLanguage": "Change language"
+  },
+  "hero": {
+    "badge1": "15+ years of experience",
+    "badge2": "Same-day response",
+    "badge3": "Direct WhatsApp",
+    "h1": "Full home renovations in Sabadell and surroundings",
+    "sub": "Over 15 years transforming spaces. From a shower tray to a complete renovation. Itemised quote and free technical visit.",
+    "ctaPrimary": "Get a free quote",
+    "ctaSecondary": "See transformations"
+  },
+  "beforeAfter": {
+    "badge": "Before & after",
+    "title": "The transformation speaks for itself",
+    "description": "Drag the handle and compare the work-in-progress state with the final finish. Real renovations, no filters.",
+    "before": "In progress",
+    "after": "After",
+    "cta": "See all transformations"
+  },
+  "calculator": {
+    "badge": "Calculator",
+    "title": "How much could your renovation cost?",
+    "description": "Three questions and you get an instant rough estimate.",
+    "step1": "What do you want to renovate?",
+    "step2": "Approximate square metres",
+    "step3": "Finish level",
+    "types": {
+      "bano": "Bathroom",
+      "cocina": "Kitchen",
+      "piso": "Whole flat",
+      "suelo": "Flooring",
+      "local": "Commercial premises",
+      "otro": "Other"
+    },
+    "finishes": {
+      "estandar": "Standard",
+      "estandarDesc": "Functional renovation, mid-to-high quality materials",
+      "premium": "Premium",
+      "premiumDesc": "Brand materials, careful finishes, custom design",
+      "alto": "High end",
+      "altoDesc": "Luxury materials, bespoke design, top quality"
+    },
+    "result": "Rough estimate",
+    "disclaimer": "*Rough estimate. The final quote is prepared after a free technical visit.",
+    "cta": "Get a personalised quote",
+    "sqm": "m²"
+  },
+  "servicesGrid": {
+    "badge": "Services",
+    "title": "What can we transform?",
+    "description": "From replacing a shower tray to renovating your entire flat. All with the same care.",
+    "viewMore": "See more",
+    "viewAll": "See all services"
+  },
+  "process": {
+    "badge": "Process",
+    "title": "How we work",
+    "description": "A clear 5-step process so you always know where your renovation stands.",
+    "steps": [
+      { "title": "Visit", "description": "We see the space and understand what you need. Free technical visit, no obligation." },
+      { "title": "Planning", "description": "We define materials, functions and priorities with you." },
+      { "title": "Quote", "description": "You receive a clear, itemised proposal. No surprises." },
+      { "title": "Execution", "description": "Our team coordinates and carries out the work, tidy and clean." },
+      { "title": "Handover", "description": "Finishes, cleaning and final review with you." }
+    ]
+  },
+  "gallery": {
+    "badge": "Transformations",
+    "title": "Projects that speak for us",
+    "description": "A sample of our recent renovations. Real spaces, real finishes.",
+    "cta": "See all transformations",
+    "filters": {
+      "all": "All",
+      "COCINA": "Kitchens",
+      "BANO": "Bathrooms",
+      "PISO": "Flats",
+      "SUELO": "Floors",
+      "LOCAL": "Commercial",
+      "phaseAll": "All phases",
+      "ANTES": "In progress",
+      "DURANTE": "During",
+      "DESPUES": "After",
+      "DETALLE": "Details"
+    },
+    "openImage": "Enlarge image",
+    "closeImage": "Close",
+    "pageTitle": "Real transformations",
+    "pageSub": "Over 15 years leaving spaces like new. These are some of our renovations."
+  },
+  "whyJunior": {
+    "badge": "Why Junior",
+    "title": "Why trust Junior Reformas?",
+    "items": [
+      { "title": "15+ years of experience", "description": "Over fifteen years renovating flats, bathrooms, kitchens and commercial premises in Sabadell, Barcelona and surroundings." },
+      { "title": "Quality in every detail", "description": "Perfect joints, careful finishes and first-quality materials with manufacturer's warranty." },
+      { "title": "Guaranteed peace of mind", "description": "Itemised quote, free technical visit and same-day response. Support at every step." }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What our clients say",
+    "description": "Real reviews from verified clients.",
+    "verified": "Verified review",
+    "source": "Google / ProntoPro"
+  },
+  "area": {
+    "badge": "Service area",
+    "title": "Where we work",
+    "description": "Based in Sabadell, covering a 40-50 km radius: Barcelona, Terrassa, Mataró and surroundings.",
+    "cta": "Is your area here? Contact us",
+    "main": "Main area"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How much does a full renovation cost in Sabadell?",
+        "a": "It depends on size and finish level. As a guide, a standard full renovation usually starts at €400-600/m². We prepare a free itemised quote after the technical visit."
+      },
+      {
+        "q": "How long does a bathroom renovation take?",
+        "a": "A complete bathroom renovation usually takes 1 to 3 weeks depending on scope: demolition, plumbing and electrics, tiling, fixtures and finishes."
+      },
+      {
+        "q": "Can I live at home during the works?",
+        "a": "For most partial renovations, yes, with some planning. For full renovations a temporary alternative is usually more comfortable. We explain it during the visit."
+      },
+      {
+        "q": "What does a full renovation include?",
+        "a": "Demolition, masonry, electrics, plumbing, carpentry, flooring, painting, kitchen, bathrooms and final cleaning. All coordinated by a single team."
+      },
+      {
+        "q": "Do I need permits to renovate?",
+        "a": "For interior renovations that don't affect the structure, a notice to the town hall is usually enough. We advise you on the permits needed in Sabadell, Barcelona, Terrassa and Mataró."
+      },
+      {
+        "q": "What warranty do the materials have?",
+        "a": "We work with first-quality materials with manufacturer's warranty. We also review every finish with you before final handover."
+      }
+    ]
+  },
+  "blogPreview": {
+    "badge": "Guides",
+    "title": "Useful renovation guides",
+    "description": "Clear answers to the questions everyone asks before renovating.",
+    "cta": "See all guides",
+    "readMore": "Read guide",
+    "minRead": "min read"
+  },
+  "ctaFinal": {
+    "title": "Imagine your home completely different",
+    "sub": "Now imagine walking into it. Tell us what you want to renovate and we'll reply the same day.",
+    "ctaPrimary": "Get a free quote",
+    "ctaWhatsapp": "Talk directly with Junior"
+  },
+  "footer": {
+    "slogan": "Quality and trust in every renovation",
+    "quickLinks": "Quick links",
+    "servicesTitle": "Services",
+    "localitiesTitle": "Locations",
+    "contactTitle": "Contact",
+    "legal": "Legal",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "hours": "Mon-Fri 9:00-18:00 · Sat 9:00-13:00",
+    "rights": "All rights reserved."
+  },
+  "forms": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "phone": "Phone",
+    "phonePlaceholder": "600 000 000",
+    "email": "Email",
+    "emailPlaceholder": "you@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell us what you want to renovate...",
+    "gdpr": "I accept the privacy policy and the processing of my data",
+    "gdprLink": "privacy policy",
+    "marketing": "I want to receive information and offers via WhatsApp",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Request sent. We'll contact you within 24h.",
+    "errorRequired": "This field is required",
+    "errorPhone": "Enter a valid phone number",
+    "errorEmail": "Enter a valid email",
+    "errorPostal": "Enter a valid postal code (5 digits)",
+    "errorGdpr": "You must accept the privacy policy",
+    "next": "Next",
+    "back": "Back",
+    "edit": "Edit",
+    "stepOf": "Step {current} of {total}"
+  },
+  "budgetForm": {
+    "h1": "Request your free quote",
+    "sub": "Tell us what you want to renovate and we'll reply the same day. No obligation.",
+    "steps": ["Renovation type", "Location", "Size", "Finish", "Your project", "Timeline", "Contact"],
+    "s1title": "What do you want to renovate?",
+    "s2title": "Where is it?",
+    "postalCode": "Postal code",
+    "city": "City",
+    "cityOther": "Other",
+    "s3title": "Approximate square metres?",
+    "s3hint": "An average flat in Sabadell is around 80-100 m²",
+    "s3unknown": "I don't know",
+    "s4title": "Finish level?",
+    "s4disclaimer": "Guide prices per m². The final quote requires a free technical visit.",
+    "s5title": "What do you want to achieve?",
+    "s5placeholder": "E.g.: I want to renovate the whole bathroom, replace the bathtub with a walk-in shower, light tiles, LED lighting...",
+    "s6title": "When do you want to start?",
+    "s6options": ["As soon as possible", "In 1-2 months", "In 3-6 months", "Not sure yet, just gathering information"],
+    "s7title": "How do we contact you?",
+    "contactPref": "How do you prefer we contact you?",
+    "prefWhatsapp": "WhatsApp",
+    "prefCall": "Phone call",
+    "prefEmail": "Email",
+    "summary": "Your request summary",
+    "submit": "Send request",
+    "priceHint": "Guide price"
+  },
+  "contact": {
+    "h1": "Contact",
+    "sub": "Tell us about your project. We reply the same day.",
+    "direct": "Direct contact",
+    "response": "Same-day response",
+    "area": "Sabadell, Barcelona, Terrassa, Mataró and surroundings"
+  },
+  "thanks": {
+    "h1": "Thank you for contacting us!",
+    "sub": "We've received your request. Junior will contact you within 24h.",
+    "nextSteps": "Next steps",
+    "steps": [
+      "We review your request",
+      "We call you to confirm the visit",
+      "Free technical visit",
+      "Itemised quote within 3-5 days"
+    ],
+    "ctaProjects": "Meanwhile, take a look at our transformations",
+    "ctaBlog": "Read our renovation guides",
+    "ctaWhatsapp": "Message us on WhatsApp"
+  },
+  "about": {
+    "h1": "Who's behind Junior Reformas",
+    "storyTitle": "Our story",
+    "story": [
+      "Junior Reformas was born from the experience of João Paulo de Oliveira Domingues, with over 15 years dedicated to renovations in Sabadell, Barcelona and surroundings.",
+      "He started as a bricklayer and today coordinates a small, stable team of 2 to 5 people covering the whole project: masonry, plumbing, electrics, carpentry, flooring and painting.",
+      "Most of our clients come through recommendations. That only happens by caring for every detail and delivering what was promised."
+    ],
+    "philosophyTitle": "Our philosophy",
+    "philosophy": [
+      { "title": "Quality", "description": "Careful finishes and first-quality materials with manufacturer's warranty." },
+      { "title": "Transparency", "description": "Itemised quote, no surprises or hidden costs." },
+      { "title": "Peace of mind", "description": "A single team coordinating the whole project. You just enjoy the result." },
+      { "title": "Support", "description": "From the first visit to final handover, always reachable at the same phone number." }
+    ],
+    "teamTitle": "The team",
+    "team": "A permanent team of 2 to 5 people: bricklayer, installers and carpenter. Each with their speciality, all with the same eye for detail.",
+    "stats": [
+      { "value": "15+", "label": "years of experience" },
+      { "value": "Same day", "label": "response time" },
+      { "value": "Free", "label": "technical visit" },
+      { "value": "5★", "label": "client rating" }
+    ]
+  },
+  "processPage": {
+    "h1": "How we work",
+    "sub": "A process proven on hundreds of projects: clear, tidy and surprise-free.",
+    "tips": [
+      "Use the visit to tell us everything: moving a wall now costs little; later, much more.",
+      "We help you choose materials based on your budget and the real use of each room.",
+      "Review the breakdown item by item. Ask about anything you don't understand: that's what it's for.",
+      "We keep the site tidy and update you on progress with WhatsApp photos.",
+      "We walk through every room together before closing. If something isn't right, we fix it."
+    ],
+    "faq": [
+      { "q": "Does the technical visit cost anything?", "a": "No. The visit is free and without obligation in Sabadell, Barcelona, Terrassa, Mataró and surroundings." },
+      { "q": "How long does the quote take?", "a": "After the visit, you receive the itemised quote within 3-5 working days." },
+      { "q": "Who coordinates the different trades?", "a": "Junior personally coordinates the whole team: masonry, plumbing, electrics and carpentry. A single point of contact." },
+      { "q": "How is the renovation paid?", "a": "We accept bank transfer, cash and card or Bizum. Payments are staggered according to work progress, never everything upfront." }
+    ],
+    "cta": "Start now"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "cta": "Back to home",
+    "popular": "Popular pages"
+  },
+  "whatsapp": { "ariaLabel": "Contact via WhatsApp", "message": "Hi Junior, I'd like to request a quote for a renovation." },
+  "breadcrumb": { "home": "Home" },
+  "related": { "title": "You may also be interested in" },
+  "common": { "callUs": "Call us", "writeUs": "Write to us", "freeVisit": "Free technical visit", "sameDay": "Same-day response" }
+}
