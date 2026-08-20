@@ -3,7 +3,6 @@ import { type Locale } from '@/lib/constants';
 import { isLocale, getDictionary, localePath } from '@/lib/i18n';
 import HeroCarousel from '@/components/sections/HeroCarousel';
 import StatsBanner from '@/components/sections/StatsBanner';
-import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
 import BudgetCalculator from '@/components/sections/BudgetCalculator';
 import ServicesPhotoGrid from '@/components/sections/ServicesPhotoGrid';
 import ProcessPhotoTimeline from '@/components/sections/ProcessPhotoTimeline';
@@ -31,7 +30,6 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroCarousel locale={locale} />
       <StatsBanner locale={locale} />
-      <BeforeAfterSection locale={locale} />
       <SectionWrapper variant="dark" id="calculadora">
         <SectionHeader badge={t.calculator.badge} title={t.calculator.title} description={t.calculator.description} />
         <BudgetCalculator

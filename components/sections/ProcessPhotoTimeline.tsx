@@ -28,6 +28,7 @@ export default function ProcessPhotoTimeline({ locale }: Props) {
       <SectionHeader badge={t.process.badge} title={t.process.title} description={t.process.description} />
 
       <div className="relative">
+        {/* Linha conectora */}
         <div
           className="absolute left-6 top-0 h-full w-0.5 bg-carbon-mid md:left-1/2 md:-translate-x-1/2"
           aria-hidden="true"
@@ -39,28 +40,41 @@ export default function ProcessPhotoTimeline({ locale }: Props) {
             const isEven = i % 2 === 0;
             return (
               <li key={step.title} className="relative">
-                <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
+                {/* Marcador do timeline */}
+                <div
+                  className="absolute left-6 top-8 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-terracota bg-carbon md:left-1/2 md:top-1/2 md:-translate-y-1/2"
+                  aria-hidden="true"
+                >
+                  <span className="text-xs font-bold text-terracota">{i + 1}</span>
+                </div>
+
+                <div className="grid items-center gap-6 pl-16 md:grid-cols-2 md:gap-16 md:pl-0">
+                  {/* Foto */}
                   <Reveal delay={i * 100}>
-                    <div className={`${isEven ? 'md:order-1 md:pr-12' : 'md:order-2 md:pl-12'}`}>
-                      <figure className="group relative aspect-[4/3] overflow-hidden rounded-2xl">
-                        <Image
-                          src={fotoUrl(photo.file)}
-                          alt={photo.alt}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          loading="lazy"
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent" aria-hidden="true" />
-                        <figcaption className="absolute bottom-4 left-4 rounded-full bg-terracota px-3 py-1 text-xs font-bold text-offwhite">
-                          {String(i + 1).padStart(2, '0')}
-                        </figcaption>
-                      </figure>
-                    </div>
+                    <figure
+                      className={`group relative aspect-[4/3] overflow-hidden rounded-2xl ${
+                        isEven ? 'md:order-1 md:pr-12' : 'md:order-2 md:pl-12'
+                      }`}
+                    >
+                      <Image
+                        src={fotoUrl(photo.file)}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent" aria-hidden="true" />
+                    </figure>
                   </Reveal>
 
+                  {/* Texto */}
                   <Reveal delay={i * 100 + 80}>
-                    <div className={`${isEven ? 'md:order-2 md:pl-12 md:text-left' : 'md:order-1 md:pr-12 md:text-right'}`}>
+                    <div
+                      className={`${
+                        isEven ? 'md:order-2 md:pl-12 md:text-left' : 'md:order-1 md:pr-12 md:text-right'
+                      }`}
+                    >
                       <span className="inline-block rounded-full border border-terracota/50 bg-terracota/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-terracota">
                         Paso {i + 1}
                       </span>
@@ -72,13 +86,6 @@ export default function ProcessPhotoTimeline({ locale }: Props) {
                       </p>
                     </div>
                   </Reveal>
-                </div>
-
-                <div
-                  className="absolute left-6 top-1/2 z-10 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-terracota bg-carbon md:left-1/2"
-                  aria-hidden="true"
-                >
-                  <span className="text-xs font-bold text-terracota">{i + 1}</span>
                 </div>
               </li>
             );
