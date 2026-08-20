@@ -3,12 +3,13 @@ import { notFound } from 'next/navigation';
 import { type Locale } from '@/lib/constants';
 import { isLocale, getDictionary } from '@/lib/i18n';
 import { pageMetadata } from '@/lib/seo';
-import { allPhotos } from '@/lib/photos';
+import { fotoUrl } from '@/lib/photos';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeader from '@/components/shared/SectionHeader';
 import Breadcrumb from '@/components/shared/Breadcrumb';
 import GalleryMasonry from '@/components/sections/GalleryMasonry';
 import CTAFinal from '@/components/sections/CTAFinal';
+import { type MasonryItem } from '@/components/shared/MasonryGrid';
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -35,44 +36,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({ locale, path: '/proyectos/galeria/', ...META[locale], keywords: ['galería reformas sabadell', 'fotos reformas reales'] });
 }
 
+const GALLERY_ITEMS: MasonryItem[] = [
+  { id: 'c1', src: fotoUrl('despues/galeria-cocina-01.jpg'), alt: 'Cocina moderna gris con encimera oscura', category: 'Cocinas', aspect: 'landscape' },
+  { id: 'b1', src: fotoUrl('despues/galeria-bano-01.jpg'), alt: 'Baño de mármol con doble lavabo', category: 'Baños', aspect: 'portrait' },
+  { id: 'p1', src: fotoUrl('despues/galeria-piso-01.jpg'), alt: 'Suelo de parquet acabado', category: 'Pisos', aspect: 'landscape' },
+  { id: 'b2', src: fotoUrl('despues/galeria-bano-02.jpg'), alt: 'Baño con doble lavabo y espejos LED', category: 'Baños', aspect: 'portrait' },
+  { id: 'c2', src: fotoUrl('despues/galeria-cocina-02.jpg'), alt: 'Cocina blanca con encimera de madera', category: 'Cocinas', aspect: 'landscape' },
+  { id: 't1', src: fotoUrl('despues/galeria-terraza-01.jpg'), alt: 'Terraza con suelo exterior', category: 'Terrazas', aspect: 'landscape' },
+  { id: 'b3', src: fotoUrl('despues/galeria-bano-03.jpg'), alt: 'Ducha moderna en tonos grises', category: 'Baños', aspect: 'portrait' },
+  { id: 'd1', src: fotoUrl('despues/galeria-detalle-01.jpg'), alt: 'Detalle de acabado en ducha', category: 'Detalles', aspect: 'square' },
+  { id: 'p2', src: fotoUrl('despues/galeria-piso-02.jpg'), alt: 'Suelo hexagonal negro', category: 'Pisos', aspect: 'landscape' },
+  { id: 'o1', src: fotoUrl('durante/galeria-obra-01.jpg'), alt: 'Obra en curso: albañilería', category: 'En obra', aspect: 'landscape' },
+  { id: 'o2', src: fotoUrl('durante/galeria-obra-02.jpg'), alt: 'Demolición y preparación', category: 'En obra', aspect: 'landscape' },
+  { id: 'v1', src: fotoUrl('despues/cocina-gris-hero-01.jpg'), alt: 'Vídeo timelapse de reforma', category: 'Cocinas', type: 'video', videoSrc: '/videos/obra-timelapse-01.mp4', aspect: 'video' },
+];
+
 export default async function GaleriaPage({ params }: Props) {
   const { locale: localeParam } = await params;
   if (!isLocale(localeParam)) notFound();
   const locale: Locale = localeParam;
   const t = getDictionary(locale);
-  const photos = allPhotos();
+
   return (
     <>
       <SectionWrapper variant="dark">
         <Breadcrumb locale={locale} items={[{ name: t.nav.gallery, path: '/proyectos/galeria/' }]} />
         <SectionHeader as="h1" title={t.gallery.pageTitle} description={t.gallery.pageSub} />
         <GalleryMasonry
-          photos={photos}
-          labels={{
-            all: t.gallery.filters.all,
-            phaseAll: t.gallery.filters.phaseAll,
-            categories: {
-              COCINA: t.gallery.filters.COCINA,
-              BANO: t.gallery.filters.BANO,
-              PISO: t.gallery.filters.PISO,
-              SUELO: t.gallery.filters.SUELO,
-              LOCAL: t.gallery.filters.LOCAL,
-            },
-            phases: {
-              ANTES: t.gallery.filters.ANTES,
-              DURANTE: t.gallery.filters.DURANTE,
-              DESPUES: t.gallery.filters.DESPUES,
-              DETALLE: t.gallery.filters.DETALLE,
-            },
-          }}
-          videos={[
-            {
-              src: '/videos/WhatsApp Video 2026-08-11 at 18.15.19 (1).mp4',
-              poster: '/fotos/despues/cocina-negra-despues-01-gallery.webp',
-              category: 'COCINA',
-              alt: 'Vídeo de reforma de cocina — Junior Reformas',
-            },
-          ]}
+          items={GALLERY_ITEMS}
+          categories={['Todos', 'Cocinas', 'Baños', 'Pisos', 'Terrazas', 'Detalles', 'En obra']}
+          labels={{ all: 'Todos' }}
           columns={3}
         />
       </SectionWrapper>

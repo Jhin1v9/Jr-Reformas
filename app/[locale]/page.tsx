@@ -4,11 +4,12 @@ import { isLocale, getDictionary, localePath } from '@/lib/i18n';
 import HeroCarousel from '@/components/sections/HeroCarousel';
 import StatsBanner from '@/components/sections/StatsBanner';
 import BudgetCalculator from '@/components/sections/BudgetCalculator';
-import ServicesPhotoGrid from '@/components/sections/ServicesPhotoGrid';
+import ServicesCarousel from '@/components/sections/ServicesCarousel';
 import ProcessPhotoTimeline from '@/components/sections/ProcessPhotoTimeline';
 import TransformationsGallery from '@/components/sections/TransformationsGallery';
+import BeforeAfterHome from '@/components/sections/BeforeAfterHome';
 import WhyJunior from '@/components/sections/WhyJunior';
-import Testimonials from '@/components/sections/Testimonials';
+import TestimonialsHome from '@/components/sections/TestimonialsHome';
 import AreaMap from '@/components/sections/AreaMap';
 import FAQ from '@/components/sections/FAQ';
 import BlogPreview from '@/components/sections/BlogPreview';
@@ -56,11 +57,12 @@ export default async function HomePage({ params }: Props) {
           }}
         />
       </SectionWrapper>
-      <ServicesPhotoGrid locale={locale} />
+      <ServicesCarousel locale={locale} />
       <ProcessPhotoTimeline locale={locale} />
       <TransformationsGallery locale={locale} />
+      <BeforeAfterHome locale={locale} />
       <WhyJunior locale={locale} />
-      <Testimonials locale={locale} />
+      <TestimonialsHome locale={locale} />
       <AreaMap locale={locale} />
       <FAQ locale={locale} />
       <BlogPreview locale={locale} />

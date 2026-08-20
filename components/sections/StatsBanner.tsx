@@ -1,7 +1,48 @@
-import { CalendarDays, MapPin, MessageCircle, Star } from 'lucide-react';
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { CalendarDays, MapPin, MessageCircle, Star, BadgeCheck } from 'lucide-react';
 import { type Locale } from '@/lib/constants';
-import { getDictionary } from '@/lib/i18n';
+import { getDictionary, localePath } from '@/lib/i18n';
 import Reveal from '@/components/shared/Reveal';
+
+interface Stat {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  desc: string;
+  href?: string;
+  badge?: string;
+}
+
+function useCountUp(end: number, duration = 1500) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !started.current) {
+          started.current = true;
+          const start = performance.now();
+          const step = (now: number) => {
+            const progress = Math.min((now - start) / duration, 1);
+            setCount(Math.floor(progress * end));
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return { count, ref };
+}
 
 interface Props {
   locale: Locale;
@@ -9,32 +50,59 @@ interface Props {
 
 export default function StatsBanner({ locale }: Props) {
   const t = getDictionary(locale);
-  const stats = [
-    { icon: CalendarDays, label: t.stats.label1, desc: t.stats.desc1 },
-    { icon: MessageCircle, label: t.stats.label2, desc: t.stats.desc2 },
-    { icon: MapPin, label: t.stats.label3, desc: t.stats.desc3 },
-    { icon: Star, label: t.stats.label4, desc: t.stats.desc4 },
+  const stats: Stat[] = [
+    { icon: CalendarDays, label: '15', desc: t.stats.desc1 },
+    { icon: MessageCircle, label: '24h', desc: t.stats.desc2 },
+    { icon: MapPin, label: '4', desc: t.stats.desc3 },
+    { icon: Star, label: '5', desc: t.stats.desc4, href: localePath(locale, '/sobre-junior'), badge: 'Verificado en ProntoPro' },
   ];
 
   return (
-    <section className="border-y border-border bg-carbon-light">
-      <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-8">
+    <section className="relative border-y border-border bg-carbon-light py-14 md:py-20">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-terracota/40 to-transparent" aria-hidden="true" />
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, i) => (
-            <Reveal key={stat.label} delay={i * 80}>
-              <div className="flex items-center gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-terracota/30 bg-carbon text-terracota">
-                  <stat.icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="font-display text-2xl font-bold text-offwhite md:text-3xl">{stat.label}</p>
-                  <p className="text-sm text-text-secondary">{stat.desc}</p>
-                </div>
-              </div>
+            <Reveal key={stat.desc} delay={i * 100}>
+              <StatCard stat={stat} />
             </Reveal>
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+function StatCard({ stat }: { stat: Stat }) {
+  const isNumeric = /^\d+$/.test(stat.label);
+  const { count, ref } = useCountUp(isNumeric ? parseInt(stat.label, 10) : 0);
+  const Icon = stat.icon;
+
+  const content = (
+    <div className="group flex flex-col items-center text-center">
+      <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-terracota/30 bg-carbon text-terracota shadow-lg shadow-terracota/5 transition-transform group-hover:scale-110">
+        <Icon className="h-8 w-8" aria-hidden="true" />
+      </span>
+      <div ref={ref} className="mt-5 font-display text-5xl font-bold text-offwhite md:text-6xl">
+        {isNumeric ? `${count}+` : stat.label}
+      </div>
+      <p className="mt-2 text-sm font-medium text-text-secondary md:text-base">{stat.desc}</p>
+      {stat.badge ? (
+        <span className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-olive/40 bg-olive/10 px-3 py-1 text-xs font-semibold text-olive">
+          <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />
+          {stat.badge}
+        </span>
+      ) : null}
+    </div>
+  );
+
+  if (stat.href) {
+    return (
+      <a href={stat.href} className="block rounded-2xl border border-transparent p-6 transition-all hover:border-terracota/20 hover:bg-carbon/30">
+        {content}
+      </a>
+    );
+  }
+
+  return <div className="rounded-2xl p-6">{content}</div>;
 }

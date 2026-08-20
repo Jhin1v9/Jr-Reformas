@@ -1,19 +1,34 @@
-import { ArrowRight, BadgeCheck, Clock, MessageCircle } from 'lucide-react';
+'use client';
+
+import { useState, useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { type Locale } from '@/lib/constants';
 import { getDictionary, localePath } from '@/lib/i18n';
 import { fotoUrl } from '@/lib/photos';
-import Carousel from '@/components/shared/Carousel';
 import CTAButton from '@/components/shared/CTAButton';
 
-const HERO_VIDEO = '/videos/WhatsApp Video 2026-08-11 at 18.15.19 (1).mp4';
-const HERO_POSTER = fotoUrl('despues/cocina-negra-despues-01-hero.webp');
-
 const HERO_SLIDES = [
-  { id: 'video', type: 'video' as const },
-  { id: 'cocina', src: fotoUrl('despues/cocina-negra-despues-01-hero.webp'), alt: 'Cocina reformada en tonos grafito con iluminación LED — Junior Reformas' },
-  { id: 'bano-marmol', src: fotoUrl('despues/bano-marmol-despues-02-hero.webp'), alt: 'Baño de mármol con doble lavabo y ducha — Junior Reformas' },
-  { id: 'piso', src: fotoUrl('despues/piso-pasillo-despues-01-hero.webp'), alt: 'Piso reformado: pasillo moderno y luminoso — Junior Reformas' },
-  { id: 'bano-mampara', src: fotoUrl('despues/bano-mampara-despues-01-hero.webp'), alt: 'Baño con mampara de cristal y acabados premium — Junior Reformas' },
+  {
+    id: 'cocina',
+    src: fotoUrl('despues/cocina-gris-hero-01.jpg'),
+    alt: 'Cocina reformada en tonos grafito — Junior Reformas',
+  },
+  {
+    id: 'bano',
+    src: fotoUrl('despues/bano-marmol-hero-01.jpg'),
+    alt: 'Baño de mármol con doble lavabo — Junior Reformas',
+  },
+  {
+    id: 'piso',
+    src: fotoUrl('despues/piso-parquet-hero-01.jpg'),
+    alt: 'Piso reformado con parquet — Junior Reformas',
+  },
+  {
+    id: 'terraza',
+    src: fotoUrl('despues/terraza-hero-01.jpg'),
+    alt: 'Terraza reformada con suelo exterior — Junior Reformas',
+  },
 ];
 
 interface Props {
@@ -22,85 +37,118 @@ interface Props {
 
 export default function HeroCarousel({ locale }: Props) {
   const t = getDictionary(locale);
-  const badges = [
-    { icon: BadgeCheck, label: t.hero.badge1 },
-    { icon: Clock, label: t.hero.badge2 },
-    { icon: MessageCircle, label: t.hero.badge3 },
-  ];
+  const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const slides = HERO_SLIDES.map((slide) => ({
-    id: slide.id,
-    content:
-      slide.type === 'video' ? (
-        <div className="absolute inset-0 bg-carbon">
-          <video
-            src={HERO_VIDEO}
-            poster={HERO_POSTER}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="h-full w-full object-cover"
-          />
-        </div>
-      ) : (
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${slide.src})` }}
-          role="img"
-          aria-label={slide.alt}
-        />
-      ),
-  }));
+  const go = useCallback((dir: number) => {
+    setIndex((i) => (i + dir + HERO_SLIDES.length) % HERO_SLIDES.length);
+  }, []);
+
+  useEffect(() => {
+    timerRef.current = setInterval(() => go(1), 5000);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [go]);
+
+  const onTouchStart = (e: React.TouchEvent) => setTouchStart(e.touches[0].clientX);
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) go(diff > 0 ? 1 : -1);
+    setTouchStart(null);
+  };
 
   return (
-    <section className="relative isolate h-[85vh] min-h-[600px] overflow-hidden bg-carbon md:h-[90vh]">
-      <Carousel
-        slides={slides}
-        interval={6000}
-        showArrows={false}
-        showDots={true}
-        className="absolute inset-0 h-full w-full"
-        slideClassName="h-full w-full"
-        pauseOnHover={false}
-      />
-
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-carbon via-carbon/80 to-carbon/40 md:via-carbon/75" aria-hidden="true" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-carbon/80 via-transparent to-carbon/30" aria-hidden="true" />
-
-      <div className="mx-auto flex h-full w-full max-w-content flex-col justify-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <span className="mb-6 inline-block rounded-full border border-terracota/50 bg-terracota/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-terracota backdrop-blur-sm">
-            {t.hero.badge}
-          </span>
-          <h1 className="text-4xl font-bold leading-[1.1] text-offwhite md:text-5xl lg:text-6xl">
-            {t.hero.h1}
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-text-secondary md:text-xl">
-            {t.hero.sub}
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <CTAButton variant="primary" href={localePath(locale, '/presupuesto')}>
-              {t.hero.ctaPrimary}
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </CTAButton>
-            <CTAButton variant="secondary" href={localePath(locale, '/proyectos/galeria')}>
-              {t.hero.ctaSecondary}
-            </CTAButton>
-          </div>
-          <ul className="mt-10 flex flex-wrap gap-3">
-            {badges.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="flex items-center gap-2 rounded-full border border-border bg-carbon/70 px-4 py-2 text-sm font-medium text-sand backdrop-blur"
-              >
-                <Icon className="h-4 w-4 text-terracota" aria-hidden="true" />
-                {label}
-              </li>
-            ))}
-          </ul>
+    <section
+      className="relative h-screen min-h-[600px] overflow-hidden bg-carbon"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
+      {/* Slides */}
+      {HERO_SLIDES.map((slide, i) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 transition-opacity duration-800 ease-in-out ${
+            i === index ? 'opacity-100' : 'opacity-0'
+          }`}
+          aria-hidden={i !== index}
+        >
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
+      ))}
+
+      {/* Overlay escuro */}
+      <div className="absolute inset-0 bg-gradient-to-b from-carbon/70 via-carbon/40 to-carbon/80" aria-hidden="true" />
+
+      {/* Conteúdo centralizado */}
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+        <span className="mb-6 inline-block rounded-full border border-terracota/60 bg-terracota/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-terracota backdrop-blur-sm">
+          {t.hero.badge}
+        </span>
+        <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] text-offwhite md:text-6xl lg:text-7xl">
+          Transformamos espacios.<br className="hidden md:block" /> Respetamos tus sueños.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-sand md:text-xl">
+          Reformas integrales en Sabadell, Barcelona y alrededores. 15+ años de experiencia, presupuesto desglosado y visita técnica gratuita.
+        </p>
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <CTAButton variant="primary" href={localePath(locale, '/presupuesto')} className="px-8 py-4 text-lg">
+            {t.hero.ctaPrimary}
+          </CTAButton>
+          <CTAButton variant="secondary" href={localePath(locale, '/proyectos/galeria')} className="px-8 py-4 text-lg">
+            {t.hero.ctaSecondary}
+          </CTAButton>
+        </div>
+      </div>
+
+      {/* Setas laterais */}
+      <button
+        type="button"
+        onClick={() => go(-1)}
+        className="absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-4 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 md:flex"
+        aria-label="Anterior"
+      >
+        <ChevronLeft className="h-7 w-7" />
+      </button>
+      <button
+        type="button"
+        onClick={() => go(1)}
+        className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-4 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 md:flex"
+        aria-label="Siguiente"
+      >
+        <ChevronRight className="h-7 w-7" />
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+        {HERO_SLIDES.map((slide, i) => (
+          <button
+            key={slide.id}
+            type="button"
+            onClick={() => setIndex(i)}
+            className={`h-3 rounded-full transition-all ${
+              i === index ? 'w-10 bg-terracota' : 'w-3 bg-offwhite/50 hover:bg-offwhite'
+            }`}
+            aria-label={`Ir al slide ${i + 1}`}
+            aria-current={i === index}
+          />
+        ))}
+      </div>
+
+      {/* Scroll hint */}
+      <div className="absolute bottom-24 left-1/2 z-20 hidden -translate-x-1/2 animate-bounce text-offwhite/60 md:block">
+        <span className="block h-10 w-6 rounded-full border-2 border-offwhite/40 px-1">
+          <span className="mx-auto mt-2 block h-1.5 w-1.5 rounded-full bg-offwhite/80" />
+        </span>
       </div>
     </section>
   );

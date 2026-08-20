@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { type Locale } from '@/lib/constants';
 import { getDictionary, localePath } from '@/lib/i18n';
@@ -8,12 +11,36 @@ import CTAButton from '@/components/shared/CTAButton';
 import Reveal from '@/components/shared/Reveal';
 
 const PROCESS_PHOTOS = [
-  { file: 'durante/bano-blanco-durante-01-hero.webp', alt: 'Visita técnica y preparación del espacio — Junior Reformas' },
-  { file: 'durante/bano-blanco-durante-02-hero.webp', alt: 'Replanteo y mediciones de la reforma — Junior Reformas' },
-  { file: 'durante/bano-blanco-durante-03-hero.webp', alt: 'Instalaciones de fontanería y electricidad — Junior Reformas' },
-  { file: 'durante/bano-blanco-durante-04-hero.webp', alt: 'Alicatado y acabados en obra — Junior Reformas' },
-  { file: 'durante/bano-blanco-durante-05-hero.webp', alt: 'Acabados finales y limpieza de la reforma — Junior Reformas' },
+  { file: 'durante/proceso-visita.jpg', alt: 'Visita técnica al espacio — Junior Reformas' },
+  { file: 'durante/proceso-planificacion.jpg', alt: 'Selección de materiales y planificación — Junior Reformas' },
+  { file: 'durante/proceso-presupuesto.jpg', alt: 'Preparación del presupuesto y obra — Junior Reformas' },
+  { file: 'durante/proceso-ejecucion.jpg', alt: 'Ejecución de la obra — Junior Reformas' },
+  { file: 'despues/proceso-entrega.jpg', alt: 'Ambiente terminado y entregado — Junior Reformas' },
 ];
+
+function useScrollProgress() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onScroll = () => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const start = rect.top - windowHeight;
+      const end = rect.bottom;
+      const total = end - start;
+      const current = -start;
+      setProgress(Math.max(0, Math.min(1, current / total)));
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return { ref, progress };
+}
 
 interface Props {
   locale: Locale;
@@ -22,81 +49,73 @@ interface Props {
 export default function ProcessPhotoTimeline({ locale }: Props) {
   const t = getDictionary(locale);
   const steps = t.process.steps;
+  const { ref, progress } = useScrollProgress();
 
   return (
-    <SectionWrapper variant="dark" id="proceso">
-      <SectionHeader badge={t.process.badge} title={t.process.title} description={t.process.description} />
+    <SectionWrapper variant="dark" id="proceso" className="overflow-hidden">
+      <div ref={ref}>
+        <SectionHeader badge={t.process.badge} title={t.process.title} description={t.process.description} />
 
-      <div className="relative">
-        {/* Linha conectora */}
-        <div
-          className="absolute left-6 top-0 h-full w-0.5 bg-carbon-mid md:left-1/2 md:-translate-x-1/2"
-          aria-hidden="true"
-        />
+        <div className="relative mt-12 md:mt-16">
+          {/* Linha conectora de fundo */}
+          <div
+            className="absolute left-6 top-0 hidden h-0.5 w-[calc(100%-3rem)] bg-carbon-mid md:left-0 md:top-24 md:block md:w-full"
+            aria-hidden="true"
+          />
+          {/* Linha conectora animada */}
+          <div
+            className="absolute left-6 top-0 hidden h-0.5 bg-terracota transition-all duration-300 md:left-0 md:top-24 md:block"
+            style={{ width: `${progress * 100}%` }}
+            aria-hidden="true"
+          />
 
-        <ol className="relative space-y-16 md:space-y-24">
-          {steps.map((step, i) => {
-            const photo = PROCESS_PHOTOS[i];
-            const isEven = i % 2 === 0;
-            return (
-              <li key={step.title} className="relative">
-                {/* Marcador do timeline */}
-                <div
-                  className="absolute left-6 top-8 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-2 border-terracota bg-carbon md:left-1/2 md:top-1/2 md:-translate-y-1/2"
-                  aria-hidden="true"
-                >
-                  <span className="text-xs font-bold text-terracota">{i + 1}</span>
-                </div>
+          <ol className="relative space-y-12 md:grid md:grid-cols-5 md:gap-6 md:space-y-0">
+            {steps.map((step, i) => {
+              const photo = PROCESS_PHOTOS[i];
+              return (
+                <li key={step.title} className="relative">
+                  <Reveal delay={i * 120}>
+                    <div className="flex gap-6 md:flex-col md:items-center md:text-center">
+                      {/* Número */}
+                      <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-terracota bg-carbon shadow-lg shadow-terracota/10">
+                        <span className="text-lg font-bold text-terracota">{i + 1}</span>
+                      </div>
 
-                <div className="grid items-center gap-6 pl-16 md:grid-cols-2 md:gap-16 md:pl-0">
-                  {/* Foto */}
-                  <Reveal delay={i * 100}>
-                    <figure
-                      className={`group relative aspect-[4/3] overflow-hidden rounded-2xl ${
-                        isEven ? 'md:order-1 md:pr-12' : 'md:order-2 md:pl-12'
-                      }`}
-                    >
-                      <Image
-                        src={fotoUrl(photo.file)}
-                        alt={photo.alt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        loading="lazy"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent" aria-hidden="true" />
-                    </figure>
-                  </Reveal>
+                      {/* Foto */}
+                      <figure className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl md:mt-6">
+                        <Image
+                          src={fotoUrl(photo.file)}
+                          alt={photo.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 20vw"
+                          loading="lazy"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent" aria-hidden="true" />
+                      </figure>
 
-                  {/* Texto */}
-                  <Reveal delay={i * 100 + 80}>
-                    <div
-                      className={`${
-                        isEven ? 'md:order-2 md:pl-12 md:text-left' : 'md:order-1 md:pr-12 md:text-right'
-                      }`}
-                    >
-                      <span className="inline-block rounded-full border border-terracota/50 bg-terracota/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-terracota">
-                        Paso {i + 1}
-                      </span>
-                      <h3 className="mt-4 font-display text-2xl font-semibold text-offwhite md:text-3xl">
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 text-base leading-relaxed text-text-secondary">
-                        {step.description}
-                      </p>
+                      {/* Texto */}
+                      <div className="md:mt-5">
+                        <h3 className="font-display text-lg font-semibold text-offwhite md:text-xl">
+                          {step.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   </Reveal>
-                </div>
-              </li>
-            );
-          })}
-        </ol>
-      </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
 
-      <div className="mt-16 text-center">
-        <CTAButton variant="primary" href={localePath(locale, '/proceso')}>
-          {t.processPage.cta}
-        </CTAButton>
+        <div className="mt-16 text-center">
+          <CTAButton variant="primary" href={localePath(locale, '/proceso')}>
+            {t.processPage.cta}
+          </CTAButton>
+        </div>
       </div>
     </SectionWrapper>
   );

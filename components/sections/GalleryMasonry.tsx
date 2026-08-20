@@ -1,92 +1,54 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { fotoUrl, type Photo, type Categoria, type Fase } from '@/lib/photos';
 import MasonryGrid, { type MasonryItem } from '@/components/shared/MasonryGrid';
 import { cn } from '@/lib/utils';
 
 interface FilterLabels {
   all: string;
-  phaseAll: string;
-  categories: Record<string, string>;
-  phases: Record<string, string>;
 }
 
 interface Props {
-  photos: Photo[];
-  labels: FilterLabels;
-  videos?: { src: string; poster: string; category: Categoria; alt: string }[];
-  showPhaseFilter?: boolean;
+  items: MasonryItem[];
+  categories?: string[];
+  labels?: FilterLabels;
   columns?: 2 | 3 | 4;
 }
 
-const CATS: Categoria[] = ['COCINA', 'BANO', 'PISO', 'SUELO', 'LOCAL'];
-const PHASES: Fase[] = ['ANTES', 'DURANTE', 'DESPUES', 'DETALLE'];
-
 export default function GalleryMasonry({
-  photos,
-  labels,
-  videos = [],
-  showPhaseFilter = true,
+  items,
+  categories = [],
+  labels = { all: 'Todos' },
   columns = 3,
 }: Props) {
-  const [cat, setCat] = useState<Categoria | null>(null);
-  const [phase, setPhase] = useState<Fase | null>(null);
+  const [filter, setFilter] = useState<string>('todos');
 
-  const filteredPhotos = useMemo(
-    () => photos.filter((p) => (!cat || p.categoria === cat) && (!phase || p.fase === phase)),
-    [photos, cat, phase]
+  const allCategories = useMemo(
+    () => (categories.length > 0 ? categories : [...new Set(items.map((i) => i.category).filter(Boolean))]),
+    [categories, items]
   );
 
-  const items: MasonryItem[] = useMemo(() => {
-    const photoItems: MasonryItem[] = filteredPhotos.map((p) => ({
-      id: p.id,
-      src: fotoUrl(p.sizes.gallery),
-      alt: p.alt_text,
-      category: p.categoria,
-      aspect: p.height > p.width ? 'portrait' : p.height < p.width * 0.75 ? 'landscape' : 'square',
-    }));
-    const videoItems: MasonryItem[] = videos
-      .filter((v) => !cat || v.category === cat)
-      .map((v, i) => ({
-        id: `video-${i}`,
-        src: v.poster,
-        alt: v.alt,
-        category: v.category,
-        type: 'video',
-        videoSrc: v.src,
-        aspect: 'video',
-      }));
-    return [...photoItems, ...videoItems];
-  }, [filteredPhotos, videos, cat]);
+  const filteredItems = useMemo(
+    () => (filter === 'todos' ? items : items.filter((item) => item.category === filter)),
+    [items, filter]
+  );
 
   return (
     <div>
-      <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
-        <FilterButton active={cat === null} onClick={() => setCat(null)}>
-          {labels.all}
-        </FilterButton>
-        {CATS.map((c) => (
-          <FilterButton key={c} active={cat === c} onClick={() => setCat(c)}>
-            {labels.categories[c] ?? c}
+      {allCategories.length > 0 && (
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
+          <FilterButton active={filter === 'todos'} onClick={() => setFilter('todos')}>
+            {labels.all}
           </FilterButton>
-        ))}
-        {showPhaseFilter ? (
-          <>
-            <span className="mx-2 hidden h-6 w-px bg-border sm:block" aria-hidden="true" />
-            <FilterButton active={phase === null} onClick={() => setPhase(null)}>
-              {labels.phaseAll}
+          {allCategories.map((cat) => (
+            <FilterButton key={cat} active={filter === cat} onClick={() => setFilter(cat)}>
+              {cat}
             </FilterButton>
-            {PHASES.map((f) => (
-              <FilterButton key={f} active={phase === f} onClick={() => setPhase(f)}>
-                {labels.phases[f] ?? f}
-              </FilterButton>
-            ))}
-          </>
-        ) : null}
-      </div>
+          ))}
+        </div>
+      )}
 
-      <MasonryGrid items={items} categories={undefined} columns={columns} />
+      <MasonryGrid items={filteredItems} columns={columns} />
     </div>
   );
 }
