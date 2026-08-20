@@ -15,6 +15,7 @@
     "changeLanguage": "Change language"
   },
   "hero": {
+    "badge": "Renovations in Sabadell and Barcelona",
     "badge1": "15+ years of experience",
     "badge2": "Same-day response",
     "badge3": "Direct WhatsApp",
@@ -161,6 +162,16 @@
     "cta": "See all guides",
     "readMore": "Read guide",
     "minRead": "min read"
+  },
+  "stats": {
+    "label1": "15+",
+    "desc1": "years of experience",
+    "label2": "Same day",
+    "desc2": "WhatsApp response",
+    "label3": "4 cities",
+    "desc3": "Sabadell, Barcelona, Terrassa, Mataró",
+    "label4": "5 stars",
+    "desc4": "client rating"
   },
   "ctaFinal": {
     "title": "Imagine your home completely different",

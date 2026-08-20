@@ -65,7 +65,11 @@ export default async function ServiciosPage({ params }: Props) {
                   className="group block h-full overflow-hidden rounded-xl border border-carbon/10 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-terracota/40 hover:shadow-xl"
                 >
                   <div className="relative aspect-video overflow-hidden">
-                    <Image src={fotoUrl(s.heroFoto.replace('-hero', '-gallery'))} alt={`${s.title} — Junior Reformas`} fill sizes="(max-width: 768px) 100vw, 33vw" loading="lazy" className="object-cover transition-transform duration-300 group-hover:scale-105" />
+                    {s.heroFoto ? (
+                      <Image src={fotoUrl(s.heroFoto.replace('-hero', '-gallery'))} alt={`${s.title} — Junior Reformas`} fill sizes="(max-width: 768px) 100vw, 33vw" loading="lazy" className="object-cover transition-transform duration-300 group-hover:scale-105" />
+                    ) : (
+                      <div className={`h-full w-full bg-gradient-to-br ${s.gradient ?? 'from-carbon-mid via-carbon to-carbon-light'}`} />
+                    )}
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3">

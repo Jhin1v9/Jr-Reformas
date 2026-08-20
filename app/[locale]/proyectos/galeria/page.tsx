@@ -7,7 +7,7 @@ import { allPhotos } from '@/lib/photos';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeader from '@/components/shared/SectionHeader';
 import Breadcrumb from '@/components/shared/Breadcrumb';
-import PhotoGallery from '@/components/sections/PhotoGallery';
+import GalleryMasonry from '@/components/sections/GalleryMasonry';
 import CTAFinal from '@/components/sections/CTAFinal';
 
 interface Props {
@@ -46,7 +46,7 @@ export default async function GaleriaPage({ params }: Props) {
       <SectionWrapper variant="dark">
         <Breadcrumb locale={locale} items={[{ name: t.nav.gallery, path: '/proyectos/galeria/' }]} />
         <SectionHeader as="h1" title={t.gallery.pageTitle} description={t.gallery.pageSub} />
-        <PhotoGallery
+        <GalleryMasonry
           photos={photos}
           labels={{
             all: t.gallery.filters.all,
@@ -64,9 +64,16 @@ export default async function GaleriaPage({ params }: Props) {
               DESPUES: t.gallery.filters.DESPUES,
               DETALLE: t.gallery.filters.DETALLE,
             },
-            openImage: t.gallery.openImage,
-            closeImage: t.gallery.closeImage,
           }}
+          videos={[
+            {
+              src: '/videos/WhatsApp Video 2026-08-11 at 18.15.19 (1).mp4',
+              poster: '/fotos/despues/cocina-negra-despues-01-gallery.webp',
+              category: 'COCINA',
+              alt: 'Vídeo de reforma de cocina — Junior Reformas',
+            },
+          ]}
+          columns={3}
         />
       </SectionWrapper>
       <CTAFinal locale={locale} />

@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
 import { type Locale } from '@/lib/constants';
 import { isLocale, getDictionary, localePath } from '@/lib/i18n';
-import Hero from '@/components/sections/Hero';
+import HeroCarousel from '@/components/sections/HeroCarousel';
+import StatsBanner from '@/components/sections/StatsBanner';
 import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
 import BudgetCalculator from '@/components/sections/BudgetCalculator';
-import ServicesGrid from '@/components/sections/ServicesGrid';
-import ProcessSteps from '@/components/sections/ProcessSteps';
+import ServicesPhotoGrid from '@/components/sections/ServicesPhotoGrid';
+import ProcessPhotoTimeline from '@/components/sections/ProcessPhotoTimeline';
 import TransformationsGallery from '@/components/sections/TransformationsGallery';
 import WhyJunior from '@/components/sections/WhyJunior';
 import Testimonials from '@/components/sections/Testimonials';
@@ -28,7 +29,8 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <Hero locale={locale} />
+      <HeroCarousel locale={locale} />
+      <StatsBanner locale={locale} />
       <BeforeAfterSection locale={locale} />
       <SectionWrapper variant="dark" id="calculadora">
         <SectionHeader badge={t.calculator.badge} title={t.calculator.title} description={t.calculator.description} />
@@ -56,8 +58,8 @@ export default async function HomePage({ params }: Props) {
           }}
         />
       </SectionWrapper>
-      <ServicesGrid locale={locale} />
-      <ProcessSteps locale={locale} />
+      <ServicesPhotoGrid locale={locale} />
+      <ProcessPhotoTimeline locale={locale} />
       <TransformationsGallery locale={locale} />
       <WhyJunior locale={locale} />
       <Testimonials locale={locale} />

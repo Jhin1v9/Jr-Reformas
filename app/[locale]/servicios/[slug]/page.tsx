@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.metaTitle,
     description: service.metaDesc,
     keywords: service.keywords,
-    image: `/fotos/${service.heroFoto}`,
+    image: service.heroFoto ? `/fotos/${service.heroFoto}` : undefined,
   });
 }
 
@@ -68,7 +68,14 @@ export default async function ServicioPage({ params }: Props) {
     <>
       <JsonLd data={[serviceSchema(service, locale), faqSchema(service.faq)]} />
       <section className="relative isolate overflow-hidden bg-carbon">
-        <Image src={fotoUrl(service.heroFoto)} alt={`${service.title} — Junior Reformas, Sabadell`} fill priority sizes="100vw" className="-z-10 object-cover" />
+        {service.heroFoto ? (
+          <Image src={fotoUrl(service.heroFoto)} alt={`${service.title} — Junior Reformas, Sabadell`} fill priority sizes="100vw" className="-z-10 object-cover" />
+        ) : (
+          <div
+            className={`absolute inset-0 -z-10 bg-gradient-to-br ${service.gradient ?? 'from-carbon-mid via-carbon to-carbon-light'}`}
+            aria-hidden="true"
+          />
+        )}
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-carbon via-carbon/85 to-carbon/40" aria-hidden="true" />
         <div className="mx-auto w-full max-w-content px-4 py-20 sm:px-6 md:py-28 lg:px-8">
           <Breadcrumb locale={locale} items={[{ name: t.nav.services, path: '/servicios/' }, { name: service.title, path: `/servicios/${service.slug}/` }]} />

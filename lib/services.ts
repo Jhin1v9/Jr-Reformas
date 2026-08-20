@@ -14,7 +14,8 @@ export interface Service {
   icon: LucideIcon;
   main: boolean;
   categoria: Categoria;
-  heroFoto: string;
+  heroFoto?: string;
+  gradient?: string;
   includes: string[];
   processSteps: string[];
   faq: { q: string; a: string }[];
@@ -51,7 +52,7 @@ export const SERVICES: Service[] = [
     icon: Layers,
     main: true,
     categoria: 'SUELO',
-    heroFoto: 'despues/bano-marmol-despues-01-hero.webp',
+    heroFoto: 'despues/suelo-parquet-despues-01.jpg',
     includes: ['Parquet y tarima de madera', 'Suelo laminado AC4/AC5', 'Suelo porcelánico y gres', 'Nivelación de soleras', 'Rodapiés y remates', 'Retirada del suelo antiguo'],
     processSteps: ['Revisión y nivelación de la base', 'Elección de material según uso', 'Colocación con sistema de nivelación', 'Rodapiés, juntas y remates', 'Limpieza y revisión final'],
     faq: [
@@ -90,7 +91,7 @@ export const SERVICES: Service[] = [
     icon: ChefHat,
     main: false,
     categoria: 'COCINA',
-    heroFoto: 'despues/cocina-azul-despues-01-hero.webp',
+    heroFoto: 'despues/cocina-gris-despues-01.jpg',
     includes: ['Diseño y distribución a medida', 'Muebles y encimeras', 'Fontanería y desagües', 'Instalación eléctrica e iluminación', 'Alicatado y suelo', 'Electrodomésticos', 'Carpintería y remates'],
     processSteps: ['Diseño de la distribución', 'Demolición y preparación', 'Instalaciones de agua, luz y gas', 'Alicatado y suelo', 'Montaje de muebles y encimera', 'Electrodomésticos y revisión final'],
     faq: [
@@ -127,7 +128,7 @@ export const SERVICES: Service[] = [
     icon: Zap,
     main: false,
     categoria: 'INSTAL',
-    heroFoto: 'durante/bano-blanco-durante-06-hero.webp',
+    gradient: 'from-yellow-900 via-carbon to-carbon-light',
     includes: ['Instalación eléctrica completa', 'Cuadro eléctrico y protecciones', 'Puntos de luz y enchufes', 'Iluminación LED integrada', 'Tomas USB y domótica básica', 'Boletín eléctrico'],
     processSteps: ['Revisión de la instalación existente', 'Diseño de puntos según el nuevo uso', 'Rozas y cableado nuevo', 'Cuadro y protecciones', 'Comprobaciones y boletín'],
     faq: [
@@ -145,7 +146,7 @@ export const SERVICES: Service[] = [
     icon: Droplets,
     main: false,
     categoria: 'INSTAL',
-    heroFoto: 'durante/bano-blanco-durante-03-hero.webp',
+    gradient: 'from-blue-900 via-carbon to-carbon-light',
     includes: ['Renovación completa de tuberías', 'Desagües y bajantes', 'Instalación de sanitarios', 'Grifería y termostáticas', 'Calentadores y termos', 'Cisternas empotradas'],
     processSteps: ['Revisión de bajantes y acometidas', 'Nueva distribución de tuberías', 'Pruebas de presión y estanqueidad', 'Montaje de sanitarios y grifería', 'Revisión final'],
     faq: [
@@ -199,7 +200,7 @@ export const SERVICES: Service[] = [
     icon: Building2,
     main: false,
     categoria: 'EXTERIOR',
-    heroFoto: 'despues/bano-gris-despues-01-hero.webp',
+    heroFoto: 'despues/terraza-despues-01.jpg',
     includes: ['Impermeabilización de terrazas', 'Suelos exteriores antideslizantes', 'Revestimiento de fachadas', 'Cerramientos y barandillas', 'Reparación de grietas', 'Pintura exterior'],
     processSteps: ['Diagnóstico de humedades y grietas', 'Preparación y reparación de la base', 'Impermeabilización', 'Revestimiento y acabados', 'Pruebas y revisión'],
     faq: [
@@ -217,7 +218,7 @@ export const SERVICES: Service[] = [
     icon: Store,
     main: false,
     categoria: 'LOCAL',
-    heroFoto: 'despues/bano-led-despues-02-hero.webp',
+    gradient: 'from-carbon-mid via-carbon to-carbon-light',
     includes: ['Adecuación integral del local', 'Instalaciones eléctricas y de iluminación', 'Aseos y zonas técnicas', 'Suelos de alto tránsito', 'Escaparates y entradas', 'Pintura y acabados comerciales'],
     processSteps: ['Visita y análisis del negocio', 'Proyecto de adecuación', 'Obra por fases para minimizar el cierre', 'Instalaciones y acabados', 'Entrega lista para abrir'],
     faq: [
@@ -235,7 +236,7 @@ export const SERVICES: Service[] = [
     icon: DoorOpen,
     main: false,
     categoria: 'PISO',
-    heroFoto: 'despues/bano-doble-lavabo-despues-01-hero.webp',
+    gradient: 'from-amber-950 via-carbon to-carbon-light',
     includes: ['Puertas de interior', 'Armarios empotrados a medida', 'Muebles de baño', 'Carpintería de cocina', 'Estanterías y muebles a medida', 'Marcos y molduras'],
     processSteps: ['Medición en obra', 'Diseño y elección de materiales', 'Fabricación', 'Instalación y ajuste', 'Acabados y revisión'],
     faq: [

@@ -15,6 +15,7 @@
     "changeLanguage": "Cambiar idioma"
   },
   "hero": {
+    "badge": "Reformas en Sabadell y Barcelona",
     "badge1": "15+ años de experiencia",
     "badge2": "Respuesta el mismo día",
     "badge3": "WhatsApp directo",
@@ -161,6 +162,16 @@
     "cta": "Ver todas las guías",
     "readMore": "Leer guía",
     "minRead": "min de lectura"
+  },
+  "stats": {
+    "label1": "15+",
+    "desc1": "años de experiencia",
+    "label2": "Mismo día",
+    "desc2": "respuesta por WhatsApp",
+    "label3": "4 ciudades",
+    "desc3": "Sabadell, Barcelona, Terrassa, Mataró",
+    "label4": "5 estrellas",
+    "desc4": "valoración de clientes"
   },
   "ctaFinal": {
     "title": "Imagina tu casa completamente diferente",
