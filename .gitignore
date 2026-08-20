@@ -37,4 +37,8 @@ Thumbs.db
 *.log
 *.tmp
 
+# Vercel
 .vercel
+
+# TypeScript
+tsconfig.tsbuildinfo
