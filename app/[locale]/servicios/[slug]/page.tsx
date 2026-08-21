@@ -16,7 +16,8 @@ import CTAButton from '@/components/shared/CTAButton';
 import JsonLd from '@/components/shared/JsonLd';
 import Reveal from '@/components/shared/Reveal';
 import ProcessTimeline from '@/components/shared/ProcessTimeline';
-import AfterCarousel, { type AfterSlide } from '@/components/shared/AfterCarousel';
+import GalleryMasonry from '@/components/sections/GalleryMasonry';
+import { type MasonryItem } from '@/components/shared/MasonryGrid';
 import FAQ from '@/components/sections/FAQ';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -57,18 +58,12 @@ export default async function ServicioPage({ params }: Props) {
   const fallbackPhotos = getPhotos({ fase: 'DESPUES' });
   const carouselPhotos = (catPhotos.length > 0 ? catPhotos : fallbackPhotos).slice(0, 8);
 
-  const afterSlides: AfterSlide[] = carouselPhotos.map((p: Photo) => ({
-    src: fotoUrl(p.sizes.hero),
+  const galleryItems: MasonryItem[] = carouselPhotos.map((p: Photo, i: number) => ({
+    id: `${service.slug}-${i}`,
+    src: fotoUrl(p.sizes.gallery),
     alt: p.alt_text,
-    service: service.title,
-    location:
-      {
-        SAB: 'Sabadell',
-        BCN: 'Barcelona',
-        TER: 'Terrassa',
-        MAT: 'Mataró',
-        GEN: 'Sabadell',
-      }[p.localidad] ?? 'Sabadell',
+    category: service.title,
+    aspect: p.height > p.width ? 'portrait' : p.width / p.height > 1.4 ? 'landscape' : 'square',
   }));
 
   const h1 =
@@ -115,7 +110,7 @@ export default async function ServicioPage({ params }: Props) {
       </section>
 
       <SectionWrapper variant="light">
-        <SectionHeader variant="light" title={locale === 'es' ? 'Qué incluye' : locale === 'pt' ? 'O que inclui' : "What's included"} />
+        <SectionHeader variant="light" title={t.servicePage.includesTitle} />
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {service.includes.map((item, i) => (
             <li key={item}>
@@ -133,7 +128,7 @@ export default async function ServicioPage({ params }: Props) {
       <SectionWrapper variant="light" className="pt-0">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-display text-2xl font-bold text-carbon md:text-3xl">
-            ¿Por qué contratar {service.title.toLowerCase()} con Junior Reformas?
+            {t.servicePage.whyTitle.replace('{{service}}', service.title.toLowerCase())}
           </h2>
           <div className="mt-6 space-y-4 leading-relaxed text-carbon/80">
             <p>
@@ -142,11 +137,11 @@ export default async function ServicioPage({ params }: Props) {
             <p>
               Cada proyecto de <strong>{service.title.toLowerCase()}</strong> comienza con una visita técnica gratuita sin compromiso. Durante esa visita evaluamos el estado actual del espacio, escuchamos tus necesidades y te asesoramos sobre las mejores soluciones según tu presupuesto y el uso real de cada estancia.
             </p>
-            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">Materiales, acabados y garantía</h3>
+            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">{t.servicePage.materialsTitle}</h3>
             <p>
               Trabajamos con proveedores contrastados y marcas reconocidas del sector. Desde cerámicas y porcelánicos hasta parquet, grifería, sanitarios, pintura y electricidad: cada material se elige pensando en la durabilidad, la estética y el mantenimiento diario. Todos los acabados cuentan con garantía del fabricante y revisamos contigo cada detalle antes de la entrega.
             </p>
-            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">Zonas de actuación</h3>
+            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">{t.servicePage.areasTitle}</h3>
             <p>
               Realizamos {service.title.toLowerCase()} en Sabadell, Barcelona, Terrassa, Mataró y municipios de alrededor. Nuestra base en Sant Feliu de Llobregat nos permite desplazarnos con rapidez y mantener una comunicación directa durante toda la obra. Respuesta por WhatsApp el mismo día y visita técnica gratuita.
             </p>
@@ -158,13 +153,28 @@ export default async function ServicioPage({ params }: Props) {
         <SectionHeader
           variant="light"
           badge={t.gallery.badge}
-          title={t.gallery.title}
-          description={t.gallery.description}
+          title={service.title}
+          description={t.servicePage.galleryDesc.replace('{{service}}', service.title)}
         />
-        <AfterCarousel
-          slides={afterSlides}
-          labels={{ previous: t.common.previous, next: t.common.next, slide: t.common.slide }}
-        />
+        {galleryItems.length > 0 ? (
+          <GalleryMasonry
+            items={galleryItems}
+            categories={[service.title]}
+            columns={3}
+            compact
+            labels={{
+              all: t.gallery.filters.all,
+              close: t.lightbox.close,
+              previous: t.lightbox.previous,
+              next: t.lightbox.next,
+              expanded: t.lightbox.expanded,
+              cta: t.lightbox.cta,
+              whatsappText: t.lightbox.whatsappText,
+            }}
+          />
+        ) : (
+          <p className="text-center text-text-secondary">{t.servicePage.noPhotos}</p>
+        )}
       </SectionWrapper>
 
       <ProcessTimeline locale={locale} variant="dark" title={`${t.process.title} — ${service.title}`} />

@@ -254,6 +254,14 @@
     "submit": "Enviar solicitud",
     "priceHint": "Precio orientativo"
   },
+  "servicePage": {
+    "galleryDesc": "Galería real de trabajos de {{service}} terminados por Junior Reformas.",
+    "noPhotos": "Próximamente añadiremos fotos de este servicio.",
+    "whyTitle": "¿Por qué contratar {{service}} con Junior Reformas?",
+    "materialsTitle": "Materiales, acabados y garantía",
+    "areasTitle": "Zonas de actuación",
+    "includesTitle": "Qué incluye"
+  },
   "contact": {
     "h1": "Contacto",
     "sub": "Cuéntanos tu proyecto. Respondemos el mismo día.",

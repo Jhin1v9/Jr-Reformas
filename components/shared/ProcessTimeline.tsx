@@ -66,16 +66,16 @@ export default function ProcessTimeline({ locale, variant = 'dark', title, descr
         }
       );
 
-      // Fill circles sequentially
+      // Pulse circles sequentially — keeps icon always visible
       gsap.fromTo(
         stepEls.map((el) => el?.querySelector('.process-circle')),
-        { backgroundColor: 'transparent', borderColor: '#B85C38' },
+        { scale: 0.85, opacity: 0.7 },
         {
-          backgroundColor: '#B85C38',
-          borderColor: '#B85C38',
+          scale: 1,
+          opacity: 1,
           duration: 0.4,
           stagger: 0.15,
-          ease: 'power2.out',
+          ease: 'back.out(1.7)',
           scrollTrigger: {
             trigger: section,
             start: 'top 60%',
@@ -120,7 +120,7 @@ export default function ProcessTimeline({ locale, variant = 'dark', title, descr
                   className="flex gap-5 md:flex-col md:items-center md:text-center"
                 >
                   <div className="process-circle relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-terracota bg-carbon shadow-lg shadow-terracota/10 md:mx-auto">
-                    <Icon className="relative z-10 h-6 w-6 text-offwhite" aria-hidden="true" />
+                    <Icon className="relative z-10 h-6 w-6 shrink-0 text-offwhite" strokeWidth={2} aria-hidden="true" />
                   </div>
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-widest text-terracota md:hidden">

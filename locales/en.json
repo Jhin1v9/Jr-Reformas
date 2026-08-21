@@ -254,6 +254,14 @@
     "submit": "Send request",
     "priceHint": "Guide price"
   },
+  "servicePage": {
+    "galleryDesc": "Real gallery of completed {{service}} projects by Junior Reformas.",
+    "noPhotos": "We will add photos of this service soon.",
+    "whyTitle": "Why hire Junior Reformas for {{service}}?",
+    "materialsTitle": "Materials, finishes and warranty",
+    "areasTitle": "Areas we cover",
+    "includesTitle": "What's included"
+  },
   "contact": {
     "h1": "Contact",
     "sub": "Tell us about your project. We reply the same day.",

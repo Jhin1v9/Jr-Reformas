@@ -254,6 +254,14 @@
     "submit": "Enviar sol·licitud",
     "priceHint": "Preu orientatiu"
   },
+  "servicePage": {
+    "galleryDesc": "Galeria real de treballs de {{service}} acabats per Junior Reformas.",
+    "noPhotos": "Aviat afegirem fotos d'aquest servei.",
+    "whyTitle": "Per què contractar {{service}} amb Junior Reformas?",
+    "materialsTitle": "Materials, acabats i garantia",
+    "areasTitle": "Zones d'actuació",
+    "includesTitle": "Què inclou"
+  },
   "contact": {
     "h1": "Contacte",
     "sub": "Explica'ns el teu projecte. Respondrem el mateix dia.",
