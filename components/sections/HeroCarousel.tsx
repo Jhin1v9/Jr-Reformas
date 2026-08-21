@@ -7,6 +7,7 @@ import { type Locale } from '@/lib/constants';
 import { getDictionary, localePath } from '@/lib/i18n';
 import { fotoUrl } from '@/lib/photos';
 import CTAButton from '@/components/shared/CTAButton';
+import { gsap } from '@/components/hooks/useGSAP';
 
 const HERO_SLIDES = [
   {
@@ -40,6 +41,7 @@ export default function HeroCarousel({ locale }: Props) {
   const [index, setIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const go = useCallback((dir: number) => {
     setIndex((i) => (i + dir + HERO_SLIDES.length) % HERO_SLIDES.length);
@@ -51,6 +53,21 @@ export default function HeroCarousel({ locale }: Props) {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [go]);
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('.hero-badge', { y: 30, opacity: 0, duration: 0.8 })
+        .from('.hero-title', { y: 60, opacity: 0, duration: 1 }, '-=0.5')
+        .from('.hero-subtitle', { y: 40, opacity: 0, duration: 0.8 }, '-=0.6')
+        .from('.hero-cta', { y: 30, opacity: 0, duration: 0.6, stagger: 0.15 }, '-=0.4');
+    }, content);
+
+    return () => ctx.revert();
+  }, []);
 
   const onTouchStart = (e: React.TouchEvent) => setTouchStart(e.touches[0].clientX);
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -90,17 +107,18 @@ export default function HeroCarousel({ locale }: Props) {
       <div className="absolute inset-0 bg-gradient-to-b from-carbon/70 via-carbon/40 to-carbon/80" aria-hidden="true" />
 
       {/* Conteúdo centralizado */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-        <span className="mb-6 inline-block rounded-full border border-terracota/60 bg-terracota/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-terracota backdrop-blur-sm">
+      <div
+        ref={contentRef}
+        className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center"
+      >
+        <span className="hero-badge mb-6 inline-block rounded-full border border-terracota/60 bg-terracota/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-terracota backdrop-blur-sm">
           {t.hero.badge}
         </span>
-        <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] text-offwhite md:text-6xl lg:text-7xl">
-          Transformamos espacios.<br className="hidden md:block" /> Respetamos tus sueños.
+        <h1 className="hero-title max-w-4xl font-display text-5xl font-bold leading-[1.05] text-offwhite md:text-6xl lg:text-7xl">
+          {t.hero.h1}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-sand md:text-xl">
-          Reformas integrales en Sabadell, Barcelona y alrededores. 15+ años de experiencia, presupuesto desglosado y visita técnica gratuita.
-        </p>
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+        <p className="hero-subtitle mt-6 max-w-2xl text-lg text-sand md:text-xl">{t.hero.sub}</p>
+        <div className="hero-cta mt-10 flex flex-col gap-4 sm:flex-row">
           <CTAButton variant="primary" href={localePath(locale, '/presupuesto')} className="px-8 py-4 text-lg">
             {t.hero.ctaPrimary}
           </CTAButton>

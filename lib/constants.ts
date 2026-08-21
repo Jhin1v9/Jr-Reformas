@@ -24,7 +24,7 @@ export const SITE = {
   yearsExperience: 15,
 } as const;
 
-export const LOCALES = ['es', 'en', 'pt'] as const;
+export const LOCALES = ['es', 'en', 'pt', 'ca'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'es';
 
@@ -32,10 +32,12 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   es: 'Español',
   en: 'English',
   pt: 'Português',
+  ca: 'Català',
 };
 
 export const LOCALE_OG: Record<Locale, string> = {
   es: 'es_ES',
   en: 'en_GB',
-  pt: 'pt_PT',
+  pt: 'pt_BR',
+  ca: 'ca_ES',
 };

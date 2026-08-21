@@ -22,12 +22,27 @@ export function FlagGB({ className }: { className?: string }) {
 }
 
 export function FlagPT({ className }: { className?: string }) {
+  // Brasil — conforme exigido pelo cliente (nunca Portugal).
   return (
     <svg viewBox="0 0 24 18" className={className} aria-hidden="true" role="img">
-      <rect width="24" height="18" fill="#FF0000" />
-      <rect width="9.6" height="18" fill="#046A38" />
-      <circle cx="9.6" cy="9" r="3.4" fill="#FFE900" stroke="#000" strokeWidth="0.4" />
-      <circle cx="9.6" cy="9" r="2" fill="#FF0000" />
+      <rect width="24" height="18" fill="#009C3B" />
+      <path d="M12 2l9 7-9 7-9-7z" fill="#FFDF00" />
+      <circle cx="12" cy="9" r="4" fill="#002776" />
+      <path d="M8.5 9c2.5-1.5 5-1.5 7 0-2 1.5-4.5 1.5-7 0z" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
+export function FlagCA({ className }: { className?: string }) {
+  // Senyera (Catalunya).
+  return (
+    <svg viewBox="0 0 24 18" className={className} aria-hidden="true" role="img">
+      <rect width="24" height="18" fill="#FCDD09" />
+      <rect y="2" width="24" height="1.4" fill="#DA121A" />
+      <rect y="5.6" width="24" height="1.4" fill="#DA121A" />
+      <rect y="9.2" width="24" height="1.4" fill="#DA121A" />
+      <rect y="12.8" width="24" height="1.4" fill="#DA121A" />
+      <rect y="16" width="24" height="1.4" fill="#DA121A" />
     </svg>
   );
 }

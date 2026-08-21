@@ -28,6 +28,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Contacto | Junior Reformas — Sabadell e Barcelona',
     description: 'Contacte a Junior Reformas: telefone e WhatsApp +34 658 18 70 71, email junior.sp@outlook.es. Resposta no mesmo dia. Visita técnica gratuita.',
   },
+  ca: {
+    title: 'Contacte | Junior Reformas — Sabadell i Barcelona',
+    description: 'Contacteu amb Junior Reformas: telèfon i WhatsApp +34 658 18 70 71, email junior.sp@outlook.es. Resposta el mateix dia. Visita tècnica gratuïta.',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

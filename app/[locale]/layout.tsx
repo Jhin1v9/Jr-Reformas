@@ -44,6 +44,11 @@ const HOME_META: Record<Locale, { title: string; description: string }> = {
     description:
       'Empresa de reformas em Sabadell, Barcelona, Terrassa e Mataró. Casas de banho, cozinhas, pavimentos e reformas completas. 15+ anos de experiência, visita gratuita e orçamento detalhado.',
   },
+  ca: {
+    title: 'Reformes integrals a Sabadell i Barcelona | Junior Reformas',
+    description:
+      'Empresa de reformes integrals a Sabadell, Barcelona, Terrassa i Mataró. Banys, cuines, sòls i pisos complets. Més de 15 anys d\'experiència, visita gratuïta i pressupost desglossat.',
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

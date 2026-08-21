@@ -11,7 +11,6 @@ const STATIC_PATHS = [
   { path: '/servicios/', priority: 0.9, changefreq: 'monthly' as const },
   { path: '/localidades/', priority: 0.9, changefreq: 'monthly' as const },
   { path: '/proyectos/galeria/', priority: 0.8, changefreq: 'weekly' as const },
-  { path: '/antes-y-despues/', priority: 0.8, changefreq: 'weekly' as const },
   { path: '/proceso/', priority: 0.7, changefreq: 'monthly' as const },
   { path: '/sobre-junior/', priority: 0.7, changefreq: 'monthly' as const },
   { path: '/blog/', priority: 0.8, changefreq: 'weekly' as const },

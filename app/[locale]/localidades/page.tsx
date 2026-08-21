@@ -26,6 +26,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Onde trabalhamos: Sabadell, Barcelona, Terrassa, Mataró | Junior Reformas',
     description: 'Reformas integrais em Sabadell, Barcelona, Terrassa e Mataró. Área de atuação de 40-50 km. Visita técnica gratuita e orçamento detalhado.',
   },
+  ca: {
+    title: 'On treballem: Sabadell, Barcelona, Terrassa, Mataró | Junior Reformas',
+    description: 'Reformes integrals a Sabadell, Barcelona, Terrassa i Mataró. Àrea d\'actuació de 40-50 km. Visita tècnica gratuïta i pressupost desglossat.',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

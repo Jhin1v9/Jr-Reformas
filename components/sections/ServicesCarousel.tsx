@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
@@ -10,7 +10,7 @@ import { fotoUrl } from '@/lib/photos';
 import { MAIN_SERVICES } from '@/lib/services';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeader from '@/components/shared/SectionHeader';
-import Reveal from '@/components/shared/Reveal';
+import { gsap } from '@/components/hooks/useGSAP';
 
 interface Props {
   locale: Locale;
@@ -19,6 +19,35 @@ interface Props {
 export default function ServicesCarousel({ locale }: Props) {
   const t = getDictionary(locale);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const cards = cardsRef.current.filter(Boolean);
+    if (!section || cards.length === 0) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cards,
+        { y: 60, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 70%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
 
   const scroll = (dir: number) => {
     if (!scrollRef.current) return;
@@ -28,7 +57,8 @@ export default function ServicesCarousel({ locale }: Props) {
   };
 
   return (
-    <SectionWrapper variant="dark" id="servicios">
+    <SectionWrapper variant="dark" id="servicios" className="overflow-hidden">
+      <div ref={sectionRef}>
       <SectionHeader
         badge={t.servicesGrid.badge}
         title={t.servicesGrid.title}
@@ -59,11 +89,14 @@ export default function ServicesCarousel({ locale }: Props) {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {MAIN_SERVICES.map((service, i) => (
-            <Reveal key={service.slug} delay={i * 100}>
-              <Link
-                href={localePath(locale, `/servicios/${service.slug}`)}
-                className="group relative block w-[85vw] shrink-0 snap-center overflow-hidden rounded-2xl bg-carbon-light md:w-[60vw] lg:w-[45vw]"
-              >
+            <Link
+              key={service.slug}
+              href={localePath(locale, `/servicios/${service.slug}`)}
+              ref={(el) => {
+                cardsRef.current[i] = el;
+              }}
+              className="group relative block w-[85vw] shrink-0 snap-center overflow-hidden rounded-2xl bg-carbon-light md:w-[60vw] lg:w-[45vw]"
+            >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   {service.heroFoto ? (
                     <Image
@@ -94,12 +127,10 @@ export default function ServicesCarousel({ locale }: Props) {
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
-              </Link>
-            </Reveal>
+            </Link>
           ))}
         </div>
       </div>
-
       <div className="mt-10 text-center">
         <Link
           href={localePath(locale, '/servicios')}
@@ -108,6 +139,7 @@ export default function ServicesCarousel({ locale }: Props) {
           Ver todos los servicios
           <ArrowRight className="h-4 w-4" />
         </Link>
+      </div>
       </div>
     </SectionWrapper>
   );

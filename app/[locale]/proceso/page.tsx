@@ -31,6 +31,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Como trabalhamos: processo de reforma em 5 passos | Junior Reformas',
     description: 'Visita gratuita, planeamento, orçamento detalhado, execução e entrega. Assim trabalhamos cada reforma em Sabadell e Barcelona, sem surpresas.',
   },
+  ca: {
+    title: 'Com treballem: procés de reforma en 5 passos | Junior Reformas',
+    description: 'Visita gratuïta, planejament, pressupost desglossat, execució i lliurament. Així treballem cada reforma a Sabadell i Barcelona, sense sorpreses.',
+  },
 };
 
 const STEP_FOTOS = [

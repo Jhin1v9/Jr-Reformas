@@ -8,14 +8,15 @@ import { isLocale, getDictionary, localePath } from '@/lib/i18n';
 import { pageMetadata, serviceSchema, faqSchema } from '@/lib/seo';
 import { SERVICES, getService } from '@/lib/services';
 import { LOCALITIES } from '@/lib/localities';
-import { fotoUrl, getPairs, getPhotos } from '@/lib/photos';
+import { fotoUrl, getPhotos, type Photo } from '@/lib/photos';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeader from '@/components/shared/SectionHeader';
 import Breadcrumb from '@/components/shared/Breadcrumb';
 import CTAButton from '@/components/shared/CTAButton';
 import JsonLd from '@/components/shared/JsonLd';
 import Reveal from '@/components/shared/Reveal';
-import BeforeAfterSlider from '@/components/sections/BeforeAfterSlider';
+import ProcessTimeline from '@/components/shared/ProcessTimeline';
+import AfterCarousel, { type AfterSlide } from '@/components/shared/AfterCarousel';
 import FAQ from '@/components/sections/FAQ';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -51,18 +52,33 @@ export default async function ServicioPage({ params }: Props) {
   const t = getDictionary(locale);
   const Icon = service.icon;
 
-  // Pairs of the service category (fallback: all pairs)
-  const catPairs = getPairs().filter((p) => p.categoria === service.categoria);
-  const pairs = (catPairs.length > 0 ? catPairs : getPairs()).slice(0, 2);
-  // Gallery photos of the same category
-  const catPhotos = getPhotos({ categoria: service.categoria }).slice(0, 4);
+  // Gallery photos of the same category (DESPUES only)
+  const catPhotos = getPhotos({ categoria: service.categoria, fase: 'DESPUES' });
+  const fallbackPhotos = getPhotos({ fase: 'DESPUES' });
+  const carouselPhotos = (catPhotos.length > 0 ? catPhotos : fallbackPhotos).slice(0, 8);
+
+  const afterSlides: AfterSlide[] = carouselPhotos.map((p: Photo) => ({
+    src: fotoUrl(p.sizes.hero),
+    alt: p.alt_text,
+    service: service.title,
+    location:
+      {
+        SAB: 'Sabadell',
+        BCN: 'Barcelona',
+        TER: 'Terrassa',
+        MAT: 'Mataró',
+        GEN: 'Sabadell',
+      }[p.localidad] ?? 'Sabadell',
+  }));
 
   const h1 =
     locale === 'es'
       ? `${service.title} en Sabadell, Barcelona y alrededores`
       : locale === 'pt'
         ? `${service.title} em Sabadell, Barcelona e arredores`
-        : `${service.title} in Sabadell, Barcelona and surroundings`;
+        : locale === 'ca'
+          ? `${service.title} a Sabadell, Barcelona i voltants`
+          : `${service.title} in Sabadell, Barcelona and surroundings`;
 
   return (
     <>
@@ -115,45 +131,40 @@ export default async function ServicioPage({ params }: Props) {
       </SectionWrapper>
 
       <SectionWrapper variant="light" className="pt-0">
-        <SectionHeader variant="light" badge={t.beforeAfter.badge} title={t.beforeAfter.title} />
-        <div className="grid gap-8 md:grid-cols-2">
-          {pairs.map((p) => (
-            <BeforeAfterSlider
-              key={p.par_id}
-              beforeSrc={fotoUrl(p.antes_file)}
-              afterSrc={fotoUrl(p.despues_file)}
-              beforeAlt={`${p.descripcion} — en obra`}
-              afterAlt={`${p.descripcion} — acabado final — Junior Reformas`}
-              beforeLabel={t.beforeAfter.before}
-              afterLabel={t.beforeAfter.after}
-              caption={p.descripcion}
-            />
-          ))}
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-2xl font-bold text-carbon md:text-3xl">
+            ¿Por qué contratar {service.title.toLowerCase()} con Junior Reformas?
+          </h2>
+          <div className="mt-6 space-y-4 leading-relaxed text-carbon/80">
+            <p>
+              En <strong className="text-carbon">Junior Reformas</strong> llevamos más de 15 años transformando espacios en Sabadell, Barcelona, Terrassa y Mataró. Nuestro equipo coordina personalmente cada fase de la obra para que tú solo tengas que preocuparte de disfrutar del resultado. Trabajamos con materiales de primera calidad, presupuestos desglosados y plazos reales.
+            </p>
+            <p>
+              Cada proyecto de <strong>{service.title.toLowerCase()}</strong> comienza con una visita técnica gratuita sin compromiso. Durante esa visita evaluamos el estado actual del espacio, escuchamos tus necesidades y te asesoramos sobre las mejores soluciones según tu presupuesto y el uso real de cada estancia.
+            </p>
+            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">Materiales, acabados y garantía</h3>
+            <p>
+              Trabajamos con proveedores contrastados y marcas reconocidas del sector. Desde cerámicas y porcelánicos hasta parquet, grifería, sanitarios, pintura y electricidad: cada material se elige pensando en la durabilidad, la estética y el mantenimiento diario. Todos los acabados cuentan con garantía del fabricante y revisamos contigo cada detalle antes de la entrega.
+            </p>
+            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">Zonas de actuación</h3>
+            <p>
+              Realizamos {service.title.toLowerCase()} en Sabadell, Barcelona, Terrassa, Mataró y municipios de alrededor. Nuestra base en Sant Feliu de Llobregat nos permite desplazarnos con rapidez y mantener una comunicación directa durante toda la obra. Respuesta por WhatsApp el mismo día y visita técnica gratuita.
+            </p>
+          </div>
         </div>
-        {catPhotos.length > 0 ? (
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {catPhotos.map((p) => (
-              <li key={p.id} className="relative aspect-square overflow-hidden rounded-xl">
-                <Image src={fotoUrl(p.sizes.gallery)} alt={p.alt_text} fill sizes="(max-width: 768px) 50vw, 25vw" loading="lazy" className="object-cover" />
-              </li>
-            ))}
-          </ul>
-        ) : null}
       </SectionWrapper>
 
-      <SectionWrapper variant="dark">
-        <SectionHeader title={`${t.process.title} — ${service.title}`} />
-        <ol className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {service.processSteps.map((step, i) => (
-            <li key={step} className="flex items-start gap-4 rounded-xl border border-border bg-carbon-light p-5">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-terracota font-display text-sm font-bold text-offwhite">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <span className="text-sm leading-relaxed text-text-secondary">{step}</span>
-            </li>
-          ))}
-        </ol>
+      <SectionWrapper variant="light" className="pt-0">
+        <SectionHeader
+          variant="light"
+          badge={t.gallery.badge}
+          title="Resultados de nuestro trabajo"
+          description="Acabados reales de reformas en Sabadell, Barcelona y alrededores."
+        />
+        <AfterCarousel slides={afterSlides} />
       </SectionWrapper>
+
+      <ProcessTimeline locale={locale} variant="dark" title={`${t.process.title} — ${service.title}`} />
 
       <FAQ locale={locale} items={service.faq} variant="light" withSchema={false} />
 

@@ -26,6 +26,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Peça o seu orçamento grátis | Junior Reformas',
     description: 'Peça orçamento de reforma em Sabadell, Barcelona, Terrassa e Mataró em 7 passos. Resposta no mesmo dia e visita técnica gratuita. Sem compromisso.',
   },
+  ca: {
+    title: 'Demana el teu pressupost gratis | Junior Reformas',
+    description: 'Demana pressupost de reforma a Sabadell, Barcelona, Terrassa i Mataró en 7 passos. Resposta el mateix dia i visita tècnica gratuïta. Sense compromís.',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

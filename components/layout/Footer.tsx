@@ -16,7 +16,6 @@ export default function Footer({ locale }: Props) {
     { href: localePath(locale, '/proceso'), label: t.nav.process },
     { href: localePath(locale, '/sobre-junior'), label: t.nav.about },
     { href: localePath(locale, '/proyectos/galeria'), label: t.nav.gallery },
-    { href: localePath(locale, '/antes-y-despues'), label: t.nav.beforeAfter },
     { href: localePath(locale, '/blog'), label: t.nav.blog },
     { href: localePath(locale, '/contacto'), label: t.nav.contact },
     { href: localePath(locale, '/presupuesto'), label: t.nav.budget },

@@ -28,6 +28,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Guias úteis sobre reformas | Blog Junior Reformas',
     description: 'Guias práticos sobre reformas: preços em Sabadell, prazos, licenças, materiais e conselhos para reformar sem surpresas.',
   },
+  ca: {
+    title: 'Guies útils sobre reformes | Blog Junior Reformas',
+    description: 'Guies pràctiques sobre reformes: preus a Sabadell, terminis, llicències, materials i consells per reformar sense sorpreses.',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -2,10 +2,16 @@ import { DEFAULT_LOCALE, LOCALES, type Locale } from './constants';
 import es from '@/locales/es.json';
 import en from '@/locales/en.json';
 import pt from '@/locales/pt.json';
+import ca from '@/locales/ca.json';
 
 export type Messages = typeof es;
 
-const dictionaries: Record<Locale, Messages> = { es, en: en as Messages, pt: pt as Messages };
+const dictionaries: Record<Locale, Messages> = {
+  es,
+  en: en as Messages,
+  pt: pt as Messages,
+  ca: ca as Messages,
+};
 
 export function isLocale(value: string): value is Locale {
   return (LOCALES as readonly string[]).includes(value);

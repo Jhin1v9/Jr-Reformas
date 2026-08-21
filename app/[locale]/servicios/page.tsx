@@ -31,6 +31,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Serviços de reforma em Sabadell e Barcelona | Junior Reformas',
     description: 'Reformas integrais, casas de banho, cozinhas, pavimentos, alvenaria, eletricidade, canalização e mais em Sabadell, Barcelona, Terrassa e Mataró. Orçamento grátis.',
   },
+  ca: {
+    title: 'Serveis de reforma a Sabadell i Barcelona | Junior Reformas',
+    description: 'Reformes integrals, banys, cuines, sòls, paleteria, electricitat, fontaneria i més a Sabadell, Barcelona, Terrassa i Mataró. Pressupost gratuït.',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

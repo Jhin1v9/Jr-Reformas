@@ -153,11 +153,18 @@ export function articleSchema(post: {
   };
 }
 
+const HOW_TO_NAME: Record<Locale, string> = {
+  es: 'Cómo trabajamos: proceso de reforma en 5 pasos',
+  en: 'How we work: 5-step renovation process',
+  pt: 'Como trabalhamos: processo de reforma em 5 passos',
+  ca: 'Com treballem: procés de reforma en 5 passos',
+};
+
 export function howToSchema(locale: Locale, steps: { title: string; description: string }[]): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: locale === 'es' ? 'Cómo trabajamos: proceso de reforma en 5 pasos' : locale === 'pt' ? 'Como trabalhamos: processo de reforma em 5 passos' : 'How we work: 5-step renovation process',
+    name: HOW_TO_NAME[locale],
     step: steps.map((s, i) => ({
       '@type': 'HowToStep',
       position: i + 1,

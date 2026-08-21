@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import PhotoCard from './PhotoCard';
 import VideoCard from './VideoCard';
 import Lightbox, { type LightboxItem } from './Lightbox';
+import { gsap } from '@/components/hooks/useGSAP';
 import { cn } from '@/lib/utils';
 
 export interface MasonryItem {
@@ -27,11 +28,40 @@ export default function MasonryGrid({ items, categories, className, columns = 3 
   const [filter, setFilter] = useState<string>('todos');
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const filteredItems = useMemo(
     () => (filter === 'todos' ? items : items.filter((item) => item.category === filter)),
     [items, filter]
   );
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    const itemEls = itemsRef.current.filter(Boolean);
+    if (!grid || itemEls.length === 0) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        itemEls,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.08,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: grid,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }, grid);
+
+    return () => ctx.revert();
+  }, [filter]);
 
   const lightboxItems: LightboxItem[] = useMemo(
     () =>
@@ -71,28 +101,33 @@ export default function MasonryGrid({ items, categories, className, columns = 3 
         </div>
       )}
 
-      <div className={cn('columns-1 gap-4 space-y-4', colCount)}>
-        {filteredItems.map((item, index) =>
-          item.type === 'video' && item.videoSrc ? (
-            <VideoCard
-              key={item.id}
-              src={item.videoSrc}
-              poster={item.src}
-              aspect={item.aspect || 'video'}
-              className="break-inside-avoid"
-              onClick={() => openLightbox(index)}
-            />
-          ) : (
-            <PhotoCard
-              key={item.id}
-              src={item.src}
-              alt={item.alt}
-              aspect={item.aspect || 'square'}
-              className="break-inside-avoid"
-              onClick={() => openLightbox(index)}
-            />
-          )
-        )}
+      <div ref={gridRef} className={cn('columns-1 gap-4 space-y-4', colCount)}>
+        {filteredItems.map((item, index) => (
+          <div
+            key={item.id}
+            ref={(el) => {
+              itemsRef.current[index] = el;
+            }}
+          >
+            {item.type === 'video' && item.videoSrc ? (
+              <VideoCard
+                src={item.videoSrc}
+                poster={item.src}
+                aspect={item.aspect || 'video'}
+                className="break-inside-avoid"
+                onClick={() => openLightbox(index)}
+              />
+            ) : (
+              <PhotoCard
+                src={item.src}
+                alt={item.alt}
+                aspect={item.aspect || 'square'}
+                className="break-inside-avoid"
+                onClick={() => openLightbox(index)}
+              />
+            )}
+          </div>
+        ))}
       </div>
 
       <Lightbox

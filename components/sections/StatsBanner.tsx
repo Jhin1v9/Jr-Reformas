@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { CalendarDays, MapPin, MessageCircle, Star, BadgeCheck } from 'lucide-react';
 import { type Locale } from '@/lib/constants';
 import { getDictionary, localePath } from '@/lib/i18n';
+import { gsap } from '@/components/hooks/useGSAP';
 import Reveal from '@/components/shared/Reveal';
 
 interface Stat {
@@ -12,36 +13,6 @@ interface Stat {
   desc: string;
   href?: string;
   badge?: string;
-}
-
-function useCountUp(end: number, duration = 1500) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !started.current) {
-          started.current = true;
-          const start = performance.now();
-          const step = (now: number) => {
-            const progress = Math.min((now - start) / duration, 1);
-            setCount(Math.floor(progress * end));
-            if (progress < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-        }
-      },
-      { threshold: 0.5 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [end, duration]);
-
-  return { count, ref };
 }
 
 interface Props {
@@ -75,7 +46,33 @@ export default function StatsBanner({ locale }: Props) {
 
 function StatCard({ stat }: { stat: Stat }) {
   const isNumeric = /^\d+$/.test(stat.label);
-  const { count, ref } = useCountUp(isNumeric ? parseInt(stat.label, 10) : 0);
+  const valueRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = valueRef.current;
+    if (!el || !isNumeric) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el,
+        { innerText: '0' },
+        {
+          innerText: stat.label,
+          duration: 2,
+          ease: 'power2.out',
+          snap: { innerText: 1 },
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, [isNumeric, stat.label]);
+
   const Icon = stat.icon;
 
   const content = (
@@ -83,8 +80,9 @@ function StatCard({ stat }: { stat: Stat }) {
       <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-terracota/30 bg-carbon text-terracota shadow-lg shadow-terracota/5 transition-transform group-hover:scale-110">
         <Icon className="h-8 w-8" aria-hidden="true" />
       </span>
-      <div ref={ref} className="mt-5 font-display text-5xl font-bold text-offwhite md:text-6xl">
-        {isNumeric ? `${count}+` : stat.label}
+      <div ref={valueRef} className="mt-5 font-display text-5xl font-bold text-offwhite md:text-6xl">
+        {isNumeric ? '0' : stat.label}
+        {isNumeric ? '+' : ''}
       </div>
       <p className="mt-2 text-sm font-medium text-text-secondary md:text-base">{stat.desc}</p>
       {stat.badge ? (

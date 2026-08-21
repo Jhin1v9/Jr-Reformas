@@ -5,12 +5,13 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronDown, Check } from 'lucide-react';
 import { LOCALES, LOCALE_LABELS, type Locale } from '@/lib/constants';
-import { FlagES, FlagGB, FlagPT } from './Flags';
+import { FlagES, FlagGB, FlagPT, FlagCA } from './Flags';
 
 const FLAGS: Record<Locale, (p: { className?: string }) => React.ReactElement> = {
   es: FlagES,
   en: FlagGB,
   pt: FlagPT,
+  ca: FlagCA,
 };
 
 interface Props {

@@ -11,7 +11,7 @@ import SectionHeader from '@/components/shared/SectionHeader';
 import Breadcrumb from '@/components/shared/Breadcrumb';
 import CTAButton from '@/components/shared/CTAButton';
 import Reveal from '@/components/shared/Reveal';
-import ProcessSteps from '@/components/sections/ProcessSteps';
+import ProcessTimeline from '@/components/shared/ProcessTimeline';
 import CTAFinal from '@/components/sections/CTAFinal';
 
 interface Props {
@@ -30,6 +30,10 @@ const META: Record<Locale, { title: string; description: string }> = {
   pt: {
     title: 'Sobre a Junior Reformas: 15+ anos de ofício | Junior Reformas',
     description: 'Conheça o João Paulo e a equipa da Junior Reformas: mais de 15 anos reformando apartamentos, casas de banho e cozinhas em Sabadell e arredores.',
+  },
+  ca: {
+    title: 'Sobre Junior Reformas: 15+ anys d\'ofici | Junior Reformas',
+    description: 'Coneix el João Paulo i l\'equip de Junior Reformas: més de 15 anys reformant pisos, banys i cuines a Sabadell, Barcelona i voltants.',
   },
 };
 
@@ -107,7 +111,7 @@ export default async function SobreJuniorPage({ params }: Props) {
         </div>
       </SectionWrapper>
 
-      <ProcessSteps locale={locale} />
+      <ProcessTimeline locale={locale} variant="dark" title={t.processPage.h1} description={t.processPage.sub} />
 
       <div className="bg-carbon pb-16 text-center">
         <CTAButton variant="primary" href={localePath(locale, '/contacto')}>

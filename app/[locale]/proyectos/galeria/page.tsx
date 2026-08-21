@@ -28,6 +28,10 @@ const META: Record<Locale, { title: string; description: string }> = {
     title: 'Galeria de transformações reais | Junior Reformas',
     description: 'Fotos reais das nossas reformas: casas de banho, cozinhas, apartamentos e pavimentos em Sabadell, Barcelona e arredores. Antes, durante e depois.',
   },
+  ca: {
+    title: 'Galeria de transformacions reals | Junior Reformas',
+    description: 'Fotos reals de les nostres reformes: banys, cuines, pisos i sòls a Sabadell, Barcelona i voltants. Abans, durant i després.',
+  },
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
