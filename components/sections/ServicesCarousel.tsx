@@ -112,17 +112,17 @@ export default function ServicesCarousel({ locale }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/40 to-transparent" />
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full p-6 md:p-8">
-                  <span className="mb-2 inline-block rounded-full bg-terracota px-3 py-1 text-xs font-bold uppercase tracking-wider text-offwhite">
+                <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 md:p-8">
+                  <span className="mb-2 inline-block rounded-full bg-terracota px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-offwhite sm:text-xs">
                     {t.servicesGrid.mostRequested}
                   </span>
-                  <h3 className="font-display text-2xl font-bold text-offwhite md:text-3xl">
+                  <h3 className="font-display text-xl font-bold text-offwhite sm:text-2xl md:text-3xl">
                     {service.title}
                   </h3>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-sand/90 md:text-base">
                     {service.shortDesc}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-100 transition-all duration-300 lg:opacity-0 lg:group-hover:opacity-100">
                     {t.servicesGrid.viewProjects}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>

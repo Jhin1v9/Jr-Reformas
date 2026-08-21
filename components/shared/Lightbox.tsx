@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { SITE } from '@/lib/constants';
@@ -44,6 +44,7 @@ const DEFAULT_LABELS: Labels = {
 export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext, onPrev, labels = {} }: Props) {
   const l = { ...DEFAULT_LABELS, ...labels };
   const current = items[currentIndex];
+  const [touchStart, setTouchStart] = useState<number | null>(null);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -54,6 +55,16 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
     },
     [isOpen, onClose, onNext, onPrev]
   );
+
+  const onTouchStart = (e: React.TouchEvent) => setTouchStart(e.touches[0].clientX);
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? onNext() : onPrev();
+    }
+    setTouchStart(null);
+  };
 
   useEffect(() => {
     if (!isOpen) return;
@@ -101,7 +112,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
               e.stopPropagation();
               onPrev();
             }}
-            className="absolute left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 p-3 text-offwhite transition-all hover:scale-110 hover:bg-carbon/80 md:flex"
+            className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 p-2 text-offwhite transition-all hover:scale-110 hover:bg-carbon/80 active:scale-95 md:left-4"
             aria-label={l.previous}
           >
             <ChevronLeft className="h-6 w-6" />
@@ -112,7 +123,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
               e.stopPropagation();
               onNext();
             }}
-            className="absolute right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 p-3 text-offwhite transition-all hover:scale-110 hover:bg-carbon/80 md:flex"
+            className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 p-2 text-offwhite transition-all hover:scale-110 hover:bg-carbon/80 active:scale-95 md:right-4"
             aria-label={l.next}
           >
             <ChevronRight className="h-6 w-6" />
@@ -123,6 +134,8 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
       <div
         className="relative flex h-[70vh] w-full max-w-6xl flex-col items-center justify-center px-4 md:h-[75vh] md:px-16"
         onClick={(e) => e.stopPropagation()}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
       >
         {current.type === 'video' && current.videoSrc ? (
           <video
@@ -150,7 +163,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
           href={`${SITE.whatsapp}&text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-whatsapp px-6 py-3 text-sm font-semibold text-white transition-all hover:brightness-110"
+          className="inline-flex min-h-[48px] items-center gap-2 rounded-lg bg-whatsapp px-6 py-3 text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-95"
         >
           <MessageCircle className="h-4 w-4" />
           {l.cta}

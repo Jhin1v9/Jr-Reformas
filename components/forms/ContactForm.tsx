@@ -86,12 +86,12 @@ export default function ContactForm({ labels }: { labels: Labels }) {
         <textarea id="cf-message" rows={5} placeholder={labels.messagePlaceholder} className={inputCls} aria-invalid={!!errors.message} aria-describedby={errors.message ? 'cf-msg-err' : undefined} {...register('message')} />
         {errors.message ? <p id="cf-msg-err" role="alert" className="mt-1 text-sm text-terracota">{err('message')}</p> : null}
       </div>
-      <div className="flex items-start gap-3">
-        <input id="cf-gdpr" type="checkbox" className="mt-1 h-4 w-4 accent-terracota" aria-invalid={!!errors.gdpr} aria-describedby={errors.gdpr ? 'cf-gdpr-err' : undefined} {...register('gdpr')} />
-        <label htmlFor="cf-gdpr" className="text-sm text-text-secondary">
+      <label htmlFor="cf-gdpr" className="flex cursor-pointer items-start gap-3 py-1">
+        <input id="cf-gdpr" type="checkbox" className="mt-0.5 h-5 w-5 min-h-[44px] min-w-[44px] accent-terracota" aria-invalid={!!errors.gdpr} aria-describedby={errors.gdpr ? 'cf-gdpr-err' : undefined} {...register('gdpr')} />
+        <span className="text-sm text-text-secondary">
           {labels.gdpr} *
-        </label>
-      </div>
+        </span>
+      </label>
       {errors.gdpr ? <p id="cf-gdpr-err" role="alert" className="text-sm text-terracota">{err('gdpr')}</p> : null}
       <button
         type="submit"

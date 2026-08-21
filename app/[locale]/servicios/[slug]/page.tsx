@@ -97,17 +97,17 @@ export default async function ServicioPage({ params }: Props) {
         <div className="mx-auto w-full max-w-content px-4 py-20 sm:px-6 md:py-28 lg:px-8">
           <Breadcrumb locale={locale} items={[{ name: t.nav.services, path: '/servicios/' }, { name: service.title, path: `/servicios/${service.slug}/` }]} />
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-terracota px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-terracota">
+            <span className="inline-flex items-center gap-2 rounded-full border border-terracota px-4 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-terracota sm:text-[11px] sm:tracking-[0.2em]">
               <Icon className="h-4 w-4" aria-hidden="true" />
               {service.title}
             </span>
-            <h1 className="mt-4 text-3xl font-bold leading-tight text-offwhite md:text-5xl">{h1}</h1>
-            <p className="mt-5 text-lg leading-relaxed text-text-secondary">{service.shortDesc}</p>
+            <h1 className="mt-4 text-2xl font-bold leading-tight text-offwhite sm:text-3xl md:text-5xl">{h1}</h1>
+            <p className="mt-5 text-base leading-relaxed text-text-secondary sm:text-lg">{service.shortDesc}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton variant="primary" href={localePath(locale, '/presupuesto')}>
+              <CTAButton variant="primary" href={localePath(locale, '/presupuesto')} className="w-full sm:w-auto">
                 {t.hero.ctaPrimary}
               </CTAButton>
-              <CTAButton variant="whatsapp" external href={SITE.whatsapp} ariaLabel={t.whatsapp.ariaLabel}>
+              <CTAButton variant="whatsapp" external href={SITE.whatsapp} ariaLabel={t.whatsapp.ariaLabel} className="w-full sm:w-auto">
                 WhatsApp
               </CTAButton>
             </div>

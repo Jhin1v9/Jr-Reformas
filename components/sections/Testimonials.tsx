@@ -21,8 +21,8 @@ export function TestimonialCard({
     <blockquote
       className={
         light
-          ? 'h-full rounded-2xl border border-carbon/10 bg-white p-7 shadow-sm'
-          : 'h-full rounded-2xl border border-border bg-carbon-light p-7'
+          ? 'h-full rounded-2xl border border-carbon/10 bg-white p-5 shadow-sm sm:p-6 lg:p-7'
+          : 'h-full rounded-2xl border border-border bg-carbon-light p-5 sm:p-6 lg:p-7'
       }
     >
       <div className="flex items-center gap-1" aria-label={`${t.stars} / 5 ${ratingLabel}`}>

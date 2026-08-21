@@ -75,7 +75,7 @@ export default async function ContactoPage({ params }: Props) {
                   <Mail className="h-6 w-6 shrink-0 text-terracota" aria-hidden="true" />
                   <span>
                     <span className="block text-sm text-text-muted">{t.forms.email}</span>
-                    <span className="font-semibold text-offwhite">{SITE.email}</span>
+                    <span className="break-all font-semibold text-offwhite">{SITE.email}</span>
                   </span>
                 </a>
               </li>

@@ -113,10 +113,10 @@ export default function MasonryGrid({
     columns === 5
       ? 'columns-2 sm:columns-3 md:columns-4 lg:columns-5'
       : columns === 4
-        ? 'columns-2 sm:columns-3 lg:columns-4'
+        ? 'columns-1 min-[400px]:columns-2 sm:columns-3 lg:columns-4'
         : columns === 2
-          ? 'columns-2'
-          : 'columns-2 sm:columns-3';
+          ? 'columns-1 min-[400px]:columns-2'
+          : 'columns-1 min-[400px]:columns-2 sm:columns-3';
 
   const gapClass = compact ? 'gap-2' : 'gap-4';
   const spaceClass = compact ? 'space-y-2' : 'space-y-4';
@@ -181,8 +181,8 @@ export default function MasonryGrid({
                 </div>
               )}
 
-              {/* Instagram-style hover overlay */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-carbon/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              {/* Instagram-style hover overlay — always visible on touch */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-carbon/60 opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
                 <Maximize2 className="h-6 w-6 text-offwhite" />
                 <span className="mt-2 text-xs font-medium uppercase tracking-wider text-offwhite/90">
                   {item.category}
@@ -227,7 +227,7 @@ function FilterButton({
       )}
       aria-pressed={active}
     >
-      {children}
+      <span className="flex min-h-[44px] items-center justify-center">{children}</span>
     </button>
   );
 }

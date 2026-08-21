@@ -79,7 +79,7 @@ export default function HeroCarousel({ locale }: Props) {
 
   return (
     <section
-      className="relative h-screen min-h-[600px] overflow-hidden bg-carbon"
+      className="relative h-screen min-h-[500px] overflow-hidden bg-carbon md:min-h-[600px]"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
@@ -114,7 +114,7 @@ export default function HeroCarousel({ locale }: Props) {
         <span className="hero-badge mb-6 inline-block rounded-full border border-terracota/60 bg-terracota/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-terracota backdrop-blur-sm">
           {t.hero.badge}
         </span>
-        <h1 className="hero-title max-w-4xl font-display text-5xl font-bold leading-[1.05] text-offwhite md:text-6xl lg:text-7xl">
+        <h1 className="hero-title max-w-4xl font-display text-3xl font-bold leading-[1.05] text-offwhite sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
           {t.hero.h1}
         </h1>
         <p className="hero-subtitle mt-6 max-w-2xl text-lg text-sand md:text-xl">{t.hero.sub}</p>
@@ -132,33 +132,37 @@ export default function HeroCarousel({ locale }: Props) {
       <button
         type="button"
         onClick={() => go(-1)}
-        className="absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-4 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 md:flex"
+        className="absolute left-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-2 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 active:scale-95 md:left-4 md:h-12 md:w-12"
         aria-label={t.common.previous}
       >
-        <ChevronLeft className="h-7 w-7" />
+        <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
       </button>
       <button
         type="button"
         onClick={() => go(1)}
-        className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-4 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 md:flex"
+        className="absolute right-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-2 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 active:scale-95 md:right-4 md:h-12 md:w-12"
         aria-label={t.common.next}
       >
-        <ChevronRight className="h-7 w-7" />
+        <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+      <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-1">
         {HERO_SLIDES.map((slide, i) => (
           <button
             key={slide.id}
             type="button"
             onClick={() => setIndex(i)}
-            className={`h-3 rounded-full transition-all ${
-              i === index ? 'w-10 bg-terracota' : 'w-3 bg-offwhite/50 hover:bg-offwhite'
-            }`}
+            className="flex h-10 w-10 items-center justify-center rounded-full"
             aria-label={`${t.common.slide} ${i + 1}`}
             aria-current={i === index}
-          />
+          >
+            <span
+              className={`block h-3 rounded-full transition-all ${
+                i === index ? 'w-10 bg-terracota' : 'w-3 bg-offwhite/50 hover:bg-offwhite'
+              }`}
+            />
+          </button>
         ))}
       </div>
 

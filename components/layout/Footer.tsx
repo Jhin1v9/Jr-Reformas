@@ -23,7 +23,7 @@ export default function Footer({ locale }: Props) {
 
   return (
     <footer className="border-t border-border bg-carbon text-sand">
-      <div className="mx-auto grid w-full max-w-content gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid w-full max-w-content gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 md:gap-10 md:py-14 lg:grid-cols-4 lg:px-8">
         <div>
           <Link href={localePath(locale, '/')} className="flex items-center gap-3">
             <Image src="/logo/logo-jr.png" alt={`Logo ${SITE.name}`} width={48} height={48} className="h-12 w-12 object-contain" />
@@ -47,13 +47,13 @@ export default function Footer({ locale }: Props) {
           <ul className="mt-4 space-y-2 text-sm">
             {SERVICES.slice(0, 6).map((s) => (
               <li key={s.slug}>
-                <Link href={localePath(locale, `/servicios/${s.slug}`)} className="text-text-secondary transition-colors hover:text-terracota">
+                <Link href={localePath(locale, `/servicios/${s.slug}`)} className="inline-block py-1 text-text-secondary transition-colors hover:text-terracota md:py-2">
                   {s.title}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href={localePath(locale, '/servicios')} className="font-medium text-terracota hover:text-terracota-light">
+              <Link href={localePath(locale, '/servicios')} className="inline-block py-1 font-medium text-terracota hover:text-terracota-light md:py-2">
                 {t.servicesGrid.viewAll} →
               </Link>
             </li>
@@ -64,7 +64,7 @@ export default function Footer({ locale }: Props) {
           <ul className="mt-4 space-y-2 text-sm">
             {LOCALITIES.map((l) => (
               <li key={l.slug}>
-                <Link href={localePath(locale, `/localidades/${l.slug}`)} className="text-text-secondary transition-colors hover:text-terracota">
+                <Link href={localePath(locale, `/localidades/${l.slug}`)} className="inline-block py-1 text-text-secondary transition-colors hover:text-terracota md:py-2">
                   {l.name}
                 </Link>
               </li>
@@ -74,7 +74,7 @@ export default function Footer({ locale }: Props) {
           <ul className="mt-3 space-y-2 text-sm">
             {quickLinks.slice(0, 4).map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-text-secondary transition-colors hover:text-terracota">
+                <Link href={l.href} className="inline-block py-1 text-text-secondary transition-colors hover:text-terracota md:py-2">
                   {l.label}
                 </Link>
               </li>
@@ -112,10 +112,10 @@ export default function Footer({ locale }: Props) {
       <div className="border-t border-border">
         <div className="mx-auto flex w-full max-w-content flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-text-muted sm:px-6 md:flex-row lg:px-8">
           <p>© {new Date().getFullYear()} {SITE.name}. {t.footer.rights}</p>
-          <ul className="flex gap-5">
-            <li><Link href={localePath(locale, '/aviso-legal')} className="hover:text-sand">{t.footer.legalNotice}</Link></li>
-            <li><Link href={localePath(locale, '/politica-privacidad')} className="hover:text-sand">{t.footer.privacy}</Link></li>
-            <li><Link href={localePath(locale, '/politica-cookies')} className="hover:text-sand">{t.footer.cookies}</Link></li>
+          <ul className="flex flex-wrap justify-center gap-5">
+            <li><Link href={localePath(locale, '/aviso-legal')} className="inline-block py-2 hover:text-sand">{t.footer.legalNotice}</Link></li>
+            <li><Link href={localePath(locale, '/politica-privacidad')} className="inline-block py-2 hover:text-sand">{t.footer.privacy}</Link></li>
+            <li><Link href={localePath(locale, '/politica-cookies')} className="inline-block py-2 hover:text-sand">{t.footer.cookies}</Link></li>
           </ul>
         </div>
       </div>

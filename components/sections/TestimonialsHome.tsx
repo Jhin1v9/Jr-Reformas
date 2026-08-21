@@ -25,7 +25,7 @@ export default function TestimonialsHome({ locale }: Props) {
       <div className="grid gap-6 md:grid-cols-3">
         {items.map((item, i) => (
           <Reveal key={item.id} delay={i * 100}>
-            <blockquote className="relative h-full rounded-2xl border border-border bg-carbon-light p-7">
+            <blockquote className="relative h-full rounded-2xl border border-border bg-carbon-light p-5 sm:p-6 lg:p-7">
               <Quote className="absolute right-6 top-6 h-8 w-8 text-terracota/20" aria-hidden="true" />
               <div className="flex items-center gap-1" aria-label={`${item.stars} / 5 ${t.testimonials.rating}`}>
                 {Array.from({ length: item.stars }).map((_, idx) => (
@@ -54,7 +54,7 @@ export default function TestimonialsHome({ locale }: Props) {
       <div className="mt-10 text-center">
         <Link
           href={localePath(locale, '/sobre-junior')}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-terracota transition-colors hover:text-terracota-light"
+          className="inline-flex min-h-[44px] items-center gap-2 px-2 text-sm font-semibold text-terracota transition-colors hover:text-terracota-light"
         >
           {t.testimonials.viewAll} →
         </Link>

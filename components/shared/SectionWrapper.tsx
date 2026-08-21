@@ -13,7 +13,7 @@ export default function SectionWrapper({ variant = 'dark', id, className, childr
     <section
       id={id}
       className={cn(
-        'py-16 md:py-24',
+        'py-12 md:py-20 lg:py-24',
         variant === 'dark' ? 'bg-carbon text-text-primary' : 'bg-offwhite text-carbon',
         className
       )}

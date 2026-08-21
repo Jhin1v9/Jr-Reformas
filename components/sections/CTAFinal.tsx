@@ -74,8 +74,8 @@ export default function CTAFinal({ locale }: Props) {
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-carbon/90 via-carbon/80 to-carbon/70" aria-hidden="true" />
 
-      <div className="mx-auto w-full max-w-content px-4 py-24 text-center sm:px-6 md:py-32 lg:px-8">
-        <h2 className="cta-title mx-auto max-w-3xl font-display text-4xl font-bold leading-tight text-offwhite md:text-5xl lg:text-6xl">
+      <div className="mx-auto w-full max-w-content px-4 py-16 text-center sm:px-6 md:py-24 lg:px-8 lg:py-32">
+        <h2 className="cta-title mx-auto max-w-3xl font-display text-2xl font-bold leading-tight text-offwhite sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           {t.ctaFinal.title}
         </h2>
         <p className="cta-sub mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-text-secondary md:text-xl">
@@ -106,7 +106,7 @@ export default function CTAFinal({ locale }: Props) {
         </a>
 
         {/* Stats flutuantes */}
-        <div className="cta-stats mx-auto mt-12 grid max-w-3xl gap-4 rounded-2xl border border-border/50 bg-carbon/60 p-6 backdrop-blur sm:grid-cols-3">
+        <div className="cta-stats mx-auto mt-12 grid max-w-3xl grid-cols-3 gap-2 rounded-2xl border border-border/50 bg-carbon/60 p-4 backdrop-blur sm:gap-4 sm:p-6">
           <div className="flex flex-col items-center gap-2">
             <Calendar className="h-6 w-6 text-terracota" aria-hidden="true" />
             <span className="text-2xl font-bold text-offwhite">15+</span>

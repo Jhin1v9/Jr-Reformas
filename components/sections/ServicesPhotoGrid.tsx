@@ -85,19 +85,19 @@ function ServiceCard({
         <div className="absolute inset-0 bg-gradient-to-t from-carbon/95 via-carbon/50 to-transparent" />
       </div>
 
-      <div className="absolute inset-0 flex flex-col justify-end p-6">
+      <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
         {service.main && (
-          <span className="mb-2 w-fit rounded-full bg-terracota px-3 py-1 text-xs font-bold uppercase tracking-wider text-offwhite">
+          <span className="mb-2 w-fit rounded-full bg-terracota px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-offwhite sm:text-xs">
             {t.servicesGrid.mostRequested}
           </span>
         )}
-        <h3 className="font-display text-xl font-bold text-offwhite md:text-2xl">
+        <h3 className="font-display text-lg font-bold text-offwhite sm:text-xl md:text-2xl">
           {service.title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-sand/90 line-clamp-2">
           {service.shortDesc}
         </p>
-        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-0 transition-all duration-300 group-hover:opacity-100">
+        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-100 transition-all duration-300 lg:opacity-0 lg:group-hover:opacity-100">
           {t.servicesGrid.viewProjects}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>

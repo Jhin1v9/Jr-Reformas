@@ -163,7 +163,7 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
   };
 
   const optionCard = (active: boolean): string =>
-    `flex items-center gap-3 rounded-lg border p-4 text-left transition-all ${
+    `flex min-h-[48px] items-center gap-3 rounded-lg border p-4 text-left transition-all ${
       active ? 'border-terracota bg-terracota/10 text-offwhite' : 'border-border bg-carbon text-text-secondary hover:border-sand'
     }`;
 
@@ -199,16 +199,16 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
                 [labels.steps[5], values.timeline],
                 [labels.steps[6], `${values.name} · ${values.phone}${values.email ? ` · ${values.email}` : ''}`],
               ].map(([dt, dd], i) => (
-                <div key={String(dt)} className="flex items-start justify-between gap-4 rounded-lg border border-border bg-carbon p-4">
+                <div key={String(dt)} className="flex flex-col gap-2 rounded-lg border border-border bg-carbon p-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                   <dt className="font-medium text-text-muted">{dt}</dt>
-                  <dd className="flex-1 text-right text-offwhite">{dd}</dd>
+                  <dd className="text-offwhite sm:flex-1 sm:text-right">{dd}</dd>
                   <button
                     type="button"
                     onClick={() => {
                       setShowSummary(false);
                       setStep(i);
                     }}
-                    className="shrink-0 text-xs font-semibold text-terracota hover:underline"
+                    className="shrink-0 self-start text-xs font-semibold text-terracota hover:underline sm:self-auto"
                   >
                     {labels.edit}
                   </button>
@@ -218,7 +218,7 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-terracota px-8 py-4 text-base font-semibold text-offwhite transition-all hover:bg-terracota-light disabled:opacity-60"
+              className="mt-8 inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-terracota px-8 py-3 text-base font-semibold text-offwhite transition-all hover:bg-terracota-light disabled:opacity-60"
             >
               <Send className="h-5 w-5" aria-hidden="true" />
               {isSubmitting ? labels.sending : labels.submit}
@@ -229,7 +229,7 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
             {step === 0 ? (
               <fieldset>
                 <legend className="font-display text-2xl font-semibold text-offwhite">{labels.s1title}</legend>
-                <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <div className="mt-6 grid grid-cols-1 min-[400px]:grid-cols-2 gap-3 sm:grid-cols-3">
                   {REFORM_TYPES.map((rt) => {
                     const Icon = TYPE_ICONS[rt];
                     return (
@@ -277,8 +277,8 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
                   </label>
                   <input id="bf-sqm" type="range" min={10} max={200} step={5} disabled={values.sqmUnknown} className="mt-6 w-full accent-terracota disabled:opacity-40" {...register('sqm', { valueAsNumber: true })} />
                   <p className="mt-2 text-sm text-text-muted">{labels.s3hint}</p>
-                  <label className="mt-4 flex items-center gap-3 text-sm text-text-secondary">
-                    <input type="checkbox" className="h-4 w-4 accent-terracota" {...register('sqmUnknown')} />
+                  <label className="mt-4 flex cursor-pointer items-center gap-3 py-1 text-sm text-text-secondary">
+                    <input type="checkbox" className="h-5 w-5 min-h-[44px] min-w-[44px] accent-terracota" {...register('sqmUnknown')} />
                     {labels.s3unknown}
                   </label>
                 </div>
@@ -358,25 +358,25 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
                       ))}
                     </div>
                   </fieldset>
-                  <div className="flex items-start gap-3">
-                    <input id="bf-gdpr" type="checkbox" className="mt-1 h-4 w-4 accent-terracota" aria-invalid={!!errors.gdpr} {...register('gdpr')} />
-                    <label htmlFor="bf-gdpr" className="text-sm text-text-secondary">{labels.gdpr} *</label>
-                  </div>
+                  <label htmlFor="bf-gdpr" className="flex cursor-pointer items-start gap-3 py-1">
+                    <input id="bf-gdpr" type="checkbox" className="mt-0.5 h-5 w-5 min-h-[44px] min-w-[44px] accent-terracota" aria-invalid={!!errors.gdpr} {...register('gdpr')} />
+                    <span className="text-sm text-text-secondary">{labels.gdpr} *</span>
+                  </label>
                   {errors.gdpr ? <p role="alert" className="text-sm text-terracota">{errorFor('gdpr')}</p> : null}
-                  <div className="flex items-start gap-3">
-                    <input id="bf-mkt" type="checkbox" className="mt-1 h-4 w-4 accent-terracota" {...register('marketing')} />
-                    <label htmlFor="bf-mkt" className="text-sm text-text-secondary">{labels.marketing}</label>
-                  </div>
+                  <label htmlFor="bf-mkt" className="flex cursor-pointer items-start gap-3 py-1">
+                    <input id="bf-mkt" type="checkbox" className="mt-0.5 h-5 w-5 min-h-[44px] min-w-[44px] accent-terracota" {...register('marketing')} />
+                    <span className="text-sm text-text-secondary">{labels.marketing}</span>
+                  </label>
                 </div>
               </fieldset>
             ) : null}
 
-            <div className="mt-8 flex items-center justify-between gap-4">
+            <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
               <button
                 type="button"
                 onClick={() => setStep((s) => Math.max(0, s - 1))}
                 disabled={step === 0}
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-sand transition-colors hover:border-offwhite hover:text-offwhite disabled:opacity-40"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold text-sand transition-colors hover:border-offwhite hover:text-offwhite disabled:opacity-40 sm:w-auto"
               >
                 <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                 {labels.back}
@@ -384,7 +384,7 @@ export default function SmartBudgetForm({ labels }: { labels: Labels }) {
               <button
                 type="button"
                 onClick={goNext}
-                className="inline-flex items-center gap-2 rounded-lg bg-terracota px-8 py-3.5 text-sm font-semibold text-offwhite transition-all hover:bg-terracota-light"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-terracota px-8 py-3.5 text-sm font-semibold text-offwhite transition-all hover:bg-terracota-light sm:w-auto"
               >
                 {labels.next}
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />

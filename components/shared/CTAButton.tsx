@@ -21,7 +21,7 @@ const styles: Record<NonNullable<Props['variant']>, string> = {
 
 export default function CTAButton({ variant = 'primary', href, children, className, external, ariaLabel }: Props) {
   const cls = cn(
-    'inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-base font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracota',
+    'inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg px-8 py-3 text-base font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracota',
     styles[variant],
     className
   );

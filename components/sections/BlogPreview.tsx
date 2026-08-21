@@ -24,7 +24,7 @@ export function BlogCard({ post, locale, readMore, minRead }: { post: BlogPost; 
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           loading="lazy"
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-cover transition-transform duration-300 group-hover:scale-105 group-active:scale-105"
         />
         <span className="absolute left-3 top-3 rounded-full bg-terracota px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-offwhite">
           {post.category}
@@ -42,7 +42,7 @@ export function BlogCard({ post, locale, readMore, minRead }: { post: BlogPost; 
         </div>
         <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-terracota">
           {readMore}
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-active:translate-x-1" aria-hidden="true" />
         </span>
       </div>
     </Link>

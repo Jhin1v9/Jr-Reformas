@@ -100,7 +100,7 @@ export default function Carousel({
           <button
             type="button"
             onClick={() => go(-1)}
-            className="absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/50 p-3 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/70 md:flex"
+            className="absolute left-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/50 p-2 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/70 active:scale-95 md:left-4"
             aria-label={l.previous}
           >
             <ChevronLeft className="h-5 w-5" />
@@ -108,7 +108,7 @@ export default function Carousel({
           <button
             type="button"
             onClick={() => go(1)}
-            className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/50 p-3 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/70 md:flex"
+            className="absolute right-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/50 p-2 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/70 active:scale-95 md:right-4"
             aria-label={l.next}
           >
             <ChevronRight className="h-5 w-5" />
@@ -117,19 +117,23 @@ export default function Carousel({
       )}
 
       {showDots && slides.length > 1 && (
-        <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+        <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-1">
           {slides.map((slide, i) => (
             <button
               key={slide.id}
               type="button"
               onClick={() => goTo(i)}
-              className={cn(
-                'h-2 rounded-full transition-all',
-                i === index ? 'w-8 bg-terracota' : 'w-2 bg-offwhite/50 hover:bg-offwhite'
-              )}
+              className="flex h-10 w-10 items-center justify-center rounded-full"
               aria-label={`${l.slide} ${i + 1}`}
               aria-current={i === index}
-            />
+            >
+              <span
+                className={cn(
+                  'block h-2 rounded-full transition-all',
+                  i === index ? 'w-8 bg-terracota' : 'w-2 bg-offwhite/50 hover:bg-offwhite'
+                )}
+              />
+            </button>
           ))}
         </div>
       )}

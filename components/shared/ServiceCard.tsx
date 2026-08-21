@@ -74,7 +74,7 @@ export default function ServiceCard({
         >
           {description}
         </p>
-        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-0 transition-all duration-300 group-hover:opacity-100">
+        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-100 transition-all duration-300 lg:opacity-0 lg:group-hover:opacity-100">
           Ver proyectos
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </span>

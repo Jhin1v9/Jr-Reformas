@@ -159,7 +159,7 @@ export default function Header({ locale }: Props) {
               type="button"
               onClick={() => setMobileOpen(true)}
               aria-label={t.nav.openMenu}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-offwhite/80 hover:border-sand hover:text-offwhite lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border text-offwhite/80 hover:border-sand hover:text-offwhite lg:hidden"
             >
               <Menu className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -169,8 +169,8 @@ export default function Header({ locale }: Props) {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[60] bg-carbon/98 backdrop-blur lg:hidden" role="dialog" aria-modal="true">
-          <div className="flex h-[60px] items-center justify-between border-b border-border px-4">
+        <div className="fixed inset-0 z-[60] flex flex-col bg-carbon/98 backdrop-blur lg:hidden" role="dialog" aria-modal="true">
+          <div className="flex h-[60px] shrink-0 items-center justify-between border-b border-border px-4">
             <span className="font-display text-lg font-bold text-offwhite">
               Junior <span className="text-terracota">Reformas</span>
             </span>
@@ -178,12 +178,12 @@ export default function Header({ locale }: Props) {
               type="button"
               onClick={() => setMobileOpen(false)}
               aria-label={t.nav.closeMenu}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-offwhite/80 hover:text-offwhite"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border text-offwhite/80 hover:text-offwhite"
             >
               <X className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
-          <nav aria-label="Menú móvil" className="px-4 py-4">
+          <nav aria-label="Menú móvil" className="flex-1 overflow-y-auto px-4 py-4">
             <ul className="divide-y divide-border">
               {/* Servicios expandable */}
               <li>

@@ -32,7 +32,7 @@ export default function PhotoGallery({ photos, labels, showPhaseFilter = true }:
   const filtered = photos.filter((p) => (!cat || p.categoria === cat) && (!phase || p.fase === phase));
 
   const chip = (active: boolean): string =>
-    `rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+    `inline-flex min-h-[44px] items-center rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
       active ? 'border-terracota bg-terracota text-offwhite' : 'border-border text-text-secondary hover:border-sand hover:text-offwhite'
     }`;
 
@@ -78,7 +78,7 @@ export default function PhotoGallery({ photos, labels, showPhaseFilter = true }:
                 loading="lazy"
                 className="w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
               />
-              <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-carbon/90 to-transparent px-4 pb-3 pt-10 text-left text-sm font-medium text-offwhite opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-carbon/90 to-transparent px-4 pb-3 pt-10 text-left text-sm font-medium text-offwhite opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
                 {p.descripcion}
                 <span className="ml-2 shrink-0 rounded bg-terracota px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider">
                   {labels.phases[p.fase] ?? p.fase}
