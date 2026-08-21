@@ -682,6 +682,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           ],
         warranty: "Garantía de 2 años en la aplicación y garantía del fabricante en pinturas."
       }
+    },
+    en: {
+      intro: ['A good paint job is the finish that stands out most when you walk into a home. Removing textured paint, smoothing walls and applying modern colours completely refreshes any room without major building work.', 'At Junior Reformas we paint entire flats in Sabadell, Barcelona, Terrassa and Mataró. We use quality washable emulsion, durable enamels and smooth finishes that last over time.', 'We prepare surfaces thoroughly before painting: we repair cracks, smooth walls and apply primer so the result is flawless.'],
+      pricesTitle: 'Guide painting prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the square metres, wall condition and type of finish.',
+      prices: [
+        {
+          concept: 'Painting a 70-80 m² flat',
+          price: '1,500 - 3,000 €',
+          note: 'walls and ceilings'
+        },
+        {
+          concept: 'Remove textured paint and smooth walls',
+          price: '25 - 45 €/m²',
+          note: 'includes paint'
+        },
+        {
+          concept: 'Standard painting',
+          price: '8 - 15 €/m²',
+          note: 'smooth walls'
+        },
+        {
+          concept: 'Doors and windows enamel',
+          price: '80 - 150 €/unit',
+          note: 'depending on size'
+        },
+        {
+          concept: 'Facade painting',
+          price: '15 - 30 €/m²',
+          note: 'depending on access'
+        }
+      ],
+      durationTitle: 'How long does it take to paint a flat?',
+      duration: {
+        typical: '3 - 7 days',
+        range: '80 m² flat',
+        factors: ['Wall condition and need for smoothing', 'Number of colours and finishes', 'Drying time between coats', 'Protection of floors and furniture']
+      },
+      areasTitle: 'Areas where we paint',
+      areasIntro: 'We carry out painting work in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for painting',
+        items: ['Quality washable emulsion paint', 'Primers and sealers', 'Smoothing fillers', 'Water-based and synthetic enamels', 'Silicones and sealants', 'Custom colours'],
+        warranty: '2-year guarantee on application and manufacturer warranty on paints.'
+      }
+    },
+    pt: {
+      intro: ['Uma boa pintura é o acabamento que mais chama a atenção ao entrar numa casa. Tirar o gotelê, alisar paredes e aplicar cores atuais renova completamente qualquer ambiente sem obras grandes.', 'Na Junior Reformas pintamos apartamentos completos em Sabadell, Barcelona, Terrassa e Mataró. Trabalhamos com tinta plástica de qualidade, esmaltes laváveis e acabados lisos que duram no tempo.', 'Preparamos bem as superfícies antes de pintar: reparamos rachaduras, alisamos e aplicamos fundo para que o resultado fique impecável.'],
+      pricesTitle: 'Preços orientativos de pintura em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende dos metros, estado das paredes e tipo de acabado.',
+      prices: [
+        {
+          concept: 'Pintar apartamento 70-80 m²',
+          price: '1.500 - 3.000 €',
+          note: 'paredes e tetos'
+        },
+        {
+          concept: 'Tirar gotelê e alisar paredes',
+          price: '25 - 45 €/m²',
+          note: 'inclui tinta'
+        },
+        {
+          concept: 'Pintura padrão',
+          price: '8 - 15 €/m²',
+          note: 'paredes lisas'
+        },
+        {
+          concept: 'Esmalte de portas e janelas',
+          price: '80 - 150 €/unidade',
+          note: 'segundo tamanho'
+        },
+        {
+          concept: 'Pintura de fachada',
+          price: '15 - 30 €/m²',
+          note: 'segundo acesso'
+        }
+      ],
+      durationTitle: 'Quanto tempo demora pintar um apartamento?',
+      duration: {
+        typical: '3 - 7 dias',
+        range: 'Apartamento 80 m²',
+        factors: ['Estado das paredes e necessidade de alisar', 'Número de cores e acabados', 'Secagem entre demãos', 'Proteção de soalhos e móveis']
+      },
+      areasTitle: 'Onde pintamos',
+      areasIntro: 'Realizamos trabalhos de pintura em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em pintura',
+        items: ['Tinta plástica lavável de qualidade', 'Fundos e fixadores', 'Massas de alisamento', 'Esmaltes à água e sintéticos', 'Silicones e vedantes', 'Cores sob medida'],
+        warranty: 'Garantia de 2 anos na aplicação e garantia do fabricante nas tintas.'
+      }
+    },
+    ca: {
+      intro: ["Una bona pintura és l'acabat que més es nota en entrar a casa. Treure el gotelé, aplanar parets i aplicar colors actuals renova per complet qualsevol estança sense obres majors.", 'A Junior Reformas pintem pisos sencers a Sabadell, Barcelona, Terrassa i Mataró. Treballem amb pintura plàstica de qualitat, esmalts rentables i acabats allisats que duren en el temps.', 'Preparem bé les superfícies abans de pintar: arreglem esquerdes, aplanem i apliquem imprimació perquè el resultat sigui impecable.'],
+      pricesTitle: 'Preus orientatius de pintura a Sabadell',
+      pricesDisclaimer: "Preus amb IVA inclòs. El pressupost definitiu depèn dels metres, l'estat de les parets i el tipus d'acabat.",
+      prices: [
+        {
+          concept: 'Pintar pis 70-80 m²',
+          price: '1.500 - 3.000 €',
+          note: 'parets i sostres'
+        },
+        {
+          concept: 'Treure gotelé i aplanar parets',
+          price: '25 - 45 €/m²',
+          note: 'inclou pintura'
+        },
+        {
+          concept: 'Pintura estàndard',
+          price: '8 - 15 €/m²',
+          note: 'parets llises'
+        },
+        {
+          concept: 'Esmalt de portes i finestres',
+          price: '80 - 150 €/unitat',
+          note: 'segons mida'
+        },
+        {
+          concept: 'Pintura de façana',
+          price: '15 - 30 €/m²',
+          note: 'segons accés'
+        }
+      ],
+      durationTitle: 'Quant triga pintar un pis?',
+      duration: {
+        typical: '3 - 7 dies',
+        range: 'Pis 80 m²',
+        factors: ["Estat de les parets i necessitat d'aplanar", 'Nombre de colors i acabats', 'Assecat entre capes', 'Protecció de terres i mobles']
+      },
+      areasTitle: 'On pintem',
+      areasIntro: 'Realitzem treballs de pintura a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en pintura',
+        items: ['Pintura plàstica rentable de qualitat', 'Imprimacions i fixadors', "Massilles d'allisat", "Esmalts a l'aigua i sintètics", 'Silicones i selladors', 'Colors a mida'],
+        warranty: "Garantia de 2 anys en l'aplicació i garantia del fabricant en pintures."
+      }
     }
   },
   albanileria: {
@@ -809,6 +1013,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             "Impermeabilizantes para baños y terrazas"
           ],
         warranty: "Garantía de 2 años en la ejecución de los trabajos de albañilería."
+      }
+    },
+    en: {
+      intro: ['Masonry is the foundation of every quality renovation. Removing partition walls, building new walls, rendering and levelling screeds are the jobs that define the final result of a project.', 'At Junior Reformas we carry out masonry work in Sabadell, Barcelona, Terrassa and Mataró, controlling every phase from controlled demolition to the finishes before painting.', 'We work both with homeowners who need a partial renovation and full projects where we coordinate all trades.'],
+      pricesTitle: 'Guide masonry prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote is prepared after a technical visit.',
+      prices: [
+        {
+          concept: 'Remove brick or plasterboard partition',
+          price: '150 - 400 €',
+          note: 'depending on size'
+        },
+        {
+          concept: 'Build new partition wall',
+          price: '200 - 500 €',
+          note: 'includes materials'
+        },
+        {
+          concept: 'Rendering and plastering',
+          price: '25 - 45 €/m²',
+          note: 'walls'
+        },
+        {
+          concept: 'Screed levelling',
+          price: '15 - 30 €/m²',
+          note: 'depending on thickness'
+        },
+        {
+          concept: 'Opening for door or window',
+          price: '300 - 800 €',
+          note: 'door or window'
+        }
+      ],
+      durationTitle: 'Duration of masonry work',
+      duration: {
+        typical: '2 - 10 days',
+        range: 'Depending on scope',
+        factors: ['Metres of wall to remove or build', 'Need to reinforce structures', 'Drying time for renders', 'Property access and debris removal']
+      },
+      areasTitle: 'Areas where we do masonry work',
+      areasIntro: 'We carry out masonry work in Sabadell and within a 40-50 km radius:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for masonry',
+        items: ['Hollow brick and concrete blocks', 'Cement and gypsum mortar', 'Plasterboard sheets and profiles', 'Thermal and acoustic insulation', 'Steel reinforcement bars', 'Waterproofing for bathrooms and terraces'],
+        warranty: '2-year guarantee on the execution of masonry work.'
+      }
+    },
+    pt: {
+      intro: ['A alvenaria é a base de toda reforma de qualidade. Tirar tabiques, levantar paredes, rebocar e nivelar contrapisos são trabalhos que definem o resultado final da obra.', 'Na Junior Reformas realizamos trabalhos de alvenaria em Sabadell, Barcelona, Terrassa e Mataró, controlando cada fase desde a demolição controlada até aos acabados antes da pintura.', 'Trabalhamos tanto com particulares que precisam de uma reforma parcial como com obras integrais onde coordenamos todos os ofícios.'],
+      pricesTitle: 'Preços orientativos de alvenaria em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo é preparado após visita técnica.',
+      prices: [
+        {
+          concept: 'Tirar tabique de tijolo ou pladur',
+          price: '150 - 400 €',
+          note: 'segundo tamanho'
+        },
+        {
+          concept: 'Levantar tabique novo',
+          price: '200 - 500 €',
+          note: 'inclui materiais'
+        },
+        {
+          concept: 'Reboco e estuque',
+          price: '25 - 45 €/m²',
+          note: 'paredes'
+        },
+        {
+          concept: 'Nivelamento de contrapiso',
+          price: '15 - 30 €/m²',
+          note: 'segundo espessura'
+        },
+        {
+          concept: 'Abertura de vão',
+          price: '300 - 800 €',
+          note: 'porta ou janela'
+        }
+      ],
+      durationTitle: 'Duração dos trabalhos de alvenaria',
+      duration: {
+        typical: '2 - 10 dias',
+        range: 'Segundo alcance',
+        factors: ['Metros de tabique a tirar ou levantar', 'Necessidade de reforçar estruturas', 'Tempo de secagem dos rebocos', 'Acesso ao imóvel e retirada de entulho']
+      },
+      areasTitle: 'Onde fazemos alvenaria',
+      areasIntro: 'Realizamos trabalhos de alvenaria em Sabadell e num raio de 40-50 km:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em alvenaria',
+        items: ['Tijolo furado e blocos de betão', 'Mortero de cimento e gesso', 'Placas de pladur e perfis', 'Isolamento térmico e acústico', 'Ferro para reforços', 'Impermeabilizantes para casas de banho e terraços'],
+        warranty: 'Garantia de 2 anos na execução dos trabalhos de alvenaria.'
+      }
+    },
+    ca: {
+      intro: ["La paleteria és la base de tota reforma de qualitat. Tirar tabics, aixecar murs, enfoscar i nivellar soleres són treballs que defineixen el resultat final de l'obra.", 'A Junior Reformas realitzem treballs de paleteria a Sabadell, Barcelona, Terrassa i Mataró amb control de cada fase, des de la demolició controlada fins als acabats previs a la pintura.', 'Treballem tant amb particulars que necessiten una reforma parcial com amb obres integrals on coordinem tots els oficis.'],
+      pricesTitle: 'Preus orientatius de paleteria a Sabadell',
+      pricesDisclaimer: "Preus amb IVA inclòs. El pressupost definitiu es prepara després d'una visita tècnica.",
+      prices: [
+        {
+          concept: 'Tirar tabic de maó o pladur',
+          price: '150 - 400 €',
+          note: 'segons mida'
+        },
+        {
+          concept: 'Aixecar tabic nou',
+          price: '200 - 500 €',
+          note: 'inclou materials'
+        },
+        {
+          concept: 'Enfoscament i revestiment',
+          price: '25 - 45 €/m²',
+          note: 'parets'
+        },
+        {
+          concept: 'Nivellació de solera',
+          price: '15 - 30 €/m²',
+          note: 'segons gruix'
+        },
+        {
+          concept: 'Obertura de buit',
+          price: '300 - 800 €',
+          note: 'porta o finestra'
+        }
+      ],
+      durationTitle: 'Durada dels treballs de paleteria',
+      duration: {
+        typical: '2 - 10 dies',
+        range: 'Segons abast',
+        factors: ['Metres de tabic a tirar o aixecar', 'Necessitat de reforçar estructures', "Temps d'assecat dels enfoscats", "Accés a l'immoble i retirada de runa"]
+      },
+      areasTitle: 'On fem paleteria',
+      areasIntro: 'Realitzem treballs de paleteria a Sabadell i en un radi de 40-50 km:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en paleteria',
+        items: ['Maó foradat i blocs de formigó', 'Mortar de ciment i guix', 'Plaques de pladur i perfils', 'Aïllament tèrmic i acústic', 'Ferro per a reforços', 'Impermeabilitzants per a banys i terrasses'],
+        warranty: "Garantia de 2 anys en l'execució dels treballs de paleteria."
       }
     }
   },
@@ -938,6 +1346,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           ],
         warranty: "Garantía de 2 años en la instalación y boletín eléctrico incluido cuando proceda."
       }
+    },
+    en: {
+      intro: ['The electrical installation is one of the most important parts of a renovation, especially in older flats in Sabadell where fuse boxes and wiring no longer meet current needs.', 'At Junior Reformas we renew complete electrical installations: fuse box, protection devices, wiring, light points, sockets and LED lighting. We include the electrical certificate where applicable.', 'Every electrical renovation starts with a technical visit to assess the current condition, the contracted power and the needs of each room.'],
+      pricesTitle: 'Guide electrical prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the number of points, flat size and current condition.',
+      prices: [
+        {
+          concept: 'Partial electrical renovation',
+          price: '1,200 - 2,500 €',
+          note: 'specific points'
+        },
+        {
+          concept: 'Complete electrical installation 80 m² flat',
+          price: '4,000 - 7,000 €',
+          note: 'fuse box, wiring and points'
+        },
+        {
+          concept: 'New fuse box',
+          price: '400 - 900 €',
+          note: 'depending on circuits'
+        },
+        {
+          concept: 'New light point or socket',
+          price: '60 - 120 €',
+          note: 'per unit'
+        },
+        {
+          concept: 'Full LED lighting',
+          price: '800 - 2,000 €',
+          note: 'depending on property'
+        }
+      ],
+      durationTitle: 'Duration of an electrical renovation',
+      duration: {
+        typical: '3 - 7 days',
+        range: 'Complete installation',
+        factors: ['Number of points to renew', 'Condition of existing wiring', 'Need to chase walls', 'Processing of electrical certificate']
+      },
+      areasTitle: 'Areas where we install electrics',
+      areasIntro: 'We carry out electrical installations in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for electrics',
+        items: ['Certified copper wiring', 'Electrical panels with protection devices', 'Switches and sockets from recognised brands', 'Low-consumption LED lighting', 'USB sockets and chargers', 'Basic home automation systems'],
+        warranty: '2-year installation guarantee and electrical certificate included where applicable.'
+      }
+    },
+    pt: {
+      intro: ['A instalação elétrica é uma das partes mais importantes de uma reforma, especialmente em apartamentos antigos de Sabadell onde os quadros e cabos já não atendem às necessidades atuais.', 'Na Junior Reformas renovamos instalações elétricas completas: quadro, proteções, cabeamento, pontos de luz, tomadas e iluminação LED. Trabalhamos com boletim incluído quando procede.', 'Cada reforma elétrica começa com uma visita técnica para avaliar o estado atual, a potência contratada e as necessidades de cada ambiente.'],
+      pricesTitle: 'Preços orientativos de eletricidade em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende do número de pontos, metros da casa e estado atual.',
+      prices: [
+        {
+          concept: 'Renovação elétrica parcial',
+          price: '1.200 - 2.500 €',
+          note: 'pontos específicos'
+        },
+        {
+          concept: 'Instalação elétrica completa apartamento 80 m²',
+          price: '4.000 - 7.000 €',
+          note: 'quadro, cabeamento e pontos'
+        },
+        {
+          concept: 'Quadro elétrico novo',
+          price: '400 - 900 €',
+          note: 'segundo linhas'
+        },
+        {
+          concept: 'Ponto de luz ou tomada nova',
+          price: '60 - 120 €',
+          note: 'por unidade'
+        },
+        {
+          concept: 'Iluminação LED completa',
+          price: '800 - 2.000 €',
+          note: 'segundo casa'
+        }
+      ],
+      durationTitle: 'Duração de uma reforma elétrica',
+      duration: {
+        typical: '3 - 7 dias',
+        range: 'Instalação completa',
+        factors: ['Número de pontos a renovar', 'Estado do cabeamento existente', 'Necessidade de abrir roços', 'Tramitação do boletim']
+      },
+      areasTitle: 'Onde instalamos eletricidade',
+      areasIntro: 'Realizamos instalações elétricas em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em eletricidade',
+        items: ['Cabeamento de cobre certificado', 'Quadros elétricos com proteções', 'Mecanismos de marcas reconhecidas', 'Iluminação LED de baixo consumo', 'Tomadas USB e carregadores', 'Sistemas de domótica básica'],
+        warranty: 'Garantia de 2 anos na instalação e boletim elétrico incluído quando procede.'
+      }
+    },
+    ca: {
+      intro: ["La instal·lació elèctrica és una de les parts més importants d'una reforma, especialment en pisos antics de Sabadell on els quadres i cablejats ja no compleixen les necessitats actuals.", 'A Junior Reformas renovem instal·lacions elèctriques completes: quadre, proteccions, cablejat, punts de llum, endolls i il·luminació LED. Treballem amb butlletí inclòs quan escau.', "Cada reforma elèctrica comença amb una visita tècnica per avaluar l'estat actual, la potència contractada i les necessitats de cada estança."],
+      pricesTitle: "Preus orientatius d'electricitat a Sabadell",
+      pricesDisclaimer: 'Preus amb IVA inclòs. El pressupost definitiu depèn del nombre de punts, metres de vivenda i estat actual.',
+      prices: [
+        {
+          concept: 'Renovació elèctrica parcial',
+          price: '1.200 - 2.500 €',
+          note: 'punts específics'
+        },
+        {
+          concept: 'Instal·lació elèctrica completa pis 80 m²',
+          price: '4.000 - 7.000 €',
+          note: 'quadre, cablejat i punts'
+        },
+        {
+          concept: 'Quadre elèctric nou',
+          price: '400 - 900 €',
+          note: 'segons línies'
+        },
+        {
+          concept: 'Punt de llum o endoll nou',
+          price: '60 - 120 €',
+          note: 'per unitat'
+        },
+        {
+          concept: 'Il·luminació LED completa',
+          price: '800 - 2.000 €',
+          note: 'segons vivenda'
+        }
+      ],
+      durationTitle: "Durada d'una reforma elèctrica",
+      duration: {
+        typical: '3 - 7 dies',
+        range: 'Instal·lació completa',
+        factors: ['Nombre de punts a renovar', 'Estat del cablejat existent', 'Necessitat de rajar parets', 'Tramitació del butlletí']
+      },
+      areasTitle: 'On instal·lem electricitat',
+      areasIntro: 'Realitzem instal·lacions elèctriques a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en electricitat',
+        items: ['Cablejat de coure certificat', 'Quadres elèctrics amb proteccions', 'Mecanismes de marques reconegudes', 'Il·luminació LED de baix consum', 'Tomes USB i carregadors', 'Sistemes de domòtica bàsica'],
+        warranty: 'Garantia de 2 anys en la instal·lació i butlletí elèctric inclòs quan escau.'
+      }
     }
   },
   fontaneria: {
@@ -1066,6 +1678,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           ],
         warranty: "Garantía de 2 años en la instalación y garantía del fabricante en todos los materiales."
       }
+    },
+    en: {
+      intro: ['Plumbing is the system that makes a home work properly every day. Replacing old pipes, changing downpipes or installing modern sanitaryware improves comfort and prevents future problems.', 'At Junior Reformas we carry out plumbing installations in bathroom, kitchen and full flat renovations in Sabadell, Barcelona, Terrassa and Mataró.', 'We work with multilayer, copper and PVC pipes as needed, and we always perform leak tests before closing walls.'],
+      pricesTitle: 'Guide plumbing prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the scope, number of points and condition of the pipes.',
+      prices: [
+        {
+          concept: 'Bathroom plumbing renovation',
+          price: '800 - 2,000 €',
+          note: 'pipes and drains'
+        },
+        {
+          concept: 'Downpipe replacement',
+          price: '400 - 1,200 €',
+          note: 'depending on height and access'
+        },
+        {
+          concept: 'Sanitaryware installation',
+          price: '200 - 500 €',
+          note: 'per unit'
+        },
+        {
+          concept: 'Concealed cistern',
+          price: '350 - 700 €',
+          note: 'includes mechanism'
+        },
+        {
+          concept: 'Electric water heater or boiler',
+          price: '300 - 900 €',
+          note: 'depending on capacity'
+        }
+      ],
+      durationTitle: 'Duration of plumbing work',
+      duration: {
+        typical: '2 - 5 days',
+        range: 'Depending on scope',
+        factors: ['Condition of existing pipes', 'Number of water points to renew', 'Need to access downpipes', 'Leak tests']
+      },
+      areasTitle: 'Areas where we do plumbing',
+      areasIntro: 'We carry out plumbing installations in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for plumbing',
+        items: ['Multilayer and copper pipe', 'High-resistance sanitary PVC', 'Thermostatic and single-lever taps', 'Wall-hung sanitaryware and cisterns', 'Siphons and non-return valves', 'Water heaters and boilers'],
+        warranty: '2-year installation guarantee and manufacturer warranty on all materials.'
+      }
+    },
+    pt: {
+      intro: ['A canalização é o sistema que faz uma casa funcionar bem todos os dias. Renovar tubulações velhas, trocar colunas ou instalar sanitários modernos melhora o conforto e evita problemas futuros.', 'Na Junior Reformas realizamos instalações de canalização em reformas de casas de banho, cozinhas e apartamentos completos em Sabadell, Barcelona, Terrassa e Mataró.', 'Trabalhamos com tubos multicamada, cobre e PVC conforme necessidade, e sempre fazemos testes de estanqueidade antes de fechar paredes.'],
+      pricesTitle: 'Preços orientativos de canalização em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende do alcance, número de pontos e estado das tubulações.',
+      prices: [
+        {
+          concept: 'Renovação canalização casa de banho',
+          price: '800 - 2.000 €',
+          note: 'tubulações e esgotos'
+        },
+        {
+          concept: 'Troca de coluna',
+          price: '400 - 1.200 €',
+          note: 'segundo altura e acesso'
+        },
+        {
+          concept: 'Instalação de sanitários',
+          price: '200 - 500 €',
+          note: 'por unidade'
+        },
+        {
+          concept: 'Caixa de descarga embutida',
+          price: '350 - 700 €',
+          note: 'inclui mecanismo'
+        },
+        {
+          concept: 'Aquecedor ou termo elétrico',
+          price: '300 - 900 €',
+          note: 'segundo capacidade'
+        }
+      ],
+      durationTitle: 'Duração dos trabalhos de canalização',
+      duration: {
+        typical: '2 - 5 dias',
+        range: 'Segundo alcance',
+        factors: ['Estado das tubulações existentes', 'Número de pontos de água a renovar', 'Necessidade de aceder a colunas', 'Testes de estanqueidade']
+      },
+      areasTitle: 'Onde fazemos canalização',
+      areasIntro: 'Realizamos instalações de canalização em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em canalização',
+        items: ['Tubulação multicamada e cobre', 'PVC sanitário de alta resistência', 'Torneiras termostáticas e monocomando', 'Sanitários suspensos e caixas de descarga', 'Sifões e válvulas antirretorno', 'Aquecedores e termos'],
+        warranty: 'Garantia de 2 anos na instalação e garantia do fabricante em todos os materiais.'
+      }
+    },
+    ca: {
+      intro: ['La fontaneria és el sistema que fa que una casa funcioni bé cada dia. Renovar canonades velles, canviar baixants o instal·lar sanitaris moderns millora el confort i evita problemes futurs.', 'A Junior Reformas realitzem instal·lacions de fontaneria en reformes de banys, cuines i pisos complets a Sabadell, Barcelona, Terrassa i Mataró.', "Treballem amb canonades multicapa, coure i PVC segons necessitat, i sempre fem proves d'estanqueïtat abans de tancar parets."],
+      pricesTitle: 'Preus orientatius de fontaneria a Sabadell',
+      pricesDisclaimer: "Preus amb IVA inclòs. El pressupost definitiu depèn de l'abast, nombre de punts i estat de les canonades.",
+      prices: [
+        {
+          concept: 'Renovació fontaneria bany',
+          price: '800 - 2.000 €',
+          note: 'canonades i desaigües'
+        },
+        {
+          concept: 'Canvi de baixant',
+          price: '400 - 1.200 €',
+          note: 'segons alçada i accés'
+        },
+        {
+          concept: 'Instal·lació de sanitaris',
+          price: '200 - 500 €',
+          note: 'per unitat'
+        },
+        {
+          concept: 'Cisterna encastada',
+          price: '350 - 700 €',
+          note: 'inclou mecanisme'
+        },
+        {
+          concept: 'Escalfador o termo elèctric',
+          price: '300 - 900 €',
+          note: 'segons capacitat'
+        }
+      ],
+      durationTitle: 'Durada dels treballs de fontaneria',
+      duration: {
+        typical: '2 - 5 dies',
+        range: 'Segons abast',
+        factors: ['Estat de les canonades existents', "Nombre de punts d'aigua a renovar", "Necessitat d'accedir a baixants", "Proves d'estanqueïtat"]
+      },
+      areasTitle: 'On fem fontaneria',
+      areasIntro: 'Realitzem instal·lacions de fontaneria a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en fontaneria',
+        items: ['Canonada multicapa i coure', "PVC sanitari d'alta resistència", 'Aixetes termostàtiques i monocomandament', 'Sanitaris suspesos i cisternes', 'Sifons i vàlvules antiretorn', 'Escalfadors i termos'],
+        warranty: 'Garantia de 2 anys en la instal·lació i garantia del fabricant en tots els materials.'
+      }
     }
   },
   'pladur-y-techos': {
@@ -1192,6 +2008,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             "Tornillería y tacos específicos"
           ],
         warranty: "Garantía de 2 años en la instalación de pladur y acabados."
+      }
+    },
+    en: {
+      intro: ['Plasterboard is a versatile solution for creating partition walls, false ceilings and battens with a perfect finish. It allows you to conceal installations, improve insulation and gain visual space.', 'At Junior Reformas we install plasterboard partitions, continuous false ceilings and battens in Sabadell, Barcelona, Terrassa and Mataró, paying special attention to joints and final sanding.', 'We work with standard boards, moisture-resistant boards and insulated boards, depending on the area of the home where they will be installed.'],
+      pricesTitle: 'Guide plasterboard prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the square metres, height and type of board.',
+      prices: [
+        {
+          concept: 'Single plasterboard partition',
+          price: '25 - 45 €/m²',
+          note: 'installed and finished'
+        },
+        {
+          concept: 'Continuous false ceiling',
+          price: '30 - 55 €/m²',
+          note: 'includes framework'
+        },
+        {
+          concept: 'Insulated batten',
+          price: '40 - 70 €/m²',
+          note: 'against facade'
+        },
+        {
+          concept: 'Moisture-resistant board',
+          price: '+10 - 15 €/m²',
+          note: 'bathrooms and kitchens'
+        },
+        {
+          concept: 'Access panels and pelmets',
+          price: '60 - 150 €/unit',
+          note: 'depending on size'
+        }
+      ],
+      durationTitle: 'Duration of plasterboard work',
+      duration: {
+        typical: '2 - 7 days',
+        range: 'Depending on metres',
+        factors: ['Metres of partition or ceiling to install', 'Need for insulation', 'Board type and finish', 'Drying of fillers']
+      },
+      areasTitle: 'Areas where we install plasterboard',
+      areasIntro: 'We carry out plasterboard work in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for plasterboard',
+        items: ['Standard and moisture-resistant plasterboard sheets', 'Galvanised steel profiles', 'Rock wool or glass wool insulation', 'Joint tape and compound', 'Specialist screws and plugs'],
+        warranty: '2-year guarantee on plasterboard installation and finishes.'
+      }
+    },
+    pt: {
+      intro: ['O pladur é uma solução versátil para criar tabiques, falsos tetos e caixilhados com acabamento perfeito. Permite ocultar instalações, melhorar o isolamento e ganhar espaço visual.', 'Na Junior Reformas montamos tabiques de pladur, falsos tetos contínuos e caixilhados em Sabadell, Barcelona, Terrassa e Mataró, com especial atenção às juntas e ao lixamento final.', 'Trabalhamos com placas standard, resistentes à humidade e com isolamento, segundo a zona da casa onde vão ser instaladas.'],
+      pricesTitle: 'Preços orientativos de pladur em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende dos metros, altura e tipo de placa.',
+      prices: [
+        {
+          concept: 'Tabique de pladur simples',
+          price: '25 - 45 €/m²',
+          note: 'montado e acabado'
+        },
+        {
+          concept: 'Falso teto contínuo',
+          price: '30 - 55 €/m²',
+          note: 'inclui estrutura'
+        },
+        {
+          concept: 'Caixilhado com isolamento',
+          price: '40 - 70 €/m²',
+          note: 'frente a fachada'
+        },
+        {
+          concept: 'Placa resistente à humidade',
+          price: '+10 - 15 €/m²',
+          note: 'casas de banho e cozinhas'
+        },
+        {
+          concept: 'Registos e cortineiros',
+          price: '60 - 150 €/unidade',
+          note: 'segundo tamanho'
+        }
+      ],
+      durationTitle: 'Duração dos trabalhos de pladur',
+      duration: {
+        typical: '2 - 7 dias',
+        range: 'Segundo metros',
+        factors: ['Metros de tabique ou teto a montar', 'Necessidade de isolamento', 'Tipo de placa e acabado', 'Secagem de massas']
+      },
+      areasTitle: 'Onde montamos pladur',
+      areasIntro: 'Realizamos trabalhos de pladur em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em pladur',
+        items: ['Placas de pladur standard e resistentes à humidade', 'Perfis de aço galvanizado', 'Lã de rocha ou lã de vidro para isolamento', 'Fita de juntas e massa', 'Parafusos e buchas específicos'],
+        warranty: 'Garantia de 2 anos na instalação de pladur e acabados.'
+      }
+    },
+    ca: {
+      intro: ["El pladur és una solució versàtil per crear tabics, falsos sostres i raseres amb acabat perfecte. Permet amagar instal·lacions, millorar l'aïllament i guanyar espai visual.", 'A Junior Reformas muntem tabics de pladur, falsos sostres continus i raseres a Sabadell, Barcelona, Terrassa i Mataró, amb especial atenció en les juntes i el polit final.', "Treballem amb plaques estàndard, resistents a la humitat i amb aïllament, segons la zona de la vivenda on s'han d'instal·lar."],
+      pricesTitle: 'Preus orientatius de pladur a Sabadell',
+      pricesDisclaimer: "Preus amb IVA inclòs. El pressupost definitiu depèn dels metres, l'alçada i el tipus de placa.",
+      prices: [
+        {
+          concept: 'Tabic de pladur simple',
+          price: '25 - 45 €/m²',
+          note: 'muntat i acabat'
+        },
+        {
+          concept: 'Fals sostre continu',
+          price: '30 - 55 €/m²',
+          note: 'inclou estructura'
+        },
+        {
+          concept: 'Rasera amb aïllament',
+          price: '40 - 70 €/m²',
+          note: 'davant façana'
+        },
+        {
+          concept: 'Placa resistent a la humitat',
+          price: '+10 - 15 €/m²',
+          note: 'banys i cuines'
+        },
+        {
+          concept: 'Registres i cortiners',
+          price: '60 - 150 €/unitat',
+          note: 'segons mida'
+        }
+      ],
+      durationTitle: 'Durada dels treballs de pladur',
+      duration: {
+        typical: '2 - 7 dies',
+        range: 'Segons metres',
+        factors: ['Metres de tabic o sostre a muntar', "Necessitat d'aïllament", 'Tipus de placa i acabat', 'Assecat de massilles']
+      },
+      areasTitle: 'On muntem pladur',
+      areasIntro: 'Realitzem treballs de pladur a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en pladur',
+        items: ['Plaques de pladur estàndard i resistents a la humitat', "Perfils d'acer galvanitzat", 'Lana de roca o lana de vidre per aïllament', 'Cinta de juntes i pasta', 'Tornilleria i tacos específics'],
+        warranty: 'Garantia de 2 anys en la instal·lació de pladur i acabats.'
       }
     }
   },
@@ -1320,6 +2340,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           ],
         warranty: "Garantía de 2 años en la ejecución y garantía del fabricante en impermeabilizaciones."
       }
+    },
+    en: {
+      intro: ['Terraces and facades are the most exposed areas of a home. Proper waterproofing and suitable cladding prevent leaks, cracks and damp problems inside.', 'At Junior Reformas we restore facades and waterproof terraces in Sabadell, Barcelona, Terrassa and Mataró. We work with membranes, cladding and technical outdoor flooring.', 'Every terrace or facade requires a prior diagnosis to identify the source of damp and apply the right solution.'],
+      pricesTitle: 'Guide facade and terrace prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the square metres, condition and chosen materials.',
+      prices: [
+        {
+          concept: 'Terrace waterproofing',
+          price: '45 - 90 €/m²',
+          note: 'membrane and protection'
+        },
+        {
+          concept: 'Outdoor technical flooring',
+          price: '50 - 120 €/m²',
+          note: 'depending on material'
+        },
+        {
+          concept: 'Facade cladding',
+          price: '35 - 80 €/m²',
+          note: 'paint or monocouche'
+        },
+        {
+          concept: 'Crack repair',
+          price: '200 - 600 €',
+          note: 'depending on extent'
+        },
+        {
+          concept: 'Handrail replacement',
+          price: '150 - 400 €/ml',
+          note: 'includes material'
+        }
+      ],
+      durationTitle: 'Duration of facade and terrace work',
+      duration: {
+        typical: '1 - 3 weeks',
+        range: 'Depending on scope',
+        factors: ['Metres to waterproof or clad', 'Condition of the base', 'Weather conditions', 'Need to lift paving']
+      },
+      areasTitle: 'Areas where we work on facades and terraces',
+      areasIntro: 'We restore facades and waterproof terraces in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for facades and terraces',
+        items: ['Polyurethane membranes and bituminous sheet', 'Outdoor technical flooring', 'Monocouche cladding and facade paint', 'Specific sealants and silicones', 'Steel and aluminium handrails'],
+        warranty: '2-year guarantee on execution and manufacturer warranty on waterproofing.'
+      }
+    },
+    pt: {
+      intro: ['Os terraços e as fachadas são as zonas mais expostas de uma casa. Uma boa impermeabilização e um revestimento adequado evitam infiltrações, fissuras e problemas de humidade no interior.', 'Na Junior Reformas reabilitamos fachadas e impermeabilizamos terraços em Sabadell, Barcelona, Terrassa e Mataró. Trabalhamos com membranas, revestimentos e pisos técnicos para exteriores.', 'Cada terraço ou fachada requer um diagnóstico prévio para identificar a origem das humidades e aplicar a solução correta.'],
+      pricesTitle: 'Preços orientativos de fachadas e terraços em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende dos metros, estado e materiais escolhidos.',
+      prices: [
+        {
+          concept: 'Impermeabilização de terraço',
+          price: '45 - 90 €/m²',
+          note: 'membrana e proteção'
+        },
+        {
+          concept: 'Piso técnico exterior',
+          price: '50 - 120 €/m²',
+          note: 'segundo material'
+        },
+        {
+          concept: 'Revestimento de fachada',
+          price: '35 - 80 €/m²',
+          note: 'pintura ou monocapa'
+        },
+        {
+          concept: 'Reparação de fissuras',
+          price: '200 - 600 €',
+          note: 'segundo extensão'
+        },
+        {
+          concept: 'Troca de guarda-corpo',
+          price: '150 - 400 €/ml',
+          note: 'inclui material'
+        }
+      ],
+      durationTitle: 'Duração de fachadas e terraços',
+      duration: {
+        typical: '1 - 3 semanas',
+        range: 'Segundo alcance',
+        factors: ['Metros a impermeabilizar ou revestir', 'Estado da base', 'Condições meteorológicas', 'Necessidade de levantar pavimento']
+      },
+      areasTitle: 'Onde trabalhamos fachadas e terraços',
+      areasIntro: 'Realizamos reabilitação de fachadas e impermeabilização de terraços em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em fachadas e terraços',
+        items: ['Membranas de poliuretano e tela asfáltica', 'Pisos técnicos de exterior', 'Revestimentos monocapa e pintura de fachada', 'Seladores e silicones específicos', 'Guarda-corpos de aço e alumínio'],
+        warranty: 'Garantia de 2 anos na execução e garantia do fabricante em impermeabilizações.'
+      }
+    },
+    ca: {
+      intro: ["Les terrasses i les façanes són les zones més exposades d'un habitatge. Una bona impermeabilització i un revestiment adequat eviten filtracions, esquerdes i problemes d'humitat a l'interior.", 'A Junior Reformas rehabiliten façanes i impermeabilitzen terrasses a Sabadell, Barcelona, Terrassa i Mataró. Treballem amb membranes, revestiments i terres tècnics per a exteriors.', "Cada terrassa o façana requereix un diagnòstic previ per identificar l'origen de les humitats i aplicar la solució correcta."],
+      pricesTitle: 'Preus orientatius de façanes i terrasses a Sabadell',
+      pricesDisclaimer: "Preus amb IVA inclòs. El pressupost definitiu depèn dels metres, l'estat i els materials escollits.",
+      prices: [
+        {
+          concept: 'Impermeabilització de terrassa',
+          price: '45 - 90 €/m²',
+          note: 'membrana i protecció'
+        },
+        {
+          concept: 'Terra tècnic exterior',
+          price: '50 - 120 €/m²',
+          note: 'segons material'
+        },
+        {
+          concept: 'Revestiment de façana',
+          price: '35 - 80 €/m²',
+          note: 'pintura o monocapa'
+        },
+        {
+          concept: "Reparació d'esquerdes",
+          price: '200 - 600 €',
+          note: 'segons extensió'
+        },
+        {
+          concept: 'Canvi de barana',
+          price: '150 - 400 €/ml',
+          note: 'inclou material'
+        }
+      ],
+      durationTitle: 'Durada de façanes i terrasses',
+      duration: {
+        typical: '1 - 3 setmanes',
+        range: 'Segons abast',
+        factors: ['Metres a impermeabilitzar o revestir', 'Estat de la base', 'Condicions meteorològiques', 'Necessitat de aixecar paviment']
+      },
+      areasTitle: 'On treballem façanes i terrasses',
+      areasIntro: 'Realitzem rehabilitació de façanes i impermeabilització de terrasses a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en façanes i terrasses',
+        items: ['Membranes de poliuretà i tela asfàltica', "Terres tècnics d'exterior", 'Revestiments monocapa i pintura de façana', 'Selladors i silicones específics', "Balanços d'acer i alumini"],
+        warranty: "Garantia de 2 anys en l'execució i garantia del fabricant en impermeabilitzacions."
+      }
     }
   },
   'locales-comerciales': {
@@ -1446,6 +2670,210 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             "Pintura lavable y acabados duraderos"
           ],
         warranty: "Garantía de 2 años en la ejecución y garantía del fabricante en materiales comerciales."
+      }
+    },
+    en: {
+      intro: ['Renovating a commercial premises means meeting tight deadlines and minimising closure time. At Junior Reformas we understand that every day closed is a loss for the business.', 'We carry out full commercial premises fit-outs in Sabadell, Barcelona, Terrassa and Mataró: installations, heavy-traffic flooring, toilets, shop windows, lighting and commercial finishes.', 'We plan the work in phases whenever possible so the premises can remain partially operational during part of the renovation.'],
+      pricesTitle: 'Guide commercial premises prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the square metres, condition and type of business.',
+      prices: [
+        {
+          concept: 'Small premises fit-out 40-60 m²',
+          price: '8,000 - 18,000 €',
+          note: 'basic'
+        },
+        {
+          concept: 'Full renovation 80-120 m² premises',
+          price: '20,000 - 45,000 €',
+          note: 'medium'
+        },
+        {
+          concept: 'Heavy-traffic flooring',
+          price: '30 - 70 €/m²',
+          note: 'installed'
+        },
+        {
+          concept: 'Commercial premises toilet',
+          price: '3,000 - 6,000 €',
+          note: 'complete'
+        },
+        {
+          concept: 'Lighting and electrical panel',
+          price: '2,000 - 6,000 €',
+          note: 'depending on premises'
+        }
+      ],
+      durationTitle: 'Duration of commercial premises renovation',
+      duration: {
+        typical: '3 - 8 weeks',
+        range: 'Depending on metres',
+        factors: ['Premises size and complexity', 'Need for phased works', 'Town hall licences', 'Delivery of commercial furniture']
+      },
+      areasTitle: 'Areas where we renovate commercial premises',
+      areasIntro: 'We carry out commercial premises renovations in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for commercial premises',
+        items: ['Heavy-traffic vinyl and porcelain flooring', 'Commercial LED lighting', 'Plasterboard and glass partitions', 'Compact toilets and hard-wearing sanitaryware', 'Washable paint and durable finishes'],
+        warranty: '2-year guarantee on execution and manufacturer warranty on commercial materials.'
+      }
+    },
+    pt: {
+      intro: ['Reformar um local comercial exige cumprir prazos apertados e minimizar o tempo de fechamento. Na Junior Reformas entendemos que cada dia fechado é uma perda para o negócio.', 'Fazemos adequações integrais de locais comerciais em Sabadell, Barcelona, Terrassa e Mataró: instalações, soalhos de alto trânsito, casas de banho, montras, iluminação e acabados comerciais.', 'Planeamos a obra por fases quando possível, para que o local possa continuar operacional durante parte da reforma.'],
+      pricesTitle: 'Preços orientativos de locais comerciais em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende dos metros, estado e tipo de negócio.',
+      prices: [
+        {
+          concept: 'Adequação local pequeno 40-60 m²',
+          price: '8.000 - 18.000 €',
+          note: 'básica'
+        },
+        {
+          concept: 'Reforma integral local 80-120 m²',
+          price: '20.000 - 45.000 €',
+          note: 'média'
+        },
+        {
+          concept: 'Solo de alto trânsito',
+          price: '30 - 70 €/m²',
+          note: 'instalado'
+        },
+        {
+          concept: 'Casa de banho de local comercial',
+          price: '3.000 - 6.000 €',
+          note: 'completa'
+        },
+        {
+          concept: 'Iluminação e quadro elétrico',
+          price: '2.000 - 6.000 €',
+          note: 'segundo local'
+        }
+      ],
+      durationTitle: 'Duração da reforma de local comercial',
+      duration: {
+        typical: '3 - 8 semanas',
+        range: 'Segundo metros',
+        factors: ['Metros do local e complexidade', 'Necessidade de obra por fases', 'Licenças da câmara', 'Entrega de mobiliário comercial']
+      },
+      areasTitle: 'Onde reformamos locais comerciais',
+      areasIntro: 'Realizamos reformas de locais comerciais em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em locais comerciais',
+        items: ['Soalhos vinílicos e porcelânicos de alto trânsito', 'Iluminação LED comercial', 'Tabiques de pladur e vidro', 'Casas de banho compactas e sanitários resistentes', 'Pintura lavável e acabados duradouros'],
+        warranty: 'Garantia de 2 anos na execução e garantia do fabricante em materiais comerciais.'
+      }
+    },
+    ca: {
+      intro: ['Reformar un local comercial requereix complir terminis ajustats i minimitzar el temps de tancament. A Junior Reformas entenem que cada dia tancat és una pèrdua per al negoci.', "Fem adequacions integrals de locals comercials a Sabadell, Barcelona, Terrassa i Mataró: instal·lacions, terres d'alt trànsit, banys, aparadors, il·luminació i acabats comercials.", "Planifiquem l'obra per fases quan és possible, perquè el local pugui seguir operatiu durant part de la reforma."],
+      pricesTitle: 'Preus orientatius de locals comercials a Sabadell',
+      pricesDisclaimer: "Preus amb IVA inclòs. El pressupost definitiu depèn dels metres, l'estat i el tipus de negoci.",
+      prices: [
+        {
+          concept: 'Adequació local petit 40-60 m²',
+          price: '8.000 - 18.000 €',
+          note: 'bàsica'
+        },
+        {
+          concept: 'Reforma integral local 80-120 m²',
+          price: '20.000 - 45.000 €',
+          note: 'mitjana'
+        },
+        {
+          concept: "Terra d'alt trànsit",
+          price: '30 - 70 €/m²',
+          note: 'instal·lat'
+        },
+        {
+          concept: 'Lavabo de local comercial',
+          price: '3.000 - 6.000 €',
+          note: 'complet'
+        },
+        {
+          concept: 'Il·luminació i quadre elèctric',
+          price: '2.000 - 6.000 €',
+          note: 'segons local'
+        }
+      ],
+      durationTitle: 'Durada de la reforma de local comercial',
+      duration: {
+        typical: '3 - 8 setmanes',
+        range: 'Segons metres',
+        factors: ['Metres del local i complexitat', "Necessitat d'obra per fases", "Llicències de l'ajuntament", 'Lliurament de mobiliari comercial']
+      },
+      areasTitle: 'On reformem locals comercials',
+      areasIntro: 'Realitzem reformes de locals comercials a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en locals comercials',
+        items: ["Terres vinílics i porcel·lànics d'alt trànsit", 'Il·luminació LED comercial', 'Tabics de pladur i vidre', 'Banys compactes i sanitaris resistents', 'Pintura rentable i acabats duradors'],
+        warranty: "Garantia de 2 anys en l'execució i garantia del fabricant en materials comercials."
       }
     }
   },
@@ -1574,8 +3002,211 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           ],
         warranty: "Garantía de 2 años en la instalación y garantía del fabricante en materiales."
       }
-    }
-  },
+    },
+    en: {
+      intro: ['Carpentry adds personality and functionality to a renovation. Doors, fitted wardrobes, bathroom furniture and kitchen units are used every day and must stand the test of time.', 'At Junior Reformas we make bespoke carpentry in Sabadell, Barcelona, Terrassa and Mataró. We design and install wardrobes, interior doors, bathroom furniture and storage solutions.', 'We measure on site to make the most of every centimetre and adjust pieces to walls and ceilings that are never completely straight.'],
+      pricesTitle: 'Guide carpentry prices in Sabadell',
+      pricesDisclaimer: 'Prices include VAT. The final quote depends on the materials, dimensions and chosen finishes.',
+      prices: [
+        {
+          concept: 'Lacquered interior doors',
+          price: '180 - 350 €/unit',
+          note: 'installed'
+        },
+        {
+          concept: 'Interior veneer doors',
+          price: '120 - 220 €/unit',
+          note: 'installed'
+        },
+        {
+          concept: 'Bespoke fitted wardrobe',
+          price: '1,200 - 3,000 €',
+          note: 'depending on size'
+        },
+        {
+          concept: 'Bespoke bathroom furniture',
+          price: '600 - 1,800 €',
+          note: 'depending on design'
+        },
+        {
+          concept: 'Bespoke carpenter kitchen',
+          price: '4,000 - 10,000 €',
+          note: 'complete'
+        }
+      ],
+      durationTitle: 'Duration of carpentry work',
+      duration: {
+        typical: '1 - 3 weeks',
+        range: 'Depending on project',
+        factors: ['Manufacturing time for bespoke pieces', 'Number of doors or wardrobes', 'Special finishes (lacquer, veneer, etc.)', 'Coordination with other trades']
+      },
+      areasTitle: 'Areas where we do carpentry',
+      areasIntro: 'We carry out bespoke carpentry work in Sabadell and surrounding areas:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials we use for carpentry',
+        items: ['Hardwoods and natural veneers', 'White or custom-colour lacquers', 'Hard-wearing melamines for wardrobes', 'Quality hinges and hardware', 'Quartz and compact worktops'],
+        warranty: '2-year installation guarantee and manufacturer warranty on materials.'
+      }
+    },
+    pt: {
+      intro: ['A carpintaria dá personalidade e funcionalidade a uma reforma. Portas, roupeiros embutidos, móveis de casa de banho e cozinha são elementos que se usam diariamente e devem resistir ao passar do tempo.', 'Na Junior Reformas fazemos carpintaria sob medida em Sabadell, Barcelona, Terrassa e Mataró. Desenhamos e instalamos roupeiros, portas de interior, móveis de casa de banho e soluções de arrumação.', 'Medimos em obra para aproveitar cada centímetro e ajustar as peças a paredes e tetos que nunca são totalmente retos.'],
+      pricesTitle: 'Preços orientativos de carpintaria em Sabadell',
+      pricesDisclaimer: 'Preços com IVA incluído. O orçamento definitivo depende dos materiais, medidas e acabados escolhidos.',
+      prices: [
+        {
+          concept: 'Portas de interior lacadas',
+          price: '180 - 350 €/unidade',
+          note: 'instalada'
+        },
+        {
+          concept: 'Portas de interior folheadas',
+          price: '120 - 220 €/unidade',
+          note: 'instalada'
+        },
+        {
+          concept: 'Roupeiro embutido sob medida',
+          price: '1.200 - 3.000 €',
+          note: 'segundo tamanho'
+        },
+        {
+          concept: 'Móvel de casa de banho sob medida',
+          price: '600 - 1.800 €',
+          note: 'segundo design'
+        },
+        {
+          concept: 'Cozinha de carpintaria sob medida',
+          price: '4.000 - 10.000 €',
+          note: 'completa'
+        }
+      ],
+      durationTitle: 'Duração dos trabalhos de carpintaria',
+      duration: {
+        typical: '1 - 3 semanas',
+        range: 'Segundo projeto',
+        factors: ['Tempo de fabricação de peças sob medida', 'Número de portas ou roupeiros', 'Acabados especiais (lacado, folheado, etc.)', 'Coordenação com outros ofícios']
+      },
+      areasTitle: 'Onde fazemos carpintaria',
+      areasIntro: 'Realizamos trabalhos de carpintaria sob medida em Sabadell e arredores:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materiais que utilizamos em carpintaria',
+        items: ['Madeiras nobres e folhas naturais', 'Lacados em branco ou cores sob medida', 'Melaminas resistentes para roupeiros', 'Dobradiças e ferragens de qualidade', 'Bancadas de quartzo e compacto'],
+        warranty: 'Garantia de 2 anos na instalação e garantia do fabricante em materiais.'
+      }
+    },
+    ca: {
+      intro: ["La fusteria aporta personalitat i funcionalitat a una reforma. Portes, armaris encastats, mobles de bany i cuina són elements que s'utilitzen cada dia i han de resistir el pas del temps.", "A Junior Reformas fem fusteria a mida a Sabadell, Barcelona, Terrassa i Mataró. Dissenyem i instal·lem armaris, portes d'interior, mobles de bany i solucions d'emmagatzematge.", 'Mesurem en obra per aprofitar cada centímetre i ajustar les peces a parets i sostres que mai són del tot rectes.'],
+      pricesTitle: 'Preus orientatius de fusteria a Sabadell',
+      pricesDisclaimer: 'Preus amb IVA inclòs. El pressupost definitiu depèn dels materials, mesures i acabats escollits.',
+      prices: [
+        {
+          concept: "Portes d'interior lacades",
+          price: '180 - 350 €/unitat',
+          note: 'instal·lada'
+        },
+        {
+          concept: "Portes d'interior xapades",
+          price: '120 - 220 €/unitat',
+          note: 'instal·lada'
+        },
+        {
+          concept: 'Armari encastat a mida',
+          price: '1.200 - 3.000 €',
+          note: 'segons mida'
+        },
+        {
+          concept: 'Moble de bany a mida',
+          price: '600 - 1.800 €',
+          note: 'segons disseny'
+        },
+        {
+          concept: 'Cuina de fusteria a mida',
+          price: '4.000 - 10.000 €',
+          note: 'completa'
+        }
+      ],
+      durationTitle: 'Durada dels treballs de fusteria',
+      duration: {
+        typical: '1 - 3 setmanes',
+        range: 'Segons projecte',
+        factors: ['Temps de fabricació de peces a mida', 'Nombre de portes o armaris', 'Acabats especials (lacat, xapat, etc.)', 'Coordinació amb altres oficis']
+      },
+      areasTitle: 'On fem fusteria',
+      areasIntro: 'Realitzem treballs de fusteria a mida a Sabadell i rodalies:',
+      areas: [
+          { name: 'Centre' },
+          { name: 'Gràcia' },
+          { name: "Ca n'Oriac" },
+          { name: 'Creu Alta' },
+          { name: 'Torre-romeu' },
+          { name: 'Can Deu' },
+          { name: 'Can Rull' },
+          { name: 'Can Feu' },
+          { name: 'Sant Oleguer' },
+          { name: 'Poblenou' },
+          { name: 'La Planada' },
+          { name: 'Campoamor' },
+          { name: 'Sant Julià' },
+          { name: 'Barcelona' },
+          { name: 'Terrassa' },
+          { name: 'Mataró' },
+          { name: 'Barberà del Vallès' },
+          { name: 'Badia del Vallès' },
+          { name: 'Castellar del Vallès' },
+          { name: 'Ripollet' },
+          { name: 'Santa Perpètua de Mogoda' }
+        ],
+      materials: {
+        title: 'Materials que utilitzem en fusteria',
+        items: ['Fustes nobles i xapes naturals', 'Lacats en blanc o colors a mida', 'Melamines resistents per a armaris', 'Bisagres i ferratges de qualitat', 'Taulells de quars i compacte'],
+        warranty: 'Garantia de 2 anys en la instal·lació i garantia del fabricant en materials.'
+      }
+    }},
 
 };
 
