@@ -127,7 +127,7 @@ export default async function LocalidadPage({ params }: Props) {
           ))}
         </ul>
         <div className="mt-12 mx-auto max-w-xl">
-          <TestimonialCard t={testimonial} verifiedLabel={t.testimonials.verified} light />
+          <TestimonialCard t={testimonial} verifiedLabel={t.testimonials.verified} ratingLabel={t.testimonials.rating} light />
         </div>
       </SectionWrapper>
 

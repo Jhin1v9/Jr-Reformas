@@ -6,7 +6,17 @@ import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeader from '@/components/shared/SectionHeader';
 import Reveal from '@/components/shared/Reveal';
 
-export function TestimonialCard({ t, verifiedLabel, light = false }: { t: Testimonial; verifiedLabel: string; light?: boolean }) {
+export function TestimonialCard({
+  t,
+  verifiedLabel,
+  ratingLabel,
+  light = false,
+}: {
+  t: Testimonial;
+  verifiedLabel: string;
+  ratingLabel: string;
+  light?: boolean;
+}) {
   return (
     <blockquote
       className={
@@ -15,7 +25,7 @@ export function TestimonialCard({ t, verifiedLabel, light = false }: { t: Testim
           : 'h-full rounded-2xl border border-border bg-carbon-light p-7'
       }
     >
-      <div className="flex items-center gap-1" aria-label={`${t.stars} / 5 estrellas`}>
+      <div className="flex items-center gap-1" aria-label={`${t.stars} / 5 ${ratingLabel}`}>
         {Array.from({ length: t.stars }).map((_, i) => (
           <Star key={i} className="h-4 w-4 fill-terracota text-terracota" aria-hidden="true" />
         ))}
@@ -59,7 +69,12 @@ export default function Testimonials({ locale, max = 3, variant = 'light' }: Pro
       <div className="grid gap-6 md:grid-cols-3">
         {items.map((item, i) => (
           <Reveal key={item.id} delay={i * 80}>
-            <TestimonialCard t={item} verifiedLabel={t.testimonials.verified} light={variant === 'light'} />
+            <TestimonialCard
+              t={item}
+              verifiedLabel={t.testimonials.verified}
+              ratingLabel={t.testimonials.rating}
+              light={variant === 'light'}
+            />
           </Reveal>
         ))}
       </div>

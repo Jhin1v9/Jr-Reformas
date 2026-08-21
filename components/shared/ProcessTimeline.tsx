@@ -119,8 +119,8 @@ export default function ProcessTimeline({ locale, variant = 'dark', title, descr
                   }}
                   className="flex gap-5 md:flex-col md:items-center md:text-center"
                 >
-                  <div className="process-circle flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-terracota bg-carbon shadow-lg shadow-terracota/10 md:mx-auto">
-                    <Icon className="h-6 w-6 text-terracota" aria-hidden="true" />
+                  <div className="process-circle relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-terracota bg-carbon shadow-lg shadow-terracota/10 md:mx-auto">
+                    <Icon className="relative z-10 h-6 w-6 text-offwhite" aria-hidden="true" />
                   </div>
                   <div>
                     <span className="text-xs font-semibold uppercase tracking-widest text-terracota md:hidden">

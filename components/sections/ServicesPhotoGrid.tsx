@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { type Locale } from '@/lib/constants';
-import { getDictionary, localePath } from '@/lib/i18n';
+import { getDictionary, localePath, type Messages } from '@/lib/i18n';
 import { fotoUrl } from '@/lib/photos';
 import { SERVICES, MAIN_SERVICES } from '@/lib/services';
 import SectionWrapper from '@/components/shared/SectionWrapper';
@@ -31,7 +31,7 @@ export default function ServicesPhotoGrid({ locale }: Props) {
       <div className="grid gap-6 lg:grid-cols-3">
         {main.map((s, i) => (
           <Reveal key={s.slug} delay={i * 80}>
-            <ServiceCard service={s} locale={locale} variant="hero" />
+            <ServiceCard service={s} locale={locale} variant="hero" t={t} />
           </Reveal>
         ))}
       </div>
@@ -40,7 +40,7 @@ export default function ServicesPhotoGrid({ locale }: Props) {
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {secondary.map((s, i) => (
           <Reveal key={s.slug} delay={i * 60}>
-            <ServiceCard service={s} locale={locale} variant="grid" />
+            <ServiceCard service={s} locale={locale} variant="grid" t={t} />
           </Reveal>
         ))}
       </div>
@@ -52,10 +52,12 @@ function ServiceCard({
   service,
   locale,
   variant,
+  t,
 }: {
   service: (typeof SERVICES)[0];
   locale: Locale;
   variant: 'hero' | 'grid';
+  t: Messages;
 }) {
   const href = localePath(locale, `/servicios/${service.slug}`);
 
@@ -86,7 +88,7 @@ function ServiceCard({
       <div className="absolute inset-0 flex flex-col justify-end p-6">
         {service.main && (
           <span className="mb-2 w-fit rounded-full bg-terracota px-3 py-1 text-xs font-bold uppercase tracking-wider text-offwhite">
-            Más solicitado
+            {t.servicesGrid.mostRequested}
           </span>
         )}
         <h3 className="font-display text-xl font-bold text-offwhite md:text-2xl">
@@ -96,7 +98,7 @@ function ServiceCard({
           {service.shortDesc}
         </p>
         <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-0 transition-all duration-300 group-hover:opacity-100">
-          Ver proyectos
+          {t.servicesGrid.viewProjects}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>
       </div>

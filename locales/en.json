@@ -65,7 +65,9 @@
     "title": "What can we transform?",
     "description": "From replacing a shower tray to renovating your entire flat. All with the same care.",
     "viewMore": "See more",
-    "viewAll": "See all services"
+    "viewAll": "See all services",
+    "mostRequested": "Most requested",
+    "viewProjects": "View projects"
   },
   "process": {
     "badge": "Process",
@@ -116,7 +118,10 @@
     "title": "What our clients say",
     "description": "Real reviews from verified clients.",
     "verified": "Verified review",
-    "source": "Google / ProntoPro"
+    "source": "Google / ProntoPro",
+    "rating": "stars",
+    "viewAll": "See all reviews",
+    "verifiedOn": "Verified on ProntoPro"
   },
   "area": {
     "badge": "Service area",
@@ -177,7 +182,12 @@
     "title": "Imagine your home completely different",
     "sub": "Now imagine walking into it. Tell us what you want to renovate and we'll reply the same day.",
     "ctaPrimary": "Get a free quote",
-    "ctaWhatsapp": "Talk directly with Junior"
+    "ctaWhatsapp": "Talk directly with Junior",
+    "stats": {
+      "years": "years of experience",
+      "reviews": "verified reviews",
+      "response": "response time"
+    }
   },
   "footer": {
     "slogan": "Quality and trust in every renovation",
@@ -313,8 +323,26 @@
     "cta": "Back to home",
     "popular": "Popular pages"
   },
+  "lightbox": {
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "expanded": "Expanded view",
+    "cta": "I want this style",
+    "whatsappText": "Hi Junior, I saw this project on jr-reformas.com and would like something similar."
+  },
   "whatsapp": { "ariaLabel": "Contact via WhatsApp", "message": "Hi Junior, I'd like to request a quote for a renovation." },
   "breadcrumb": { "home": "Home" },
   "related": { "title": "You may also be interested in" },
-  "common": { "callUs": "Call us", "writeUs": "Write to us", "freeVisit": "Free technical visit", "sameDay": "Same-day response" }
+  "common": {
+    "callUs": "Call us",
+    "writeUs": "Write to us",
+    "freeVisit": "Free technical visit",
+    "sameDay": "Same-day response",
+    "previous": "Previous",
+    "next": "Next",
+    "slide": "Go to slide",
+    "whoWeAre": "Who we are",
+    "howWeWork": "How we work"
+  }
 }

@@ -13,6 +13,15 @@ export interface LightboxItem {
   videoSrc?: string;
 }
 
+interface Labels {
+  close: string;
+  previous: string;
+  next: string;
+  expanded: string;
+  cta: string;
+  whatsappText: string;
+}
+
 interface Props {
   items: LightboxItem[];
   currentIndex: number;
@@ -20,9 +29,20 @@ interface Props {
   onClose: () => void;
   onNext: () => void;
   onPrev: () => void;
+  labels?: Partial<Labels>;
 }
 
-export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext, onPrev }: Props) {
+const DEFAULT_LABELS: Labels = {
+  close: 'Cerrar',
+  previous: 'Anterior',
+  next: 'Siguiente',
+  expanded: 'Vista ampliada',
+  cta: 'Quiero este estilo',
+  whatsappText: 'Hola Junior, vi esta obra en jr-reformas.com y quiero algo similar.',
+};
+
+export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext, onPrev, labels = {} }: Props) {
+  const l = { ...DEFAULT_LABELS, ...labels };
   const current = items[currentIndex];
 
   const handleKeyDown = useCallback(
@@ -48,7 +68,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
   if (!isOpen || !current) return null;
 
   const total = items.length;
-  const whatsappMessage = encodeURIComponent(`Hola Junior, vi esta obra en jr-reformas.com y quiero algo similar.`);
+  const whatsappMessage = encodeURIComponent(l.whatsappText);
 
   return (
     <div
@@ -56,7 +76,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label="Vista ampliada"
+      aria-label={l.expanded}
     >
       {/* Header com contador e fechar */}
       <div className="absolute left-0 right-0 top-0 z-20 flex items-center justify-between px-4 py-4 md:px-8">
@@ -67,7 +87,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
           type="button"
           onClick={onClose}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 text-offwhite transition-all hover:bg-carbon/80"
-          aria-label="Cerrar"
+          aria-label={l.close}
         >
           <X className="h-5 w-5" />
         </button>
@@ -82,7 +102,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
               onPrev();
             }}
             className="absolute left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 p-3 text-offwhite transition-all hover:scale-110 hover:bg-carbon/80 md:flex"
-            aria-label="Anterior"
+            aria-label={l.previous}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -93,7 +113,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
               onNext();
             }}
             className="absolute right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/60 p-3 text-offwhite transition-all hover:scale-110 hover:bg-carbon/80 md:flex"
-            aria-label="Siguiente"
+            aria-label={l.next}
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -133,7 +153,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNext,
           className="inline-flex items-center gap-2 rounded-lg bg-whatsapp px-6 py-3 text-sm font-semibold text-white transition-all hover:brightness-110"
         >
           <MessageCircle className="h-4 w-4" />
-          Quiero este estilo
+          {l.cta}
         </a>
       </div>
     </div>

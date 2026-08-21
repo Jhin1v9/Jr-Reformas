@@ -133,7 +133,7 @@ export default function HeroCarousel({ locale }: Props) {
         type="button"
         onClick={() => go(-1)}
         className="absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-4 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 md:flex"
-        aria-label="Anterior"
+        aria-label={t.common.previous}
       >
         <ChevronLeft className="h-7 w-7" />
       </button>
@@ -141,7 +141,7 @@ export default function HeroCarousel({ locale }: Props) {
         type="button"
         onClick={() => go(1)}
         className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/30 bg-carbon/40 p-4 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/60 md:flex"
-        aria-label="Siguiente"
+        aria-label={t.common.next}
       >
         <ChevronRight className="h-7 w-7" />
       </button>
@@ -156,7 +156,7 @@ export default function HeroCarousel({ locale }: Props) {
             className={`h-3 rounded-full transition-all ${
               i === index ? 'w-10 bg-terracota' : 'w-3 bg-offwhite/50 hover:bg-offwhite'
             }`}
-            aria-label={`Ir al slide ${i + 1}`}
+            aria-label={`${t.common.slide} ${i + 1}`}
             aria-current={i === index}
           />
         ))}

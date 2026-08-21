@@ -19,7 +19,18 @@ interface Props {
   aspectClass?: string;
   autoplay?: boolean;
   interval?: number;
+  labels?: {
+    previous?: string;
+    next?: string;
+    slide?: string;
+  };
 }
+
+const DEFAULT_LABELS = {
+  previous: 'Anterior',
+  next: 'Siguiente',
+  slide: 'Ir a la transformación',
+};
 
 export default function AfterCarousel({
   slides,
@@ -27,7 +38,9 @@ export default function AfterCarousel({
   aspectClass = 'aspect-[16/9] md:aspect-[21/9]',
   autoplay = true,
   interval = 4000,
+  labels = {},
 }: Props) {
+  const l = { ...DEFAULT_LABELS, ...labels };
   const [active, setActive] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -102,7 +115,7 @@ export default function AfterCarousel({
           <button
             type="button"
             onClick={prev}
-            aria-label="Anterior"
+            aria-label={l.previous}
             className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-carbon shadow-lg transition-all hover:bg-white hover:scale-110 md:left-5 md:h-12 md:w-12"
           >
             <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
@@ -110,7 +123,7 @@ export default function AfterCarousel({
           <button
             type="button"
             onClick={next}
-            aria-label="Siguiente"
+            aria-label={l.next}
             className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-carbon shadow-lg transition-all hover:bg-white hover:scale-110 md:right-5 md:h-12 md:w-12"
           >
             <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
@@ -122,7 +135,7 @@ export default function AfterCarousel({
                 key={i}
                 type="button"
                 onClick={() => setActive(i)}
-                aria-label={`Ir a la transformación ${i + 1}`}
+                aria-label={`${l.slide} ${i + 1}`}
                 className={cn(
                   'h-2 rounded-full transition-all duration-300',
                   i === active ? 'w-8 bg-terracota' : 'w-2 bg-carbon/30 dark:bg-white/30'

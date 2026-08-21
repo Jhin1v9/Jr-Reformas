@@ -27,7 +27,7 @@ export default function TestimonialsHome({ locale }: Props) {
           <Reveal key={item.id} delay={i * 100}>
             <blockquote className="relative h-full rounded-2xl border border-border bg-carbon-light p-7">
               <Quote className="absolute right-6 top-6 h-8 w-8 text-terracota/20" aria-hidden="true" />
-              <div className="flex items-center gap-1" aria-label={`${item.stars} / 5 estrellas`}>
+              <div className="flex items-center gap-1" aria-label={`${item.stars} / 5 ${t.testimonials.rating}`}>
                 {Array.from({ length: item.stars }).map((_, idx) => (
                   <Star key={idx} className="h-4 w-4 fill-terracota text-terracota" aria-hidden="true" />
                 ))}
@@ -56,7 +56,7 @@ export default function TestimonialsHome({ locale }: Props) {
           href={localePath(locale, '/sobre-junior')}
           className="inline-flex items-center gap-2 text-sm font-semibold text-terracota transition-colors hover:text-terracota-light"
         >
-          Ver todas las {TESTIMONIALS.length} reseñas →
+          {t.testimonials.viewAll} →
         </Link>
       </div>
     </SectionWrapper>

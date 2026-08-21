@@ -113,12 +113,12 @@ export default function Header({ locale }: Props) {
                   <ul className="py-2">
                     <li>
                       <Link href={localePath(locale, '/sobre-junior')} className="block px-4 py-2.5 text-sm text-text-secondary transition-colors hover:bg-carbon-mid hover:text-offwhite">
-                        Quiénes somos
+                        {t.common.whoWeAre}
                       </Link>
                     </li>
                     <li>
                       <Link href={localePath(locale, '/sobre-junior#proceso')} className="block px-4 py-2.5 text-sm text-text-secondary transition-colors hover:bg-carbon-mid hover:text-offwhite">
-                        Cómo trabajamos
+                        {t.common.howWeWork}
                       </Link>
                     </li>
                   </ul>
@@ -241,12 +241,12 @@ export default function Header({ locale }: Props) {
                   <ul className="mb-3 space-y-1 border-l-2 border-terracota/30 pl-4">
                     <li>
                       <Link href={localePath(locale, '/sobre-junior')} onClick={() => setMobileOpen(false)} className="block py-2 text-sm text-text-secondary hover:text-terracota">
-                        Quiénes somos
+                        {t.common.whoWeAre}
                       </Link>
                     </li>
                     <li>
                       <Link href={localePath(locale, '/sobre-junior#proceso')} onClick={() => setMobileOpen(false)} className="block py-2 text-sm text-text-secondary hover:text-terracota">
-                        Cómo trabajamos
+                        {t.common.howWeWork}
                       </Link>
                     </li>
                   </ul>

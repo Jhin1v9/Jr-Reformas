@@ -68,9 +68,18 @@ export default async function GaleriaPage({ params }: Props) {
         <SectionHeader as="h1" title={t.gallery.pageTitle} description={t.gallery.pageSub} />
         <GalleryMasonry
           items={GALLERY_ITEMS}
-          categories={['Todos', 'Cocinas', 'Baños', 'Pisos', 'Terrazas', 'Detalles', 'En obra']}
-          labels={{ all: 'Todos' }}
+          categories={['Cocinas', 'Baños', 'Pisos', 'Terrazas', 'Detalles', 'En obra']}
+          labels={{
+            all: t.gallery.filters.all,
+            close: t.lightbox.close,
+            previous: t.lightbox.previous,
+            next: t.lightbox.next,
+            expanded: t.lightbox.expanded,
+            cta: t.lightbox.cta,
+            whatsappText: t.lightbox.whatsappText,
+          }}
           columns={3}
+          compact
         />
       </SectionWrapper>
       <CTAFinal locale={locale} />

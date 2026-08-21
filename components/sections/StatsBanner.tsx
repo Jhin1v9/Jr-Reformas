@@ -25,7 +25,7 @@ export default function StatsBanner({ locale }: Props) {
     { icon: CalendarDays, label: '15', desc: t.stats.desc1 },
     { icon: MessageCircle, label: '24h', desc: t.stats.desc2 },
     { icon: MapPin, label: '4', desc: t.stats.desc3 },
-    { icon: Star, label: '5', desc: t.stats.desc4, href: localePath(locale, '/sobre-junior'), badge: 'Verificado en ProntoPro' },
+    { icon: Star, label: '5', desc: t.stats.desc4, href: localePath(locale, '/sobre-junior'), badge: t.testimonials.verifiedOn },
   ];
 
   return (
@@ -80,8 +80,8 @@ function StatCard({ stat }: { stat: Stat }) {
       <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-terracota/30 bg-carbon text-terracota shadow-lg shadow-terracota/5 transition-transform group-hover:scale-110">
         <Icon className="h-8 w-8" aria-hidden="true" />
       </span>
-      <div ref={valueRef} className="mt-5 font-display text-5xl font-bold text-offwhite md:text-6xl">
-        {isNumeric ? '0' : stat.label}
+      <div className="mt-5 font-display text-5xl font-bold text-offwhite md:text-6xl">
+        <span ref={valueRef}>{isNumeric ? '0' : stat.label}</span>
         {isNumeric ? '+' : ''}
       </div>
       <p className="mt-2 text-sm font-medium text-text-secondary md:text-base">{stat.desc}</p>

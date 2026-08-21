@@ -17,7 +17,18 @@ interface Props {
   className?: string;
   slideClassName?: string;
   pauseOnHover?: boolean;
+  labels?: {
+    previous?: string;
+    next?: string;
+    slide?: string;
+  };
 }
+
+const DEFAULT_LABELS = {
+  previous: 'Anterior',
+  next: 'Siguiente',
+  slide: 'Ir al slide',
+};
 
 export default function Carousel({
   slides,
@@ -27,7 +38,9 @@ export default function Carousel({
   className,
   slideClassName,
   pauseOnHover = true,
+  labels = {},
 }: Props) {
+  const l = { ...DEFAULT_LABELS, ...labels };
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -88,7 +101,7 @@ export default function Carousel({
             type="button"
             onClick={() => go(-1)}
             className="absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/50 p-3 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/70 md:flex"
-            aria-label="Anterior"
+            aria-label={l.previous}
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -96,7 +109,7 @@ export default function Carousel({
             type="button"
             onClick={() => go(1)}
             className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 items-center justify-center rounded-full border border-offwhite/20 bg-carbon/50 p-3 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon/70 md:flex"
-            aria-label="Siguiente"
+            aria-label={l.next}
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -114,7 +127,7 @@ export default function Carousel({
                 'h-2 rounded-full transition-all',
                 i === index ? 'w-8 bg-terracota' : 'w-2 bg-offwhite/50 hover:bg-offwhite'
               )}
-              aria-label={`Ir al slide ${i + 1}`}
+              aria-label={`${l.slide} ${i + 1}`}
               aria-current={i === index}
             />
           ))}

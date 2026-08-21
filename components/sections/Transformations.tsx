@@ -19,10 +19,13 @@ export default function Transformations({ locale, slides }: Props) {
       <SectionHeader
         variant="light"
         badge={t.gallery.badge}
-        title="Transformaciones reales"
-        description="Espacios que hemos renovado con dedicación y calidad."
+        title={t.gallery.title}
+        description={t.gallery.description}
       />
-      <AfterCarousel slides={slides} />
+      <AfterCarousel
+        slides={slides}
+        labels={{ previous: t.common.previous, next: t.common.next, slide: t.common.slide }}
+      />
     </SectionWrapper>
   );
 }

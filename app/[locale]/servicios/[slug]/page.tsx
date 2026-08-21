@@ -158,10 +158,13 @@ export default async function ServicioPage({ params }: Props) {
         <SectionHeader
           variant="light"
           badge={t.gallery.badge}
-          title="Resultados de nuestro trabajo"
-          description="Acabados reales de reformas en Sabadell, Barcelona y alrededores."
+          title={t.gallery.title}
+          description={t.gallery.description}
         />
-        <AfterCarousel slides={afterSlides} />
+        <AfterCarousel
+          slides={afterSlides}
+          labels={{ previous: t.common.previous, next: t.common.next, slide: t.common.slide }}
+        />
       </SectionWrapper>
 
       <ProcessTimeline locale={locale} variant="dark" title={`${t.process.title} — ${service.title}`} />

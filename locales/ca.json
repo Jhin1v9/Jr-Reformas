@@ -65,7 +65,9 @@
     "title": "Què podem transformar?",
     "description": "Des de canviar un plat de dutxa fins a reformar el pis complet. Tot amb la mateixa cura.",
     "viewMore": "Veure més",
-    "viewAll": "Veure tots els serveis"
+    "viewAll": "Veure tots els serveis",
+    "mostRequested": "Més sol·licitat",
+    "viewProjects": "Veure projectes"
   },
   "process": {
     "badge": "Procés",
@@ -116,7 +118,10 @@
     "title": "El que diuen els nostres clients",
     "description": "Ressenyes reals de clients verificats.",
     "verified": "Ressenya verificada",
-    "source": "Google / ProntoPro"
+    "source": "Google / ProntoPro",
+    "rating": "estrelles",
+    "viewAll": "Veure totes les ressenyes",
+    "verifiedOn": "Verificat a ProntoPro"
   },
   "area": {
     "badge": "Àrea d'actuació",
@@ -177,7 +182,12 @@
     "title": "Imagina la teva casa completament diferent",
     "sub": "Ara imagina poder entrar-hi. Explica'ns què vols reformar i et respondrem el mateix dia.",
     "ctaPrimary": "Demanar pressupost gratuït",
-    "ctaWhatsapp": "Parlar directament amb Junior"
+    "ctaWhatsapp": "Parlar directament amb Junior",
+    "stats": {
+      "years": "anys d'experiència",
+      "reviews": "ressenyes verificades",
+      "response": "temps de resposta"
+    }
   },
   "footer": {
     "slogan": "Qualitat i confiança en cada reforma",
@@ -313,8 +323,26 @@
     "cta": "Tornar a l'inici",
     "popular": "Pàgines populars"
   },
+  "lightbox": {
+    "close": "Tancar",
+    "previous": "Anterior",
+    "next": "Següent",
+    "expanded": "Vista ampliada",
+    "cta": "Vull aquest estil",
+    "whatsappText": "Hola Junior, vaig veure aquesta obra a jr-reformas.com i vull alguna cosa similar."
+  },
   "whatsapp": { "ariaLabel": "Contactar per WhatsApp", "message": "Hola Junior, vull demanar pressupost per a una reforma." },
   "breadcrumb": { "home": "Inici" },
   "related": { "title": "També t'interessa" },
-  "common": { "callUs": "Truca'ns", "writeUs": "Escriu-nos", "freeVisit": "Visita tècnica gratuïta", "sameDay": "Resposta el mateix dia" }
+  "common": {
+    "callUs": "Truca'ns",
+    "writeUs": "Escriu-nos",
+    "freeVisit": "Visita tècnica gratuïta",
+    "sameDay": "Resposta el mateix dia",
+    "previous": "Anterior",
+    "next": "Següent",
+    "slide": "Anar al slide",
+    "whoWeAre": "Qui som",
+    "howWeWork": "Com treballem"
+  }
 }

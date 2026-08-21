@@ -110,17 +110,17 @@ export default function CTAFinal({ locale }: Props) {
           <div className="flex flex-col items-center gap-2">
             <Calendar className="h-6 w-6 text-terracota" aria-hidden="true" />
             <span className="text-2xl font-bold text-offwhite">15+</span>
-            <span className="text-xs uppercase tracking-wider text-text-secondary">años de experiencia</span>
+            <span className="text-xs uppercase tracking-wider text-text-secondary">{t.ctaFinal.stats.years}</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <Star className="h-6 w-6 text-terracota" aria-hidden="true" />
             <span className="text-2xl font-bold text-offwhite">5★</span>
-            <span className="text-xs uppercase tracking-wider text-text-secondary">9 reseñas verificadas</span>
+            <span className="text-xs uppercase tracking-wider text-text-secondary">{t.ctaFinal.stats.reviews}</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <Clock className="h-6 w-6 text-terracota" aria-hidden="true" />
             <span className="text-2xl font-bold text-offwhite">24h</span>
-            <span className="text-xs uppercase tracking-wider text-text-secondary">tiempo de respuesta</span>
+            <span className="text-xs uppercase tracking-wider text-text-secondary">{t.ctaFinal.stats.response}</span>
           </div>
         </div>
       </div>

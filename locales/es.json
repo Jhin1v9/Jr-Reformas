@@ -65,7 +65,9 @@
     "title": "¿Qué podemos transformar?",
     "description": "Desde cambiar un plato de ducha hasta reformar tu piso completo. Todo con el mismo cuidado.",
     "viewMore": "Ver más",
-    "viewAll": "Ver todos los servicios"
+    "viewAll": "Ver todos los servicios",
+    "mostRequested": "Más solicitado",
+    "viewProjects": "Ver proyectos"
   },
   "process": {
     "badge": "Proceso",
@@ -116,7 +118,10 @@
     "title": "Lo que dicen nuestros clientes",
     "description": "Reseñas reales de clientes verificados.",
     "verified": "Reseña verificada",
-    "source": "Google / ProntoPro"
+    "source": "Google / ProntoPro",
+    "rating": "estrellas",
+    "viewAll": "Ver todas las reseñas",
+    "verifiedOn": "Verificado en ProntoPro"
   },
   "area": {
     "badge": "Área de actuación",
@@ -177,7 +182,12 @@
     "title": "Imagina tu casa completamente diferente",
     "sub": "Ahora imagina poder entrar en ella. Cuéntanos qué quieres reformar y te respondemos el mismo día.",
     "ctaPrimary": "Pedir presupuesto gratuito",
-    "ctaWhatsapp": "Hablar directamente con Junior"
+    "ctaWhatsapp": "Hablar directamente con Junior",
+    "stats": {
+      "years": "años de experiencia",
+      "reviews": "reseñas verificadas",
+      "response": "tiempo de respuesta"
+    }
   },
   "footer": {
     "slogan": "Calidad y confianza en cada reforma",
@@ -313,8 +323,26 @@
     "cta": "Volver al inicio",
     "popular": "Páginas populares"
   },
+  "lightbox": {
+    "close": "Cerrar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "expanded": "Vista ampliada",
+    "cta": "Quiero este estilo",
+    "whatsappText": "Hola Junior, vi esta obra en jr-reformas.com y quiero algo similar."
+  },
   "whatsapp": { "ariaLabel": "Contactar por WhatsApp", "message": "Hola Junior, quiero pedir presupuesto para una reforma." },
   "breadcrumb": { "home": "Inicio" },
   "related": { "title": "También te interesa" },
-  "common": { "callUs": "Llámanos", "writeUs": "Escríbenos", "freeVisit": "Visita técnica gratuita", "sameDay": "Respuesta el mismo día" }
+  "common": {
+    "callUs": "Llámanos",
+    "writeUs": "Escríbenos",
+    "freeVisit": "Visita técnica gratuita",
+    "sameDay": "Respuesta el mismo día",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "slide": "Ir al slide",
+    "whoWeAre": "Quiénes somos",
+    "howWeWork": "Cómo trabajamos"
+  }
 }

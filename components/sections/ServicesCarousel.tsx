@@ -70,7 +70,7 @@ export default function ServicesCarousel({ locale }: Props) {
           type="button"
           onClick={() => scroll(-1)}
           className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-carbon/80 p-3 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon lg:flex"
-          aria-label="Anterior"
+          aria-label={t.common.previous}
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
@@ -78,7 +78,7 @@ export default function ServicesCarousel({ locale }: Props) {
           type="button"
           onClick={() => scroll(1)}
           className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-carbon/80 p-3 text-offwhite backdrop-blur transition-all hover:scale-110 hover:bg-carbon lg:flex"
-          aria-label="Siguiente"
+          aria-label={t.common.next}
         >
           <ChevronRight className="h-6 w-6" />
         </button>
@@ -114,7 +114,7 @@ export default function ServicesCarousel({ locale }: Props) {
 
                 <div className="absolute bottom-0 left-0 w-full p-6 md:p-8">
                   <span className="mb-2 inline-block rounded-full bg-terracota px-3 py-1 text-xs font-bold uppercase tracking-wider text-offwhite">
-                    Más solicitado
+                    {t.servicesGrid.mostRequested}
                   </span>
                   <h3 className="font-display text-2xl font-bold text-offwhite md:text-3xl">
                     {service.title}
@@ -123,7 +123,7 @@ export default function ServicesCarousel({ locale }: Props) {
                     {service.shortDesc}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-terracota opacity-0 transition-all duration-300 group-hover:opacity-100">
-                    Ver proyectos
+                    {t.servicesGrid.viewProjects}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export default function ServicesCarousel({ locale }: Props) {
           href={localePath(locale, '/servicios')}
           className="inline-flex items-center gap-2 rounded-lg border border-sand px-6 py-3 text-sm font-semibold text-sand transition-all hover:border-offwhite hover:text-offwhite"
         >
-          Ver todos los servicios
+          {t.servicesGrid.viewAll}
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

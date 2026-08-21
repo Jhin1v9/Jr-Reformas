@@ -8,11 +8,22 @@ interface FilterLabels {
   all: string;
 }
 
+interface LightboxLabels {
+  close?: string;
+  previous?: string;
+  next?: string;
+  expanded?: string;
+  cta?: string;
+  whatsappText?: string;
+}
+
 interface Props {
   items: MasonryItem[];
   categories?: string[];
-  labels?: FilterLabels;
+  labels?: FilterLabels & LightboxLabels;
   columns?: 2 | 3 | 4;
+  compact?: boolean;
+  className?: string;
 }
 
 export default function GalleryMasonry({
@@ -20,11 +31,26 @@ export default function GalleryMasonry({
   categories = [],
   labels = { all: 'Todos' },
   columns = 3,
+  compact = true,
+  className,
 }: Props) {
+  const filterLabel = labels.all ?? 'Todos';
+  const lightboxLabels: LightboxLabels = {
+    close: labels.close,
+    previous: labels.previous,
+    next: labels.next,
+    expanded: labels.expanded,
+    cta: labels.cta,
+    whatsappText: labels.whatsappText,
+  };
   const [filter, setFilter] = useState<string>('todos');
 
+  // Avoid duplicate "Todos" / "todos" buttons — GalleryMasonry always renders the "all" filter itself.
   const allCategories = useMemo(
-    () => (categories.length > 0 ? categories : [...new Set(items.map((i) => i.category).filter(Boolean))]),
+    () =>
+      categories.length > 0
+        ? categories.filter((c) => c.toLowerCase() !== 'todos')
+        : [...new Set(items.map((i) => i.category).filter(Boolean))],
     [categories, items]
   );
 
@@ -38,7 +64,7 @@ export default function GalleryMasonry({
       {allCategories.length > 0 && (
         <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
           <FilterButton active={filter === 'todos'} onClick={() => setFilter('todos')}>
-            {labels.all}
+            {filterLabel}
           </FilterButton>
           {allCategories.map((cat) => (
             <FilterButton key={cat} active={filter === cat} onClick={() => setFilter(cat)}>
@@ -48,7 +74,7 @@ export default function GalleryMasonry({
         </div>
       )}
 
-      <MasonryGrid items={filteredItems} columns={columns} />
+      <MasonryGrid items={filteredItems} columns={columns} compact={compact} className={className} labels={lightboxLabels} />
     </div>
   );
 }
