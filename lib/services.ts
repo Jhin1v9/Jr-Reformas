@@ -3,6 +3,8 @@ import {
   Grid3x3, Building2, Store, DoorOpen, type LucideIcon,
 } from 'lucide-react';
 import type { Categoria } from './photos';
+import type { ServiceContent } from './serviceContent';
+import { SERVICE_CONTENT } from './serviceContent';
 
 export interface Service {
   slug: string;
@@ -19,6 +21,7 @@ export interface Service {
   includes: string[];
   processSteps: string[];
   faq: { q: string; a: string }[];
+  content?: ServiceContent;
 }
 
 export const SERVICES: Service[] = [
@@ -33,6 +36,7 @@ export const SERVICES: Service[] = [
     main: true,
     categoria: 'PISO',
     heroFoto: 'despues/cocina-gris-hero-01.jpg',
+    content: SERVICE_CONTENT['reformas-integrales'],
     includes: ['Demolición y desescombro', 'Albañilería y tabiques', 'Instalación eléctrica completa', 'Fontanería y climatización', 'Suelos y parquet', 'Cocina y baños completos', 'Carpintería interior', 'Pintura y acabados', 'Limpieza final de obra'],
     processSteps: ['Visita técnica y medición del espacio', 'Proyecto y definición de materiales', 'Demolición y retirada de escombros', 'Instalaciones: electricidad, fontanería y clima', 'Albañilería, tabiques y falsos techos', 'Suelos, alicatados y carpintería', 'Pintura, acabados y limpieza final'],
     faq: [
@@ -53,6 +57,7 @@ export const SERVICES: Service[] = [
     main: true,
     categoria: 'SUELO',
     heroFoto: 'despues/servicio-suelos.jpg',
+    content: SERVICE_CONTENT['suelos-y-parquet'],
     includes: ['Parquet y tarima de madera', 'Suelo laminado AC4/AC5', 'Suelo porcelánico y gres', 'Nivelación de soleras', 'Rodapiés y remates', 'Retirada del suelo antiguo'],
     processSteps: ['Revisión y nivelación de la base', 'Elección de material según uso', 'Colocación con sistema de nivelación', 'Rodapiés, juntas y remates', 'Limpieza y revisión final'],
     faq: [
@@ -72,6 +77,7 @@ export const SERVICES: Service[] = [
     main: true,
     categoria: 'BANO',
     heroFoto: 'despues/servicio-banos.jpg',
+    content: SERVICE_CONTENT['banos'],
     includes: ['Cambio de bañera por plato de ducha', 'Alicatado completo de paredes', 'Suelo porcelánico antideslizante', 'Sanitarios y grifería', 'Mamparas de cristal', 'Muebles de lavabo y espejos LED', 'Fontanería y desagües', 'Impermeabilización'],
     processSteps: ['Demolición y vaciado del baño', 'Instalaciones: fontanería y electricidad', 'Impermeabilización y alicatado', 'Plato de ducha, sanitarios y grifería', 'Mampara, mueble y accesorios', 'Sellado, limpieza y revisión final'],
     faq: [
@@ -92,6 +98,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'COCINA',
     heroFoto: 'despues/servicio-cocinas.jpg',
+    content: SERVICE_CONTENT['cocinas'],
     includes: ['Diseño y distribución a medida', 'Muebles y encimeras', 'Fontanería y desagües', 'Instalación eléctrica e iluminación', 'Alicatado y suelo', 'Electrodomésticos', 'Carpintería y remates'],
     processSteps: ['Diseño de la distribución', 'Demolición y preparación', 'Instalaciones de agua, luz y gas', 'Alicatado y suelo', 'Montaje de muebles y encimera', 'Electrodomésticos y revisión final'],
     faq: [
@@ -111,6 +118,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'DEMO',
     heroFoto: 'durante/servicio-albanileria.jpg',
+    content: SERVICE_CONTENT['albanileria'],
     includes: ['Tirar y levantar tabiques', 'Enfoscados y revocos', 'Soleras y nivelaciones', 'Apertura de huecos', 'Reparación de paredes', 'Desescombro'],
     processSteps: ['Evaluación del estado de muros y soleras', 'Demolición controlada', 'Nueva albañilería y enfoscados', 'Nivelación y secados', 'Revisión antes de acabados'],
     faq: [
@@ -129,6 +137,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'INSTAL',
     gradient: 'from-yellow-900 via-carbon to-carbon-light',
+    content: SERVICE_CONTENT['electricidad'],
     includes: ['Instalación eléctrica completa', 'Cuadro eléctrico y protecciones', 'Puntos de luz y enchufes', 'Iluminación LED integrada', 'Tomas USB y domótica básica', 'Boletín eléctrico'],
     processSteps: ['Revisión de la instalación existente', 'Diseño de puntos según el nuevo uso', 'Rozas y cableado nuevo', 'Cuadro y protecciones', 'Comprobaciones y boletín'],
     faq: [
@@ -147,6 +156,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'INSTAL',
     gradient: 'from-blue-900 via-carbon to-carbon-light',
+    content: SERVICE_CONTENT['fontaneria'],
     includes: ['Renovación completa de tuberías', 'Desagües y bajantes', 'Instalación de sanitarios', 'Grifería y termostáticas', 'Calentadores y termos', 'Cisternas empotradas'],
     processSteps: ['Revisión de bajantes y acometidas', 'Nueva distribución de tuberías', 'Pruebas de presión y estanqueidad', 'Montaje de sanitarios y grifería', 'Revisión final'],
     faq: [
@@ -165,6 +175,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'PISO',
     heroFoto: 'durante/servicio-pintura.jpg',
+    content: SERVICE_CONTENT['pintura'],
     includes: ['Quitar gotelé y alisar paredes', 'Pintura plástica de calidad', 'Techos y carpintería', 'Reparación de grietas', 'Esmaltes y lacados', 'Colores y asesoría'],
     processSteps: ['Protección de suelos y muebles', 'Reparación y alisado', 'Imprimación', 'Dos manos de pintura', 'Repasos y limpieza'],
     faq: [
@@ -183,6 +194,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'DEMO',
     heroFoto: 'durante/servicio-pladur.jpg',
+    content: SERVICE_CONTENT['pladur-y-techos'],
     includes: ['Tabiques de pladur', 'Falsos techos continuos', 'Trasdosados con aislamiento', 'Foseados para iluminación LED', 'Cortineros y registros', 'Juntas y masilla perfectas'],
     processSteps: ['Replanteo y niveles', 'Estructura de perfiles', 'Placas y aislamiento', 'Cinta y pasta de juntas', 'Lijado y preparación para pintura'],
     faq: [
@@ -201,6 +213,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'EXTERIOR',
     heroFoto: 'despues/servicio-fachadas.jpg',
+    content: SERVICE_CONTENT['fachadas-y-terrazas'],
     includes: ['Impermeabilización de terrazas', 'Suelos exteriores antideslizantes', 'Revestimiento de fachadas', 'Cerramientos y barandillas', 'Reparación de grietas', 'Pintura exterior'],
     processSteps: ['Diagnóstico de humedades y grietas', 'Preparación y reparación de la base', 'Impermeabilización', 'Revestimiento y acabados', 'Pruebas y revisión'],
     faq: [
@@ -219,6 +232,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'LOCAL',
     gradient: 'from-carbon-mid via-carbon to-carbon-light',
+    content: SERVICE_CONTENT['locales-comerciales'],
     includes: ['Adecuación integral del local', 'Instalaciones eléctricas y de iluminación', 'Aseos y zonas técnicas', 'Suelos de alto tránsito', 'Escaparates y entradas', 'Pintura y acabados comerciales'],
     processSteps: ['Visita y análisis del negocio', 'Proyecto de adecuación', 'Obra por fases para minimizar el cierre', 'Instalaciones y acabados', 'Entrega lista para abrir'],
     faq: [
@@ -237,6 +251,7 @@ export const SERVICES: Service[] = [
     main: false,
     categoria: 'PISO',
     heroFoto: 'despues/servicio-carpinteria.jpg',
+    content: SERVICE_CONTENT['carpinteria'],
     includes: ['Puertas de interior', 'Armarios empotrados a medida', 'Muebles de baño', 'Carpintería de cocina', 'Estanterías y muebles a medida', 'Marcos y molduras'],
     processSteps: ['Medición en obra', 'Diseño y elección de materiales', 'Fabricación', 'Instalación y ajuste', 'Acabados y revisión'],
     faq: [

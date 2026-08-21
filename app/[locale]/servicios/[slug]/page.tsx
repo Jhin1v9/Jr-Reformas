@@ -9,6 +9,7 @@ import { pageMetadata, serviceSchema, faqSchema } from '@/lib/seo';
 import { SERVICES, getService } from '@/lib/services';
 import { LOCALITIES } from '@/lib/localities';
 import { fotoUrl, getPhotos, type Photo } from '@/lib/photos';
+import { getServiceContent } from '@/lib/serviceContent';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import SectionHeader from '@/components/shared/SectionHeader';
 import Breadcrumb from '@/components/shared/Breadcrumb';
@@ -18,6 +19,10 @@ import Reveal from '@/components/shared/Reveal';
 import ProcessTimeline from '@/components/shared/ProcessTimeline';
 import GalleryMasonry from '@/components/sections/GalleryMasonry';
 import { type MasonryItem } from '@/components/shared/MasonryGrid';
+import ServicePriceTable from '@/components/shared/ServicePriceTable';
+import ServiceDuration from '@/components/shared/ServiceDuration';
+import ServiceAreas from '@/components/shared/ServiceAreas';
+import ServiceMaterials from '@/components/shared/ServiceMaterials';
 import FAQ from '@/components/sections/FAQ';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -51,6 +56,7 @@ export default async function ServicioPage({ params }: Props) {
   const service = getService(slug);
   if (!service) notFound();
   const t = getDictionary(locale);
+  const content = getServiceContent(slug, locale);
   const Icon = service.icon;
 
   // Gallery photos of the same category (DESPUES only)
@@ -125,29 +131,56 @@ export default async function ServicioPage({ params }: Props) {
         </ul>
       </SectionWrapper>
 
-      <SectionWrapper variant="light" className="pt-0">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="font-display text-2xl font-bold text-carbon md:text-3xl">
-            {t.servicePage.whyTitle.replace('{{service}}', service.title.toLowerCase())}
-          </h2>
-          <div className="mt-6 space-y-4 leading-relaxed text-carbon/80">
-            <p>
-              En <strong className="text-carbon">Junior Reformas</strong> llevamos más de 15 años transformando espacios en Sabadell, Barcelona, Terrassa y Mataró. Nuestro equipo coordina personalmente cada fase de la obra para que tú solo tengas que preocuparte de disfrutar del resultado. Trabajamos con materiales de primera calidad, presupuestos desglosados y plazos reales.
-            </p>
-            <p>
-              Cada proyecto de <strong>{service.title.toLowerCase()}</strong> comienza con una visita técnica gratuita sin compromiso. Durante esa visita evaluamos el estado actual del espacio, escuchamos tus necesidades y te asesoramos sobre las mejores soluciones según tu presupuesto y el uso real de cada estancia.
-            </p>
-            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">{t.servicePage.materialsTitle}</h3>
-            <p>
-              Trabajamos con proveedores contrastados y marcas reconocidas del sector. Desde cerámicas y porcelánicos hasta parquet, grifería, sanitarios, pintura y electricidad: cada material se elige pensando en la durabilidad, la estética y el mantenimiento diario. Todos los acabados cuentan con garantía del fabricante y revisamos contigo cada detalle antes de la entrega.
-            </p>
-            <h3 className="pt-2 font-display text-xl font-semibold text-carbon">{t.servicePage.areasTitle}</h3>
-            <p>
-              Realizamos {service.title.toLowerCase()} en Sabadell, Barcelona, Terrassa, Mataró y municipios de alrededor. Nuestra base en Sant Feliu de Llobregat nos permite desplazarnos con rapidez y mantener una comunicación directa durante toda la obra. Respuesta por WhatsApp el mismo día y visita técnica gratuita.
-            </p>
+      {content ? (
+        <>
+          <SectionWrapper variant="light" className="pt-0">
+            <div className="mx-auto max-w-3xl space-y-4 leading-relaxed text-carbon/80">
+              {content.intro.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </SectionWrapper>
+
+          <SectionWrapper variant="light" className="pt-0">
+            <ServicePriceTable
+              title={content.pricesTitle}
+              disclaimer={content.pricesDisclaimer}
+              rows={content.prices}
+            />
+          </SectionWrapper>
+
+          <SectionWrapper variant="light" className="pt-0">
+            <div className="grid gap-6 lg:grid-cols-2">
+              <ServiceDuration title={content.durationTitle} duration={content.duration} />
+              <ServiceMaterials materials={content.materials} />
+            </div>
+          </SectionWrapper>
+
+          <SectionWrapper variant="light" className="pt-0">
+            <ServiceAreas
+              title={content.areasTitle}
+              intro={content.areasIntro}
+              areas={content.areas}
+            />
+          </SectionWrapper>
+        </>
+      ) : (
+        <SectionWrapper variant="light" className="pt-0">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-display text-2xl font-bold text-carbon md:text-3xl">
+              {t.servicePage.whyTitle.replace('{{service}}', service.title.toLowerCase())}
+            </h2>
+            <div className="mt-6 space-y-4 leading-relaxed text-carbon/80">
+              <p>
+                En <strong className="text-carbon">Junior Reformas</strong> llevamos más de 15 años transformando espacios en Sabadell, Barcelona, Terrassa y Mataró. Nuestro equipo coordina personalmente cada fase de la obra para que tú solo tengas que preocuparte de disfrutar del resultado.
+              </p>
+              <p>
+                Cada proyecto de <strong>{service.title.toLowerCase()}</strong> comienza con una visita técnica gratuita sin compromiso. Durante esa visita evaluamos el estado actual del espacio, escuchamos tus necesidades y te asesoramos sobre las mejores soluciones.
+              </p>
+            </div>
           </div>
-        </div>
-      </SectionWrapper>
+        </SectionWrapper>
+      )}
 
       <SectionWrapper variant="light" className="pt-0">
         <SectionHeader
